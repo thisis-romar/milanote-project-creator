@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.env
+*.session.json
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+.ms-debug/
+graphify-out/
+coverage/

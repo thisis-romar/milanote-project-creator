@@ -1,0 +1,22 @@
+#!/bin/bash
+# @file pre-push
+# @description Pre-push hook — full build, typecheck, lint
+# @standard project-management/standards/hooks.md
+# @version 1.0.0
+# @created 2026-04-29T00:00:00Z
+# @lastUpdated 2026-04-29T00:00:00Z
+
+set -euo pipefail
+
+echo "pre-push: running checks..."
+
+echo "pre-push: typechecking..."
+npm run typecheck
+
+echo "pre-push: linting..."
+npm run lint
+
+echo "pre-push: building..."
+npm run build
+
+echo "pre-push: all checks passed."
