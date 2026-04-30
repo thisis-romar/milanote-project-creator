@@ -11,6 +11,7 @@ import 'dotenv/config';
 import { Command } from 'commander';
 import chalk from 'chalk';
 import { registerProbeCommand } from './commands/probe.js';
+import { registerValidateCommand } from './commands/validate.js';
 
 const program = new Command();
 
@@ -20,6 +21,7 @@ program
   .version('0.1.0');
 
 registerProbeCommand(program);
+registerValidateCommand(program);
 
 program
   .command('attach')

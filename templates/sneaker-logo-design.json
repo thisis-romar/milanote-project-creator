@@ -1,0 +1,80 @@
+{
+  "$schema": "https://example.com/milanote-template.schema.json",
+  "version": 1,
+  "variables": {
+    "brandName": "Voltura",
+    "owner": "Romar",
+    "deadline": "2026-06-15"
+  },
+  "board": {
+    "title": "{{brandName}} - Logo Design",
+    "description": "Logo direction for {{brandName}}, owned by {{owner}}, due {{deadline}}.",
+    "columns": [
+      {
+        "title": "Brief",
+        "cards": [
+          {
+            "type": "note",
+            "text": "Design a logo for {{brandName}}, a new sneaker brand. Modern, athletic, distinctive. Target audience: 18-34, urban, design-conscious. Deliverable due {{deadline}}."
+          },
+          {
+            "type": "checklist",
+            "title": "Project tasks",
+            "items": [
+              { "text": "Research competitor brands" },
+              { "text": "Mood board" },
+              { "text": "Sketch 5 directions" },
+              { "text": "Refine top 2" },
+              { "text": "Color exploration" },
+              { "text": "Present to {{owner}}" }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Inspiration",
+        "cards": [
+          {
+            "type": "link",
+            "url": "https://fontsinuse.com/uses/sneakers",
+            "title": "Fonts In Use - Sneakers",
+            "description": "Typography references from sneaker branding"
+          },
+          {
+            "type": "image",
+            "src": "https://images.unsplash.com/photo-1542291026-7eec264c27ff",
+            "caption": "Reference: high-contrast hero shot composition"
+          }
+        ]
+      },
+      {
+        "title": "Color palette",
+        "cards": [
+          { "type": "swatch", "hex": "#0F172A", "label": "Midnight" },
+          { "type": "swatch", "hex": "#F97316", "label": "Sunset" },
+          { "type": "swatch", "hex": "#FAFAFA", "label": "Bone" },
+          { "type": "swatch", "hex": "#22C55E", "label": "Court" },
+          { "type": "swatch", "hex": "#EF4444", "label": "Flag" }
+        ]
+      }
+    ],
+    "freeform": [
+      {
+        "type": "board",
+        "title": "Visual References",
+        "description": "Subboard for mood-board imagery and competitor logos.",
+        "freeform": [
+          {
+            "type": "note",
+            "text": "Drag in inspiration images here. Add captions describing what's working in each."
+          },
+          {
+            "type": "image",
+            "src": "https://images.unsplash.com/photo-1556906781-9a412961c28c",
+            "caption": "Texture study"
+          }
+        ]
+      }
+    ]
+  }
+}
