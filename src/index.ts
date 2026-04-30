@@ -10,6 +10,7 @@
 import 'dotenv/config';
 import { Command } from 'commander';
 import chalk from 'chalk';
+import { registerProbeCommand } from './commands/probe.js';
 
 const program = new Command();
 
@@ -17,6 +18,8 @@ program
   .name('milanote-creator')
   .description('Create Milanote boards programmatically from JSON templates')
   .version('0.1.0');
+
+registerProbeCommand(program);
 
 program
   .command('attach')

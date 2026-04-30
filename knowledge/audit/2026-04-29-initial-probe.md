@@ -8,7 +8,15 @@ last_updated: 2026-04-29T00:00:00Z
 
 # Initial API Probe — 2026-04-29
 
-**Status:** Stub — Phase 2 not yet complete.
+**Status:** Tooling ready — awaiting first probe session.
+
+The `milanote-creator probe` command (`src/commands/probe.ts`) is built and ready to capture XHR/fetch traffic from a live Milanote session. See playbook: [knowledge/milanote/playbooks/discovering-the-api.md](../milanote/playbooks/discovering-the-api.md).
+
+To run:
+```bash
+npm run dev probe -- --duration 180
+```
+Then perform create-board / add-column / add-card actions of every primitive type in the Edge window during the capture window.
 
 ## To fill in after running `milanote-creator probe`
 
