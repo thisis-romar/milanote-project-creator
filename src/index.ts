@@ -12,6 +12,7 @@ import { Command } from 'commander';
 import chalk from 'chalk';
 import { registerProbeCommand } from './commands/probe.js';
 import { registerValidateCommand } from './commands/validate.js';
+import { registerCreateCommand } from './commands/create.js';
 
 const program = new Command();
 
@@ -22,6 +23,7 @@ program
 
 registerProbeCommand(program);
 registerValidateCommand(program);
+registerCreateCommand(program);
 
 program
   .command('attach')
