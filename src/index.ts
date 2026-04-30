@@ -2,28 +2,34 @@
 /**
  * @file index.ts
  * @description milanote-project-creator CLI entry point
- * @version 0.2.0
+ * @version 0.3.0
  * @created 2026-04-29T00:00:00Z
  * @lastUpdated 2026-04-29T00:00:00Z
  */
 
 import 'dotenv/config';
+import { createRequire } from 'node:module';
 import { Command } from 'commander';
 import chalk from 'chalk';
 import { registerProbeCommand } from './commands/probe.js';
 import { registerValidateCommand } from './commands/validate.js';
 import { registerCreateCommand } from './commands/create.js';
+import { registerWorkspacesCommand } from './commands/workspaces.js';
+
+const require = createRequire(import.meta.url);
+const { version } = require('../../package.json') as { version: string };
 
 const program = new Command();
 
 program
   .name('milanote-creator')
   .description('Create Milanote boards programmatically from JSON templates')
-  .version('0.1.0');
+  .version(version);
 
 registerProbeCommand(program);
 registerValidateCommand(program);
 registerCreateCommand(program);
+registerWorkspacesCommand(program);
 
 program
   .command('attach')

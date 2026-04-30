@@ -1,7 +1,7 @@
 /**
  * @file variables.ts
  * @description {{variable}} substitution for board templates
- * @version 0.1.0
+ * @version 0.2.0
  * @created 2026-04-29T00:00:00Z
  * @lastUpdated 2026-04-29T00:00:00Z
  *
@@ -12,6 +12,10 @@
  *   {{varName}}     — looked up in `variables` block (or CLI overrides)
  *   {{env.NAME}}    — looked up in process.env
  *   {{env.NAME?}}   — same, but empty string if unset (no error)
+ *
+ * Cycle detection: if a variable value itself contains {{markers}}, and those
+ * markers resolve back to the original variable, a VariableResolutionError is
+ * thrown rather than looping infinitely.
  */
 
 import type { VariableSpecT } from './schema.js';
@@ -37,7 +41,7 @@ export class VariableResolutionError extends Error {
   }
 }
 
-function lookup(name: string, opts: ResolveOptions): string {
+function lookup(name: string, opts: ResolveOptions, seen: ReadonlySet<string>): string {
   const env = opts.env ?? process.env;
 
   if (name.startsWith('env.')) {
@@ -51,23 +55,38 @@ function lookup(name: string, opts: ResolveOptions): string {
     return v;
   }
 
+  if (seen.has(name)) {
+    throw new VariableResolutionError(
+      name,
+      `circular variable reference detected: ${[...seen, name].join(' → ')}`,
+    );
+  }
+
   // Override wins over declared default
   if (opts.overrides && name in opts.overrides) {
     const v = opts.overrides[name];
-    if (v !== undefined) return v;
+    if (v !== undefined) {
+      // The override value itself may contain markers — resolve them with cycle guard
+      return substituteWithSeen(v, opts, new Set([...seen, name]));
+    }
   }
 
   const declared = opts.declared?.[name];
   if (declared !== undefined) {
-    if (typeof declared === 'string') return declared;
-    return declared.default;
+    const raw = typeof declared === 'string' ? declared : declared.default;
+    // The declared value itself may contain markers — resolve with cycle guard
+    return substituteWithSeen(raw, opts, new Set([...seen, name]));
   }
 
   throw new VariableResolutionError(name, `undeclared variable: ${name}`);
 }
 
+function substituteWithSeen(input: string, opts: ResolveOptions, seen: ReadonlySet<string>): string {
+  return input.replace(VAR_PATTERN, (_, raw: string) => lookup(raw.trim(), opts, seen));
+}
+
 export function substitute(input: string, opts: ResolveOptions): string {
-  return input.replace(VAR_PATTERN, (_, raw: string) => lookup(raw.trim(), opts));
+  return substituteWithSeen(input, opts, new Set());
 }
 
 /**

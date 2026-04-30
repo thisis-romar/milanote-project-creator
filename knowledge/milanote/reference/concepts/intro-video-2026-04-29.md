@@ -1,10 +1,16 @@
 ---
 title: Milanote Intro Video — Official Primitive Set
 description: Verbatim transcript of the official Milanote intro tutorial video. Canonical reference for what Milanote considers its core element types and user workflows.
-version: 1.0.0
+version: 1.1.0
 created: 2026-04-29T00:00:00Z
 last_updated: 2026-04-29T00:00:00Z
+canonical: true
+supersedes: knowledge/milanote/reference/videos/milanote-getting-started.md
 ---
+
+<!-- canonical: true — prefer this document over reference/videos/milanote-getting-started.md
+     (raw auto-captions). This is the human-edited, punctuated version. -->
+<!-- related: knowledge/milanote/reference/videos/milanote-getting-started.md (same video, raw captions) -->
 
 <!-- source: official Milanote intro tutorial video -->
 

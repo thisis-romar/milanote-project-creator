@@ -44,6 +44,10 @@ When the timer expires, the tool dumps:
 
 ### Per-primitive mapping
 
+<!-- derived from: knowledge/milanote/reference/elements/INDEX.md -->
+<!-- The primitives listed here mirror the v0 primitive set defined in reference/elements/INDEX.md. -->
+<!-- If you add a new primitive there, add a row here too. -->
+
 For the v0 supported primitives, expect to see these mutations during a probe session:
 
 | User action | Expected captured calls |
@@ -55,6 +59,7 @@ For the v0 supported primitives, expect to see these mutations during a probe se
 | Add image card | upload (multipart or signed URL flow) + 1 element-create mutation |
 | Add swatch card | 1 mutation |
 | Add checklist card | 1 mutation; each subsequent item may be a separate PUT |
+| Add file card | upload (same flow as image) + 1 element-create mutation |
 | Nest a board | board-create mutation with a parent ID parameter, OR board-create + a separate move/link call |
 
 ## Output convention

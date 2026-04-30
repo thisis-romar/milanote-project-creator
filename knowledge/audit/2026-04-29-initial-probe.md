@@ -29,10 +29,14 @@ Then perform create-board / add-column / add-card actions of every primitive typ
 
 ## Probe variants to test
 
+<!-- derived from: knowledge/milanote/reference/elements/INDEX.md -->
+<!-- This table mirrors the v0 primitive set. If a new primitive is added to the INDEX, add it here too. -->
+
 | Endpoint | Method | Status |
 |----------|--------|--------|
 | `/api/boards` | POST | pending |
 | `/api/v1/boards` | POST | pending |
 | `/api/workspaces/:id/boards` | POST | pending |
 | GraphQL `createBoard` mutation | POST | pending |
-| Per-primitive (column, note, image, swatch, checklist, link) | POST | pending |
+| Per-primitive (column, note, image, file, swatch, checklist, link, nested board) | POST | pending |
+| Workspace list (for `workspaces` command) | GET | pending |

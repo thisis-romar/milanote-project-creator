@@ -1,16 +1,22 @@
 ---
 title: Milanote - Getting Started
 description: Tutorial transcript (auto-generated): Milanote - Getting Started.
-version: 1.0.0
+version: 1.1.0
 created: 2026-04-29T00:00:00Z
 last_updated: 2026-04-29T00:00:00Z
 video_id: OaWhH_5-XH8
 video_url: https://youtube.com/watch?v=OaWhH_5-XH8
 duration: 2:02
 transcript_kind: auto-generated
+canonical: false
+superseded_by: knowledge/milanote/reference/concepts/intro-video-2026-04-29.md
 ---
 
 <!-- source: https://youtube.com/watch?v=OaWhH_5-XH8 -->
+<!-- NOTE: This is the raw auto-generated caption file (92% similar to the canonical human-edited
+     transcript at knowledge/milanote/reference/concepts/intro-video-2026-04-29.md).
+     For citations and agent queries, prefer the canonical doc. This file is retained as
+     the raw auto-caption source for the video playlist index. -->
 
 # Milanote - Getting Started
 
