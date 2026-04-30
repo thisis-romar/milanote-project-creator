@@ -2,13 +2,14 @@
 /**
  * @file index.ts
  * @description milanote-project-creator CLI entry point
- * @version 0.1.0
+ * @version 0.2.0
  * @created 2026-04-29T00:00:00Z
  * @lastUpdated 2026-04-29T00:00:00Z
  */
 
 import 'dotenv/config';
 import { Command } from 'commander';
+import chalk from 'chalk';
 
 const program = new Command();
 
@@ -17,4 +18,35 @@ program
   .description('Create Milanote boards programmatically from JSON templates')
   .version('0.1.0');
 
-program.parse();
+program
+  .command('attach')
+  .description('Attach to live Edge via CDP and open Milanote (smoke test)')
+  .option('--url <url>', 'URL to load if no Milanote tab is open', 'https://app.milanote.com')
+  .action(async (opts: { url: string }) => {
+    const { attachToEdge } = await import('./cdp/attach.js');
+    const { getOrOpenMilanotePage, MILANOTE_HOST } = await import('./cdp/page.js');
+
+    console.log(chalk.cyan('Attaching to Edge via CDP...'));
+    const browser = await attachToEdge(opts.url);
+
+    console.log(chalk.cyan('Locating Milanote tab...'));
+    const page = await getOrOpenMilanotePage(browser);
+
+    if (!page.url().includes(MILANOTE_HOST)) {
+      console.log(chalk.cyan(`Navigating to ${opts.url}...`));
+      await page.goto(opts.url, { waitUntil: 'load', timeout: 60_000 });
+    }
+
+    const title = await page.title();
+    const url = page.url();
+    console.log(chalk.green('\nConnected.'));
+    console.log(`  Title: ${title}`);
+    console.log(`  URL:   ${url}`);
+
+    await browser.close();
+  });
+
+program.parseAsync().catch((err: unknown) => {
+  console.error(chalk.red('Error:'), err instanceof Error ? err.message : err);
+  process.exit(1);
+});
