@@ -17,7 +17,7 @@ import { registerCreateCommand } from './commands/create.js';
 import { registerWorkspacesCommand } from './commands/workspaces.js';
 
 const require = createRequire(import.meta.url);
-const { version } = require('../../package.json') as { version: string };
+const { version } = require('../package.json') as { version: string };
 
 const program = new Command();
 

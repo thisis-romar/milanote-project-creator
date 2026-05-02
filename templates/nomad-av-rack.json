@@ -1,0 +1,120 @@
+{
+  "$schema": "https://example.com/milanote-template.schema.json",
+  "version": 1,
+  "variables": {
+    "venue": "Nomad Toronto",
+    "system": "VOID Acoustics"
+  },
+  "board": {
+    "title": "{{venue}} — AV Rack",
+    "description": "{{system}} sound system — rack build, wiring, signal flow, and documentation for {{venue}}.",
+    "columns": [
+      {
+        "title": "System Overview",
+        "cards": [
+          {
+            "type": "note",
+            "text": "16-speaker VOID Acoustics system:\n• Mains: 4× Stasys Xair (2 stacks L/R)\n• Outboard subs: 2× Venu 215 V2\n• Amps: 2× Bias V3 + Q2\n• Signal processor: Drawmer SP2120\n• Mixer: Allen & Heath CQ12\n• Control: Armonía Pro Audio Suite"
+          },
+          {
+            "type": "link",
+            "url": "https://claude.ai/chat/54db5ad6-e91b-4fd5-9650-c6ee77acfc30",
+            "title": "System Overview & Electrical Panels",
+            "description": "Complete Nomad Toronto VOID Acoustics system overview, rack power topology, load calculations, breaker allocation, and speaker layout (Venu 215 V2 flanks + Xair stacks)"
+          }
+        ]
+      },
+      {
+        "title": "Wiring & Signal Flow",
+        "cards": [
+          {
+            "type": "link",
+            "url": "https://claude.ai/chat/81ef8190-238f-4f37-901d-ead397b7a6e1",
+            "title": "Amp Rack Cable Schedule & Connection Diagram",
+            "description": "Cable schedule and connection diagram for the full rack — VOID Xair subs wired parallel on Bias V3 channels, all I/O rear-panel verified against manufacturer manuals"
+          },
+          {
+            "type": "link",
+            "url": "https://claude.ai/chat/61c49787-7fd9-4227-ae32-2f3c8301d7f6",
+            "title": "Audio Rack Equipment Audit & System Rewiring",
+            "description": "Armonía Pro Audio Suite screenshot audit, corrected 16-speaker system rewiring (Drawmer SP2120 → V3/Q2), signal flow diagram, and audio-system-diagram skill extraction"
+          },
+          {
+            "type": "link",
+            "url": "https://claude.ai/chat/c8999358-0d6d-42d2-8abd-d5e1b06ff2d8",
+            "title": "CQ12 Mixer System Diagram Audit & Refactor",
+            "description": "Replaced Yamaha MG12 with Allen & Heath CQ12 — CH1+2 linked for V10 master, CH3+4 for V10 booth out via dedicated stereo output. Full SVG wiring diagram refactored."
+          }
+        ]
+      },
+      {
+        "title": "Equipment & Manuals",
+        "cards": [
+          {
+            "type": "link",
+            "url": "https://claude.ai/chat/bfe45378-1df0-4646-b3a1-dde53b1db8c4",
+            "title": "Yamaha MG12 I/O Validation & Corrections",
+            "description": "Pre-CQ12 mixer baseline — MG12 input/output audit with corrections, used as reference for the CQ12 upgrade comparison"
+          },
+          {
+            "type": "checklist",
+            "title": "Equipment Confirmed in System",
+            "items": [
+              { "text": "VOID Acoustics Bias V3 ×2 (amplifiers)", "done": true },
+              { "text": "VOID Acoustics Q2 (amplifier)", "done": true },
+              { "text": "VOID Acoustics Stasys Xair ×4 (subs)", "done": true },
+              { "text": "VOID Acoustics Venu 215 V2 ×2 (outboard subs)", "done": true },
+              { "text": "Drawmer SP2120 (signal processor)", "done": true },
+              { "text": "Allen & Heath CQ12 (mixer)", "done": true },
+              { "text": "Armonía Pro Audio Suite (DSP control)", "done": true }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Rack Standards & Tools",
+        "cards": [
+          {
+            "type": "link",
+            "url": "https://claude.ai/chat/fb56aa22-37a8-4633-825c-6dd1c91f4db5",
+            "title": "19-Inch Rack Architecture & 12U Enclosure Standards",
+            "description": "Technical engineering report — 19-inch rack standards, 12U enclosure specs, global infrastructure dimensions with 10+ cited examples"
+          },
+          {
+            "type": "link",
+            "url": "https://claude.ai/chat/77927477-ddf9-4a6e-8507-652816224db0",
+            "title": "SVG Rack Elevation Diagram Skill",
+            "description": "Comparison of SVG vs proprietary rack documentation formats; skill extraction for reusable SVG rack elevation diagram generation"
+          }
+        ]
+      }
+    ],
+    "freeform": [
+      {
+        "type": "board",
+        "title": "Business & Monetization",
+        "description": "Strategy for monetizing the Nomad Toronto AV profile and documentation.",
+        "freeform": [
+          {
+            "type": "link",
+            "url": "https://claude.ai/chat/5b4811a9-d684-4dd6-a647-6784a4ce8865",
+            "title": "Monetizing Nomad Toronto's AV Profile",
+            "description": "Strategy conversation — how to leverage the fully documented VOID Acoustics system and rack build as a commercial AV asset"
+          }
+        ]
+      },
+      {
+        "type": "board",
+        "title": "System Color Reference",
+        "description": "VOID Acoustics brand palette used in rack diagrams.",
+        "freeform": [
+          { "type": "swatch", "hex": "#0F172A", "label": "Rack Black" },
+          { "type": "swatch", "hex": "#DC2626", "label": "Power / Alert" },
+          { "type": "swatch", "hex": "#16A34A", "label": "Signal / Active" },
+          { "type": "swatch", "hex": "#2563EB", "label": "Digital / Control" },
+          { "type": "swatch", "hex": "#F59E0B", "label": "Pending / Review" }
+        ]
+      }
+    ]
+  }
+}
