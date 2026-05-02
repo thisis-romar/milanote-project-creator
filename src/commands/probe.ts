@@ -19,6 +19,7 @@ interface ProbeOptions {
   duration: string;
   out?: string;
   url: string;
+  reload?: boolean;
 }
 
 export function registerProbeCommand(program: Command): void {
@@ -28,6 +29,7 @@ export function registerProbeCommand(program: Command): void {
     .option('-d, --duration <seconds>', 'how long to capture', '120')
     .option('-o, --out <file>', 'output file (default: .ms-debug/probe-<ts>.json)')
     .option('-u, --url <url>', 'URL to load if no Milanote tab is open', 'https://app.milanote.com')
+    .option('--reload', 'reload the page after attaching listeners (required to capture pre-existing WebSocket connections)')
     .action(async (opts: ProbeOptions) => {
       const seconds = Number(opts.duration);
       if (!Number.isFinite(seconds) || seconds <= 0) {
@@ -48,6 +50,7 @@ export function registerProbeCommand(program: Command): void {
       const spinner = ora(`Captured 0 requests`).start();
       const result = await captureNetwork(page, {
         durationMs: seconds * 1000,
+        reloadAfterAttach: opts.reload === true,
         onRequest: (r) => {
           count += 1;
           spinner.text = `Captured ${count} requests — last: ${r.method} ${r.pathname}`;

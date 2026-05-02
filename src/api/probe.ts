@@ -34,6 +34,12 @@ const MAX_BODY_BYTES = 50_000;
 export interface CaptureOptions {
   durationMs: number;
   onRequest?: (req: CapturedRequest) => void;
+  /**
+   * If true, reload the page after attaching listeners. Required to capture
+   * WebSocket connections that were established before the probe attached
+   * (Playwright's `page.on('websocket')` does NOT see pre-existing sockets).
+   */
+  reloadAfterAttach?: boolean;
 }
 
 export async function captureNetwork(page: Page, options: CaptureOptions): Promise<ProbeResult> {
@@ -144,6 +150,13 @@ export async function captureNetwork(page: Page, options: CaptureOptions): Promi
     void onResponse(resp);
   });
   page.on('websocket', onWebSocket);
+
+  if (options.reloadAfterAttach) {
+    // Reload AFTER listeners are attached so the new WS connection fires
+    // page.on('websocket') from the start. Without this, the pre-existing
+    // collab socket is invisible to Playwright (no replay of prior opens).
+    await page.reload({ waitUntil: 'networkidle', timeout: 60_000 });
+  }
 
   await new Promise((r) => setTimeout(r, options.durationMs));
 
