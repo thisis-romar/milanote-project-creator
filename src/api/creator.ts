@@ -43,6 +43,52 @@ export class ApiCreator implements Creator {
     private readonly socket?: CollabSocket,
   ) {}
 
+  // ── Position tracking per board ─────────────────────────────────────────────
+  // Milanote positions use {x, y, score} for CANVAS items.
+  // score is used for z-order/sort; we increment by 65536 per item.
+  // Columns are laid out horizontally at ~280px intervals.
+  // Freeform items (subboards, loose cards) go below columns.
+
+  private readonly columnIndex = new Map<string, number>();
+  private readonly freeformIndex = new Map<string, number>();
+  private readonly columnItemIndex = new Map<string, number>(); // per-column card index
+
+  // Milanote canvas coordinate system: 1 canvas unit ≈ 7 screen pixels at 100% zoom.
+  // Element widths in canvas units: column ~39, subboard ~33, swatch ~13.
+  // Use tight spacing to avoid large gaps.
+
+  private nextColumnPos(boardId: string): { x: number; y: number; score: number } {
+    const i = this.columnIndex.get(boardId) ?? 0;
+    this.columnIndex.set(boardId, i + 1);
+    // ~40 canvas units per column (~280px at 100% zoom — matches column visual width + gap)
+    return { x: i * 40, y: 0, score: (i + 1) * 65536 };
+  }
+
+  private nextFreeformPos(
+    boardId: string,
+    opts: { colWidth?: number; rowHeight?: number; startY?: number } = {},
+  ): { x: number; y: number; score: number } {
+    const i = this.freeformIndex.get(boardId) ?? 0;
+    this.freeformIndex.set(boardId, i + 1);
+    const colWidth = opts.colWidth ?? 40;    // ~280px per subboard slot
+    const rowHeight = opts.rowHeight ?? 30;  // ~210px per row
+    const startY = opts.startY ?? 60;        // ~420px below column row
+    const col = i % 3;
+    const row = Math.floor(i / 3);
+    return { x: col * colWidth, y: startY + row * rowHeight, score: (i + 1) * 65536 };
+  }
+
+  private nextSwatchPos(boardId: string): { x: number; y: number; score: number } {
+    // Swatches are ~90px wide (~13 canvas units) — tight horizontal row
+    return this.nextFreeformPos(boardId, { colWidth: 15, rowHeight: 18, startY: 5 });
+  }
+
+  private nextColumnItemIndex(columnId: string): number {
+    const i = this.columnItemIndex.get(columnId) ?? 0;
+    this.columnItemIndex.set(columnId, i + 1);
+    return i;
+  }
+
   private async permToken(boardId: string): Promise<string> {
     const resp = await this.client.getJson<PermissionsTokenResponse>(
       `/api/permissions/token?ids=${boardId}`,
@@ -87,7 +133,8 @@ export class ApiCreator implements Creator {
     }
     await this.socket.navigate(parent.id);
     const id = genSocketId();
-    await this.socket.createElement(parent.id, id, 'COLUMN', { title });
+    const pos = this.nextColumnPos(parent.id);
+    await this.socket.createElement(parent.id, id, 'COLUMN', { title }, pos);
     return { id };
   }
 
@@ -109,21 +156,29 @@ export class ApiCreator implements Creator {
     const containerId = column?.id ?? parent.id;
     const inColumn = !!column;
 
+    // Position helpers: column items use INBOX sequential index; freeform gets canvas coords.
+    const colItemScore = inColumn ? this.nextColumnItemIndex(containerId) : 0;
+    const pos = (isSwatchLayout = false) => {
+      if (inColumn) return { x: 0, y: 0, score: colItemScore };
+      return isSwatchLayout
+        ? this.nextSwatchPos(parent.id)
+        : this.nextFreeformPos(parent.id);
+    };
+
     const id = genSocketId();
 
     switch (card.type) {
       case 'note':
-        await this.socket.createElement(containerId, id, 'CARD', { textContent: card.text }, undefined, inColumn);
+        await this.socket.createElement(containerId, id, 'CARD', { textContent: card.text }, pos(), inColumn);
         break;
 
       case 'link':
-        // Create with url in content (supported for programmatic creation)
         await this.socket.createElement(containerId, id, 'LINK', {
           url: card.url,
           ...(card.title ? { title: card.title } : {}),
           ...(card.description ? { description: card.description } : {}),
-        }, undefined, inColumn);
-        // Also send ELEMENT_UPDATE with data wrapper (confirmed bundle format: updates:[{id,data:{url}}])
+        }, pos(), inColumn);
+        // ELEMENT_UPDATE with data wrapper to ensure URL persists (confirmed bundle format)
         await this.socket.updateElement(parent.id, id, {
           url: card.url,
           ...(card.title ? { title: card.title } : {}),
@@ -132,18 +187,17 @@ export class ApiCreator implements Creator {
         break;
 
       case 'checklist': {
-        // TASK_LIST container inside the column, then TASK children inside the list
         await this.socket.createElement(containerId, id, 'TASK_LIST', {
           title: card.title ?? null,
           showTitle: !!card.title,
-        }, undefined, inColumn);
-        let idx = 0;
+        }, pos(), inColumn);
+        let taskIdx = 0;
         for (const item of card.items) {
           const taskId = genSocketId();
           await this.socket.createElement(id, taskId, 'TASK', {
             textContent: item.text,
             checked: item.done ?? false,
-          }, { x: 0, y: 0, score: idx++ });
+          }, { x: 0, y: 0, score: taskIdx++ });
         }
         break;
       }
@@ -152,15 +206,15 @@ export class ApiCreator implements Creator {
         await this.socket.createElement(containerId, id, 'IMAGE', {
           url: card.src,
           ...(card.caption ? { caption: card.caption } : {}),
-        }, undefined, inColumn);
+        }, pos(), inColumn);
         break;
 
       case 'swatch':
-        // Milanote element type is COLOR_SWATCH (not SWATCH)
+        // COLOR_SWATCH is ~90px wide — use tight horizontal layout when freeform
         await this.socket.createElement(containerId, id, 'COLOR_SWATCH', {
           color: card.hex,
           ...(card.label ? { label: card.label } : {}),
-        }, undefined, inColumn);
+        }, pos(true), inColumn);
         break;
 
       case 'file':
@@ -190,10 +244,11 @@ export class ApiCreator implements Creator {
     }
     await this.socket.navigate(parent.id);
     const id = genSocketId();
+    const pos = this.nextFreeformPos(parent.id);
     await this.socket.createElement(parent.id, id, 'BOARD', {
       title,
       ...(description ? { description } : {}),
-    });
+    }, pos);
     // Wait for server to register new board before creating children inside it
     await new Promise((r) => setTimeout(r, 800));
     return { id, url: `https://app.milanote.com/${id}/` };
