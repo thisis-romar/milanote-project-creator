@@ -185,9 +185,10 @@ export class CollabSocket {
   }
 
   /**
-   * Create any element in a board or inside another element.
-   * For TASK elements (children of TASK_LIST): pass `position` with `{x:0, y:0, score: index}`
-   * and set `isListItem: true` — uses INBOX section instead of CANVAS.
+   * Create any element inside a board, column, or other container.
+   *
+   * @param inList - true when creating inside a COLUMN or TASK_LIST (uses INBOX section
+   *   with index-based position). TASK elements always use INBOX regardless of this flag.
    */
   async createElement(
     parentId: string,
@@ -195,8 +196,9 @@ export class CollabSocket {
     elementType: string,
     content: Record<string, unknown>,
     position?: { x: number; y: number; score: number },
+    inList = false,
   ): Promise<string> {
-    const isListItem = elementType === 'TASK';
+    const isListItem = elementType === 'TASK' || inList;
     const section = isListItem ? 'INBOX' : 'CANVAS';
     const pos = isListItem
       ? { index: position?.score ?? 0, score: position?.score ?? 0 }

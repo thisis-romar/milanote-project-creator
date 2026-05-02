@@ -91,36 +91,39 @@ export class ApiCreator implements Creator {
 
   async createCard(
     parent: BoardRef,
-    _column: ColumnRef | null,
+    column: ColumnRef | null,
     card: Exclude<Card, { type: 'board' }>,
   ): Promise<CardRef> {
-    void _column;
     if (!this.socket) {
       throw new NotImplementedError('ApiCreator.createCard', 'CollabSocket required for card creation.');
     }
 
-    await this.socket.navigate(parent.id);
+    // Cards inside a column are children of the column (INBOX section),
+    // not children of the board (CANVAS section).
+    const containerId = column?.id ?? parent.id;
+    const inColumn = !!column;
+
     const id = genSocketId();
 
     switch (card.type) {
       case 'note':
-        await this.socket.createElement(parent.id, id, 'CARD', { textContent: card.text });
+        await this.socket.createElement(containerId, id, 'CARD', { textContent: card.text }, undefined, inColumn);
         break;
 
       case 'link':
-        await this.socket.createElement(parent.id, id, 'LINK', {
+        await this.socket.createElement(containerId, id, 'LINK', {
           url: card.url,
           ...(card.title ? { title: card.title } : {}),
           ...(card.description ? { description: card.description } : {}),
-        });
+        }, undefined, inColumn);
         break;
 
       case 'checklist': {
-        // TASK_LIST container first, then one TASK per item
-        await this.socket.createElement(parent.id, id, 'TASK_LIST', {
+        // TASK_LIST container inside the column, then TASK children inside the list
+        await this.socket.createElement(containerId, id, 'TASK_LIST', {
           title: card.title ?? null,
           showTitle: !!card.title,
-        });
+        }, undefined, inColumn);
         let idx = 0;
         for (const item of card.items) {
           const taskId = genSocketId();
@@ -133,17 +136,17 @@ export class ApiCreator implements Creator {
       }
 
       case 'image':
-        await this.socket.createElement(parent.id, id, 'IMAGE', {
+        await this.socket.createElement(containerId, id, 'IMAGE', {
           url: card.src,
           ...(card.caption ? { caption: card.caption } : {}),
-        });
+        }, undefined, inColumn);
         break;
 
       case 'swatch':
-        await this.socket.createElement(parent.id, id, 'SWATCH', {
+        await this.socket.createElement(containerId, id, 'SWATCH', {
           color: card.hex,
           ...(card.label ? { label: card.label } : {}),
-        });
+        }, undefined, inColumn);
         break;
 
       case 'file':
