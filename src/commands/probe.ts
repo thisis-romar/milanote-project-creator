@@ -1,9 +1,9 @@
 /**
  * @file probe.ts
- * @description `milanote-creator probe` command — passive XHR capture for endpoint discovery
- * @version 0.1.0
+ * @description `milanote-creator probe` command — passive XHR + WebSocket capture for endpoint discovery
+ * @version 0.2.0
  * @created 2026-04-29T00:00:00Z
- * @lastUpdated 2026-04-29T00:00:00Z
+ * @lastUpdated 2026-05-02T15:34:43Z
  */
 
 import type { Command } from 'commander';
@@ -86,6 +86,32 @@ export function registerProbeCommand(program: Command): void {
         }
       } else {
         console.log('\n' + chalk.dim('No 2xx mutations captured. Try performing more actions, or extend --duration.'));
+      }
+
+      // ── WebSocket summary ─────────────────────────────────────────────────
+      console.log('\n' + chalk.bold('WebSocket frames:'));
+      console.log(`  Sent     ${summary.wsFrameCounts.sent}`);
+      console.log(`  Received ${summary.wsFrameCounts.received}`);
+      console.log(`  Total    ${summary.wsFrameCounts.total}`);
+
+      if (summary.wsByUrl.length > 0) {
+        console.log('\n' + chalk.bold('WS by URL:'));
+        for (const w of summary.wsByUrl) {
+          console.log(`  ${w.sent.toString().padStart(3)}↑ ${w.received.toString().padStart(3)}↓  ${w.url}`);
+        }
+      }
+
+      if (summary.wsSampleSent.length > 0) {
+        console.log('\n' + chalk.bold(`First ${summary.wsSampleSent.length} sent frames (truncated):`));
+        for (const f of summary.wsSampleSent) {
+          const preview =
+            f.payloadType === 'text'
+              ? f.payload.slice(0, 200).replace(/\n/g, '\\n')
+              : `<binary ${f.payloadBytes}B>`;
+          console.log(`  ${chalk.cyan(new Date(f.timestamp).toISOString().slice(11, 23))}  ${preview}`);
+        }
+      } else {
+        console.log('\n' + chalk.dim('No WS sent frames captured.'));
       }
 
       await browser.close();

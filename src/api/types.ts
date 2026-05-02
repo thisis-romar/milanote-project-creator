@@ -1,12 +1,16 @@
 /**
  * @file types.ts
  * @description Shared types for the Milanote API layer
- * @version 0.2.0
+ * @version 0.3.0
  * @created 2026-04-29T00:00:00Z
- * @lastUpdated 2026-05-02T00:00:00Z
+ * @lastUpdated 2026-05-02T15:34:43Z
  *
  * Zod schemas added in v0.2.0 are derived from confirmed shapes observed during the
  * automated probe session on 2026-05-02 (see knowledge/audit/2026-05-02-automated-probe.md).
+ *
+ * v0.3.0 adds CapturedWsFrame + WsLifecycleEvent for WebSocket capture in src/api/probe.ts,
+ * since Milanote's element create/update/delete operations flow over wss://collab.milanote.com
+ * rather than HTTP.
  */
 
 import { z } from 'zod';
@@ -84,6 +88,8 @@ export interface ProbeResult {
   endedAt: string;
   totalRequests: number;
   capturedRequests: CapturedRequest[];
+  capturedWsFrames: CapturedWsFrame[];
+  capturedWsEvents: WsLifecycleEvent[];
 }
 
 /**
@@ -95,4 +101,36 @@ export interface ProbeSummary {
   byStatus: Record<string, number>;
   topPaths: Array<{ path: string; count: number; methods: string[] }>;
   candidateMutations: CapturedRequest[];
+  wsFrameCounts: { sent: number; received: number; total: number };
+  wsByUrl: Array<{ url: string; sent: number; received: number }>;
+  wsSampleSent: CapturedWsFrame[];
+}
+
+// ─── WebSocket capture ───────────────────────────────────────────────────────
+// Milanote's collab server (wss://collab.milanote.com) carries all element
+// create/update/delete operations — see knowledge/milanote/reference/api/collab-websocket.md
+//
+// Text frames are stored as-is (truncated at 50 KB).
+// Binary frames are base64-encoded into the `payload` field with payloadType='binary'.
+
+export interface CapturedWsFrame {
+  /** ms epoch */
+  timestamp: number;
+  /** Per-connection ID — group frames by this to reconstruct a session */
+  wsId: string;
+  direction: 'sent' | 'received';
+  url: string;
+  payload: string;
+  payloadType: 'text' | 'binary';
+  payloadBytes: number;
+  truncated?: boolean;
+}
+
+export interface WsLifecycleEvent {
+  timestamp: number;
+  wsId: string;
+  url: string;
+  kind: 'open' | 'close' | 'error';
+  /** Populated when kind === 'error' */
+  error?: string;
 }
