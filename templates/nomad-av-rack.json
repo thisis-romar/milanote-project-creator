@@ -7,58 +7,18 @@
   },
   "board": {
     "title": "{{venue}} — AV Rack",
-    "description": "{{system}} sound system — rack build, wiring, signal flow, and documentation for {{venue}}.",
+    "description": "{{system}} sound system — 8 conversation subboards, each with artifacts.",
     "columns": [
       {
-        "title": "System Overview",
+        "title": "System",
         "cards": [
           {
             "type": "note",
             "text": "16-speaker VOID Acoustics system:\n• Mains: 4× Stasys Xair (2 stacks L/R)\n• Outboard subs: 2× Venu 215 V2\n• Amps: 2× Bias V3 + Q2\n• Signal processor: Drawmer SP2120\n• Mixer: Allen & Heath CQ12\n• Control: Armonía Pro Audio Suite"
           },
           {
-            "type": "link",
-            "url": "https://claude.ai/chat/54db5ad6-e91b-4fd5-9650-c6ee77acfc30",
-            "title": "System Overview & Electrical Panels",
-            "description": "Complete Nomad Toronto VOID Acoustics system overview, rack power topology, load calculations, breaker allocation, and speaker layout (Venu 215 V2 flanks + Xair stacks)"
-          }
-        ]
-      },
-      {
-        "title": "Wiring & Signal Flow",
-        "cards": [
-          {
-            "type": "link",
-            "url": "https://claude.ai/chat/81ef8190-238f-4f37-901d-ead397b7a6e1",
-            "title": "Amp Rack Cable Schedule & Connection Diagram",
-            "description": "Cable schedule and connection diagram for the full rack — VOID Xair subs wired parallel on Bias V3 channels, all I/O rear-panel verified against manufacturer manuals"
-          },
-          {
-            "type": "link",
-            "url": "https://claude.ai/chat/61c49787-7fd9-4227-ae32-2f3c8301d7f6",
-            "title": "Audio Rack Equipment Audit & System Rewiring",
-            "description": "Armonía Pro Audio Suite screenshot audit, corrected 16-speaker system rewiring (Drawmer SP2120 → V3/Q2), signal flow diagram, and audio-system-diagram skill extraction"
-          },
-          {
-            "type": "link",
-            "url": "https://claude.ai/chat/c8999358-0d6d-42d2-8abd-d5e1b06ff2d8",
-            "title": "CQ12 Mixer System Diagram Audit & Refactor",
-            "description": "Replaced Yamaha MG12 with Allen & Heath CQ12 — CH1+2 linked for V10 master, CH3+4 for V10 booth out via dedicated stereo output. Full SVG wiring diagram refactored."
-          }
-        ]
-      },
-      {
-        "title": "Equipment & Manuals",
-        "cards": [
-          {
-            "type": "link",
-            "url": "https://claude.ai/chat/bfe45378-1df0-4646-b3a1-dde53b1db8c4",
-            "title": "Yamaha MG12 I/O Validation & Corrections",
-            "description": "Pre-CQ12 mixer baseline — MG12 input/output audit with corrections, used as reference for the CQ12 upgrade comparison"
-          },
-          {
             "type": "checklist",
-            "title": "Equipment Confirmed in System",
+            "title": "Equipment Confirmed",
             "items": [
               { "text": "VOID Acoustics Bias V3 ×2 (amplifiers)", "done": true },
               { "text": "VOID Acoustics Q2 (amplifier)", "done": true },
@@ -70,36 +30,177 @@
             ]
           }
         ]
-      },
-      {
-        "title": "Rack Standards & Tools",
-        "cards": [
-          {
-            "type": "link",
-            "url": "https://claude.ai/chat/fb56aa22-37a8-4633-825c-6dd1c91f4db5",
-            "title": "19-Inch Rack Architecture & 12U Enclosure Standards",
-            "description": "Technical engineering report — 19-inch rack standards, 12U enclosure specs, global infrastructure dimensions with 10+ cited examples"
-          },
-          {
-            "type": "link",
-            "url": "https://claude.ai/chat/77927477-ddf9-4a6e-8507-652816224db0",
-            "title": "SVG Rack Elevation Diagram Skill",
-            "description": "Comparison of SVG vs proprietary rack documentation formats; skill extraction for reusable SVG rack elevation diagram generation"
-          }
-        ]
       }
     ],
     "freeform": [
       {
         "type": "board",
+        "title": "Amp Rack Cable Schedule",
+        "description": "Cable schedule, SVG connection diagram, PDF labels, system spec.",
+        "freeform": [
+          {
+            "type": "link",
+            "url": "https://claude.ai/chat/81ef8190-238f-4f37-901d-ead397b7a6e1",
+            "title": "Nomad Amp Rack Cable Schedule & Connection Diagram",
+            "description": "Cable schedule and signal flow diagram for the full rack"
+          },
+          {
+            "type": "note",
+            "text": "nomad_cable_schedule.docx\nCable schedule and connection diagram (Word)"
+          },
+          {
+            "type": "note",
+            "text": "nomad_connection_diagram.svg\nSVG signal flow / connection diagram for the amp rack"
+          },
+          {
+            "type": "note",
+            "text": "nomad_cable_labels.pdf\nPrintable cable label sheet — both-end labels for every connection"
+          },
+          {
+            "type": "note",
+            "text": "nomad_system_spec.md\nComprehensive system specification document for Nomad Toronto"
+          },
+          {
+            "type": "note",
+            "text": "nomad_wiring_review.md\nCable management plan and wiring optimisation analysis"
+          }
+        ]
+      },
+      {
+        "type": "board",
+        "title": "Audio Rack Equipment Audit",
+        "description": "Full system rewiring with Armonía control network. 28 deliverables.",
+        "freeform": [
+          {
+            "type": "link",
+            "url": "https://claude.ai/chat/61c49787-7fd9-4227-ae32-2f3c8301d7f6",
+            "title": "Audio Rack Equipment Audit & System Rewiring",
+            "description": "Armonía screenshots, corrected 16-speaker wiring, skill extraction"
+          },
+          {
+            "type": "note",
+            "text": "nomad_system_spec_armonia.docx\nFinal system spec — Armonía control network revision"
+          },
+          {
+            "type": "note",
+            "text": "nomad_wiring_diagram_final.pdf\nFinal wiring diagram PDF"
+          },
+          {
+            "type": "note",
+            "text": "nomad_wiring_18spk_armonia.pdf\n18-speaker wiring with Armonía DSP network"
+          },
+          {
+            "type": "note",
+            "text": "nomad_system_spec_18spk.docx\n18-speaker variant system spec"
+          },
+          {
+            "type": "note",
+            "text": "nomad_wiring_svg.jsx\nReact wiring diagram component (audio-system-diagram skill)"
+          },
+          {
+            "type": "note",
+            "text": "audio-system-diagram.skill\nPackaged Claude skill bundle — reusable audio wiring diagram generator"
+          },
+          {
+            "type": "note",
+            "text": "nomad_room_layout_18spk.pdf\nVenue room layout — 18-speaker configuration"
+          }
+        ]
+      },
+      {
+        "type": "board",
+        "title": "CQ12 Mixer System Diagram",
+        "description": "Allen & Heath CQ12 integration — wiring diagram v12, I/O audit.",
+        "freeform": [
+          {
+            "type": "link",
+            "url": "https://claude.ai/chat/c8999358-0d6d-42d2-8abd-d5e1b06ff2d8",
+            "title": "CQ12 Mixer System Diagram Audit & Refactor",
+            "description": "CH1+2 for V10 master, CH3+4 for V10 booth via dedicated stereo out"
+          },
+          {
+            "type": "note",
+            "text": "nomad-wiring-diagram.jsx (v12)\nReact diagram — CDJs, Q2#1, booth speakers on DJ BOOTH plane"
+          },
+          {
+            "type": "note",
+            "text": "nomad_io_audit.txt\nComprehensive I/O audit of all devices with Y-adapter notes"
+          }
+        ]
+      },
+      {
+        "type": "board",
+        "title": "Yamaha MG12 I/O Corrections",
+        "description": "Pre-CQ12 mixer baseline with tracked corrections.",
+        "freeform": [
+          {
+            "type": "link",
+            "url": "https://claude.ai/chat/bfe45378-1df0-4646-b3a1-dde53b1db8c4",
+            "title": "Yamaha MG12 Mixer Input Output Validation & Corrections",
+            "description": "MG12 I/O audit used as reference before CQ12 upgrade"
+          },
+          {
+            "type": "note",
+            "text": "nomad725-Sound-System-Spec-Mar16-2k26-corrected.docx\nSound system spec with tracked Yamaha MG12 I/O corrections (Mar 16, 2026)"
+          }
+        ]
+      },
+      {
+        "type": "board",
+        "title": "19-Inch Rack Architecture",
+        "description": "Technical engineering report — 19-inch rack standards, 12U specs.",
+        "freeform": [
+          {
+            "type": "link",
+            "url": "https://claude.ai/chat/fb56aa22-37a8-4633-825c-6dd1c91f4db5",
+            "title": "19-Inch Rack Architectures & 12U Enclosure Standards",
+            "description": "Technical report with 10+ cited examples — global infrastructure dimensions"
+          },
+          {
+            "type": "note",
+            "text": "Verifying 19-Inch Rack Standards and Specifications.md\nClaim-by-claim analysis of 19-inch rack standards (~21 KB)"
+          }
+        ]
+      },
+      {
+        "type": "board",
+        "title": "SVG Rack Elevation Diagram Skill",
+        "description": "SVG vs proprietary formats — reusable rack elevation diagram skill.",
+        "freeform": [
+          {
+            "type": "link",
+            "url": "https://claude.ai/chat/77927477-ddf9-4a6e-8507-652816224db0",
+            "title": "SVG Rack Elevation Diagram Code Generation Skill",
+            "description": "Format comparison; skill extraction for reusable rack diagram generation"
+          },
+          {
+            "type": "note",
+            "text": "SVG Rack Elevation Diagrams — A Complete Technical Reference.md\nComplete technical reference for SVG rack elevation diagrams (~16 KB)"
+          }
+        ]
+      },
+      {
+        "type": "board",
         "title": "Business & Monetization",
-        "description": "Strategy for monetizing the Nomad Toronto AV profile and documentation.",
+        "description": "Monetizing the fully-documented VOID Acoustics system as a commercial asset.",
         "freeform": [
           {
             "type": "link",
             "url": "https://claude.ai/chat/5b4811a9-d684-4dd6-a647-6784a4ce8865",
             "title": "Monetizing Nomad Toronto's AV Profile",
-            "description": "Strategy conversation — how to leverage the fully documented VOID Acoustics system and rack build as a commercial AV asset"
+            "description": "Strategy for leveraging the documented system for commercial AV consulting"
+          },
+          {
+            "type": "note",
+            "text": "Venue AV Documentation as a Service — NOMAD Toronto Productization.md\nProductizing the NØMAD Toronto profile for the Canadian market (~16 KB)"
+          },
+          {
+            "type": "note",
+            "text": "Emblem Projects — Venue Technical Operations Partner Strategy.md\nVenue technical operations partner strategy (~26 KB)"
+          },
+          {
+            "type": "note",
+            "text": "Emblem Projects — Strategic Growth Paths and Exit Roadmap.md\nStrategic growth paths and exit roadmap for venue AV documentation (~36 KB)"
           }
         ]
       },
