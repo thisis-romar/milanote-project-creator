@@ -10,7 +10,16 @@
       "Bash(python3 *)",
       "Bash(git add knowledge/*)",
       "Bash(git add scripts/*)",
-      "Bash(git commit *)"
+      "Bash(git add src/*)",
+      "Bash(git commit *)",
+      "PowerShell(Get-Date *)",
+      "PowerShell(npm run typecheck)",
+      "PowerShell(npm run lint)",
+      "PowerShell(npm run test)",
+      "PowerShell(npm install *)",
+      "PowerShell(yt-dlp *)",
+      "PowerShell(git add *)",
+      "PowerShell(git commit *)"
     ]
   },
   "hooks": {
