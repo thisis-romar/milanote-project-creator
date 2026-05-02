@@ -12,6 +12,7 @@ import { parseTemplate, TemplateParseError } from '../template/parser.js';
 import { buildPlan, printPlan, summarize } from '../creator/plan.js';
 import { createFromTemplate, OrchestratorError } from '../creator/orchestrator.js';
 import { ApiCreator } from '../api/creator.js';
+import { CollabSocket } from '../api/collab-socket.js';
 import { UiCreator } from '../ui/driver.js';
 import { MilanoteClient, getMilanoteCookies } from '../api/client.js';
 import { attachToEdge } from '../cdp/attach.js';
@@ -82,7 +83,25 @@ export function registerCreateCommand(program: Command): void {
 
       const cookies = await getMilanoteCookies(page.context());
       const client = new MilanoteClient(cookies);
-      const apiCreator = new ApiCreator(client);
+
+      // Extract the workspace/home board ID from the current page URL or --workspace flag.
+      // URL pattern: https://app.milanote.com/<boardId>/home  or  /<boardId>/<name>
+      const workspaceBoardId =
+        opts.workspace ??
+        (() => {
+          const m = page.url().match(/app\.milanote\.com\/([A-Za-z0-9]+)/);
+          return m?.[1];
+        })();
+
+      if (workspaceBoardId) {
+        console.log(chalk.dim(`  Workspace board: ${workspaceBoardId}`));
+      } else {
+        console.log(chalk.yellow('  Warning: could not extract workspace board ID from URL. createRootBoard will fail.'));
+      }
+
+      const socket = new CollabSocket();
+      await socket.connect(page);
+      const apiCreator = new ApiCreator(client, workspaceBoardId, socket);
       const uiCreator = new UiCreator(page);
 
       try {
@@ -96,13 +115,13 @@ export function registerCreateCommand(program: Command): void {
       } catch (e) {
         if (e instanceof OrchestratorError && e.cause instanceof NotImplementedError) {
           console.error(chalk.red(`\n✗ ${e.message}`));
-          console.error(chalk.dim('Both API and UI creators are still stubbed.'));
-          console.error(chalk.dim('Next: run `npm run dev probe -- --duration 180` and follow knowledge/milanote/playbooks/discovering-the-api.md'));
+          console.error(chalk.dim('A creator method is still unimplemented. Check the error above for details.'));
           process.exitCode = 1;
         } else {
           throw e;
         }
       } finally {
+        socket.disconnect();
         await browser.close();
       }
     });

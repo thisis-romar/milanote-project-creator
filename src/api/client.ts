@@ -104,7 +104,10 @@ export class MilanoteClient {
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify(body),
     });
-    if (!resp.ok) throw new Error(`POST ${path} failed: ${resp.status} ${resp.statusText}`);
+    if (!resp.ok) {
+      const text = await resp.text().catch(() => '');
+      throw new Error(`POST ${path} failed: ${resp.status} ${resp.statusText}${text ? ` — ${text.slice(0, 300)}` : ''}`);
+    }
     return resp.json() as Promise<T>;
   }
 }

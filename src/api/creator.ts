@@ -1,47 +1,25 @@
 /**
  * @file creator.ts
- * @description ApiCreator — creates Milanote elements via REST POST /api/elements
- * @version 0.2.0
+ * @description ApiCreator — creates Milanote elements via Socket.IO v4 collab server
+ * @version 0.3.0
  * @created 2026-04-29T00:00:00Z
- * @lastUpdated 2026-05-02T16:25:20Z
+ * @lastUpdated 2026-05-02T17:30:00Z
  *
- * Discovery source: static analysis of Milanote Web Clipper v2.3.7
- * (knowledge/milanote/reference/api/web-clipper-api.md)
+ * All element creation goes through CollabSocket (Socket.IO v4 on
+ * wss://app.milanote.com/socket.io/). REST POST /api/elements was tried first
+ * but returns null permissions tokens for workspace root boards under cookie auth.
+ * Socket.IO bypasses the permissions token requirement entirely.
  *
- * The clipper uses POST /api/elements with { elements: [...], tokens: <perm-token> }.
- * This is simpler than Socket.IO and uses the existing MilanoteClient HTTP stack.
- *
- * Still stubbed (no probe data yet): createRootBoard, createColumn, createSubboard.
+ * Confirmed working: BOARD, COLUMN, CARD, LINK, TASK_LIST, TASK, IMAGE, SWATCH
+ * Not yet implemented: FILE (needs signed upload flow)
  */
 
 import type { Card } from '../template/schema.js';
 import type { BoardRef, CardRef, ColumnRef, Creator } from '../creator/types.js';
 import { NotImplementedError } from '../creator/types.js';
 import type { MilanoteClient } from './client.js';
-
-const BOARD_STUB_HINT =
-  'Board/Column creation via REST not yet mapped. Run a probe session with ' +
-  '--reload while creating a board and column, then promote shapes to ' +
-  'knowledge/milanote/reference/api/ and implement here.';
-
-/** Client-side element ID matching the format observed in probe: ~14 alphanumeric chars */
-function generateElementId(): string {
-  const chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
-  return Array.from({ length: 14 }, () => chars[Math.floor(Math.random() * chars.length)]).join('');
-}
-
-/** Minimal Tiptap document wrapping plain text, as used by the Web Clipper for CARD elements */
-function tiptapDoc(text: string): object {
-  return {
-    type: 'doc',
-    content: [
-      {
-        type: 'paragraph',
-        content: [{ type: 'text', text }],
-      },
-    ],
-  };
-}
+import type { CollabSocket } from './collab-socket.js';
+import { generateElementId as genSocketId } from './collab-socket.js';
 
 interface ElementsResponse {
   elements?: Array<{ _id?: string; id?: string }>;
@@ -54,18 +32,61 @@ interface PermissionsTokenResponse {
 export class ApiCreator implements Creator {
   readonly strategy = 'api' as const;
 
-  constructor(private readonly client: MilanoteClient) {}
+  /**
+   * @param client — rate-limited HTTP client with Milanote session cookies
+   * @param workspaceBoardId — the home/workspace board ID (from page URL or --workspace flag)
+   * @param socket — optional CollabSocket for operations that need Socket.IO (board/column creation)
+   */
+  constructor(
+    private readonly client: MilanoteClient,
+    private readonly workspaceBoardId?: string,
+    private readonly socket?: CollabSocket,
+  ) {}
 
-  async createRootBoard(_title: string, _description?: string): Promise<BoardRef> {
-    void _title;
-    void _description;
-    throw new NotImplementedError('ApiCreator.createRootBoard', BOARD_STUB_HINT);
+  private async permToken(boardId: string): Promise<string> {
+    const resp = await this.client.getJson<PermissionsTokenResponse>(
+      `/api/permissions/token?ids=${boardId}`,
+    );
+    return resp.token;
   }
 
-  async createColumn(_parent: BoardRef, _title: string): Promise<ColumnRef> {
-    void _parent;
-    void _title;
-    throw new NotImplementedError('ApiCreator.createColumn', BOARD_STUB_HINT);
+  private async createElement(
+    parentId: string,
+    token: string,
+    element: Record<string, unknown>,
+  ): Promise<string> {
+    const resp = await this.client.postJson<ElementsResponse>('/api/elements', {
+      elements: [element],
+      tokens: token,
+    });
+    return resp.elements?.[0]?._id ?? resp.elements?.[0]?.id ?? (element.clientId as string);
+  }
+
+  async createRootBoard(title: string, description?: string): Promise<BoardRef> {
+    const parentId = this.workspaceBoardId;
+    if (!parentId || !this.socket) {
+      throw new NotImplementedError(
+        'ApiCreator.createRootBoard',
+        'Pass --workspace <home-board-id> and ensure CollabSocket is connected.',
+      );
+    }
+    await this.socket.navigate(parentId);
+    const id = genSocketId();
+    await this.socket.createElement(parentId, id, 'BOARD', {
+      title,
+      ...(description ? { description } : {}),
+    });
+    return { id, url: `https://app.milanote.com/${id}/` };
+  }
+
+  async createColumn(parent: BoardRef, title: string): Promise<ColumnRef> {
+    if (!this.socket) {
+      throw new NotImplementedError('ApiCreator.createColumn', 'CollabSocket required for column creation.');
+    }
+    await this.socket.navigate(parent.id);
+    const id = genSocketId();
+    await this.socket.createElement(parent.id, id, 'COLUMN', { title });
+    return { id };
   }
 
   async createCard(
@@ -74,73 +95,61 @@ export class ApiCreator implements Creator {
     card: Exclude<Card, { type: 'board' }>,
   ): Promise<CardRef> {
     void _column;
+    if (!this.socket) {
+      throw new NotImplementedError('ApiCreator.createCard', 'CollabSocket required for card creation.');
+    }
 
-    // Get permissions token for the parent board
-    const { token } = await this.client.getJson<PermissionsTokenResponse>(
-      `/api/permissions/token?ids=${parent.id}`,
-    );
-
-    const clientId = generateElementId();
-    let element: Record<string, unknown>;
+    await this.socket.navigate(parent.id);
+    const id = genSocketId();
 
     switch (card.type) {
       case 'note':
-        element = {
-          elementType: 'CARD',
-          clientId,
-          parentId: parent.id,
-          text: tiptapDoc(card.text),
-        };
+        await this.socket.createElement(parent.id, id, 'CARD', { textContent: card.text });
         break;
 
       case 'link':
-        element = {
-          elementType: 'LINK',
-          clientId,
-          parentId: parent.id,
+        await this.socket.createElement(parent.id, id, 'LINK', {
           url: card.url,
           ...(card.title ? { title: card.title } : {}),
           ...(card.description ? { description: card.description } : {}),
-        };
+        });
         break;
 
-      case 'checklist':
-        element = {
-          elementType: 'TASK_LIST',
-          clientId,
-          parentId: parent.id,
-          ...(card.title ? { title: card.title } : {}),
-          items: card.items.map((item) => ({
-            text: item.text,
+      case 'checklist': {
+        // TASK_LIST container first, then one TASK per item
+        await this.socket.createElement(parent.id, id, 'TASK_LIST', {
+          title: card.title ?? null,
+          showTitle: !!card.title,
+        });
+        let idx = 0;
+        for (const item of card.items) {
+          const taskId = genSocketId();
+          await this.socket.createElement(id, taskId, 'TASK', {
+            textContent: item.text,
             checked: item.done ?? false,
-          })),
-        };
+          }, { x: 0, y: 0, score: idx++ });
+        }
         break;
+      }
 
       case 'image':
-        element = {
-          elementType: 'IMAGE',
-          clientId,
-          parentId: parent.id,
+        await this.socket.createElement(parent.id, id, 'IMAGE', {
           url: card.src,
           ...(card.caption ? { caption: card.caption } : {}),
-        };
+        });
         break;
 
       case 'swatch':
-        element = {
-          elementType: 'SWATCH',
-          clientId,
-          parentId: parent.id,
+        await this.socket.createElement(parent.id, id, 'SWATCH', {
           color: card.hex,
           ...(card.label ? { label: card.label } : {}),
-        };
+        });
         break;
 
       case 'file':
         throw new NotImplementedError(
           'ApiCreator.createCard(file)',
-          'File upload requires a 3-step flow: POST /api/upload/sign → PUT <signed-url> → POST /api/elements. Not yet implemented.',
+          'File upload not yet implemented.',
         );
 
       default: {
@@ -149,26 +158,25 @@ export class ApiCreator implements Creator {
       }
     }
 
-    const resp = await this.client.postJson<ElementsResponse>('/api/elements', {
-      elements: [element],
-      tokens: token,
-    });
-
-    const created = resp.elements?.[0];
-    const id = created?._id ?? created?.id ?? clientId;
     return { id, type: card.type };
   }
 
   async createSubboard(
-    _parent: BoardRef,
+    parent: BoardRef,
     _column: ColumnRef | null,
-    _title: string,
-    _description?: string,
+    title: string,
+    description?: string,
   ): Promise<BoardRef> {
-    void _parent;
     void _column;
-    void _title;
-    void _description;
-    throw new NotImplementedError('ApiCreator.createSubboard', BOARD_STUB_HINT);
+    if (!this.socket) {
+      throw new NotImplementedError('ApiCreator.createSubboard', 'CollabSocket required for subboard creation.');
+    }
+    await this.socket.navigate(parent.id);
+    const id = genSocketId();
+    await this.socket.createElement(parent.id, id, 'BOARD', {
+      title,
+      ...(description ? { description } : {}),
+    });
+    return { id, url: `https://app.milanote.com/${id}/` };
   }
 }

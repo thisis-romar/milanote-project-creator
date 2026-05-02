@@ -1,0 +1,190 @@
+/**
+ * @file collab-socket.ts
+ * @description Minimal Socket.IO v4 client for Milanote's collab server
+ * @version 1.0.0
+ * @created 2026-05-02T16:25:20Z
+ * @lastUpdated 2026-05-02T17:30:00Z
+ *
+ * Milanote routes all element create/update/delete through Socket.IO v4 on
+ * wss://app.milanote.com/socket.io/ — not REST.
+ *
+ * REST POST /api/elements works for leaf elements (CARD, LINK, etc.) when the
+ * permissions token is non-null, but BOARD creation inside the workspace root
+ * always returns null token via cookie auth. CollabSocket bypasses this.
+ *
+ * Protocol:
+ *   Engine.IO 4 handshake: server sends 0{...}, client sends 40
+ *   Socket.IO event frame: 42N["action", payload]  (N = sequential counter)
+ *   Heartbeat: server sends 2, client replies 3
+ */
+
+import WebSocket from 'ws';
+import type { Page } from 'playwright';
+import { getMilanoteCookies, buildCookieHeader } from './client.js';
+
+const COLLAB_HOST = 'app.milanote.com';
+const SOCKET_PATH = '/socket.io/';
+
+/** Client-side ID matching Milanote's observed pattern (~14 alphanumeric chars) */
+export function generateElementId(): string {
+  const chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+  return Array.from({ length: 14 }, () => chars[Math.floor(Math.random() * chars.length)]).join('');
+}
+
+export class CollabSocket {
+  private ws: WebSocket | null = null;
+  private counter = 0;
+  private userId = '';
+  private clientId = generateElementId().slice(0, 6);
+  private sessionId = `msid-${generateElementId().slice(0, 10)}`;
+  private deviceId = `mdid-${generateElementId().slice(0, 10)}`;
+  private cookieHeader = '';
+  private pingInterval: ReturnType<typeof setInterval> | null = null;
+
+  async connect(page: Page): Promise<void> {
+    const cookies = await getMilanoteCookies(page.context());
+    this.cookieHeader = buildCookieHeader(cookies);
+
+    // Extract userId — stored in mn-ot-data-subject-params as URL-encoded JSON {"id":"..."}
+    const otParams = cookies.find((c) => c.name === 'mn-ot-data-subject-params');
+    if (otParams) {
+      try {
+        const decoded = decodeURIComponent(otParams.value);
+        const parsed = JSON.parse(decoded) as { id?: string };
+        if (parsed.id) this.userId = parsed.id;
+      } catch { /* ignore */ }
+    }
+
+    // Fallback: try existing socket.io URL in performance entries
+    if (!this.userId) {
+      const uid = await page.evaluate(() => {
+        const entries = performance.getEntriesByType('resource') as PerformanceResourceTiming[];
+        const entry = entries.find((e) => e.name.includes('socket.io') && e.name.includes('userId='));
+        if (!entry) return null;
+        try { return new URL(entry.name).searchParams.get('userId'); } catch { return null; }
+      });
+      if (uid) this.userId = uid;
+    }
+
+    if (!this.userId) throw new Error('CollabSocket: could not extract userId from session');
+
+    const url = `wss://${COLLAB_HOST}${SOCKET_PATH}?userId=${this.userId}&EIO=4&transport=websocket`;
+
+    await new Promise<void>((resolve, reject) => {
+      this.ws = new WebSocket(url, {
+        headers: { cookie: this.cookieHeader },
+        handshakeTimeout: 10_000,
+      });
+
+      const timeout = setTimeout(() => reject(new Error('CollabSocket: connect timeout')), 15_000);
+
+      this.ws.on('error', (err) => { clearTimeout(timeout); reject(err); });
+
+      this.ws.on('message', (raw) => {
+        const msg = raw.toString();
+        // EIO open packet
+        if (msg.startsWith('0')) {
+          this.ws!.send('40'); // SIO connect
+          return;
+        }
+        // SIO connected
+        if (msg === '40' || msg.startsWith('40{')) {
+          clearTimeout(timeout);
+          // Start heartbeat
+          this.pingInterval = setInterval(() => {
+            if (this.ws?.readyState === WebSocket.OPEN) this.ws.send('3');
+          }, 20_000);
+          resolve();
+          return;
+        }
+        // Ping from server
+        if (msg === '2') { this.ws!.send('3'); }
+      });
+    });
+  }
+
+  disconnect(): void {
+    if (this.pingInterval) { clearInterval(this.pingInterval); this.pingInterval = null; }
+    this.ws?.close();
+    this.ws = null;
+  }
+
+  async sendAction(action: Record<string, unknown>): Promise<void> {
+    if (!this.ws || this.ws.readyState !== WebSocket.OPEN) {
+      throw new Error('CollabSocket: not connected');
+    }
+    const n = this.counter++;
+    const frame = `4${2 + n}["action",${JSON.stringify(action)}]`;
+    await new Promise<void>((resolve, reject) => {
+      this.ws!.send(frame, (err) => (err ? reject(err) : resolve()));
+    });
+  }
+
+  buildMeta(_boardId: string): Record<string, unknown> {
+    const now = Date.now();
+    return {
+      creator: this.userId,
+      modifiedBy: this.userId,
+      createdTime: now,
+      modifiedTime: now,
+      platform: 'Desktop web',
+      locationSectionModifiedTime: now,
+      versionId: `${this.sessionId}-1`,
+    };
+  }
+
+  baseAction(type: string, boardId: string): Record<string, unknown> {
+    return {
+      type,
+      timestamp: Date.now(),
+      sync: true,
+      user: { _id: this.userId, clientId: this.clientId, clientTick: this.counter },
+      deviceId: this.deviceId,
+      sessionId: this.sessionId,
+      channels: [`${boardId}-LIVE`],
+    };
+  }
+
+  /** Navigate to a board (required before creating elements in it) */
+  async navigate(boardId: string): Promise<void> {
+    await this.sendAction({
+      ...this.baseAction('USER_NAVIGATE', boardId),
+      newBoardId: boardId,
+      permissionId: null,
+      permission: 31,
+      persist: true,
+      navigationSource: 'web',
+      monitoring: { operation: 'GENERAL', requestMode: 'bufferFlush' },
+      activity: { track: true, isPreviousBoardShared: false, isNewBoardShared: false },
+    });
+  }
+
+  /**
+   * Create any element in a board or inside another element.
+   * For TASK elements (children of TASK_LIST): pass `position` with `{x:0, y:0, score: index}`
+   * and set `isListItem: true` — uses INBOX section instead of CANVAS.
+   */
+  async createElement(
+    parentId: string,
+    elementId: string,
+    elementType: string,
+    content: Record<string, unknown>,
+    position?: { x: number; y: number; score: number },
+  ): Promise<string> {
+    const isListItem = elementType === 'TASK';
+    const section = isListItem ? 'INBOX' : 'CANVAS';
+    const pos = isListItem
+      ? { index: position?.score ?? 0, score: position?.score ?? 0 }
+      : { x: position?.x ?? 100, y: position?.y ?? 100, score: position?.score ?? 196608 };
+
+    await this.sendAction({
+      ...this.baseAction('ELEMENT_CREATE', parentId),
+      id: elementId,
+      elementType,
+      location: { parentId, section, position: pos },
+      content,
+      meta: this.buildMeta(parentId),
+    });
+    return elementId;
+  }
+}
