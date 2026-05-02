@@ -121,7 +121,7 @@ export function registerCreateCommand(program: Command): void {
           throw e;
         }
       } finally {
-        socket.disconnect();
+        await socket.disconnect();
         await browser.close();
       }
     });

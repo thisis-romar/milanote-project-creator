@@ -103,7 +103,9 @@ export class CollabSocket {
     });
   }
 
-  disconnect(): void {
+  async disconnect(): Promise<void> {
+    // Wait for server to process queued actions before closing
+    await new Promise((r) => setTimeout(r, 1500));
     if (this.pingInterval) { clearInterval(this.pingInterval); this.pingInterval = null; }
     this.ws?.close();
     this.ws = null;
@@ -113,11 +115,33 @@ export class CollabSocket {
     if (!this.ws || this.ws.readyState !== WebSocket.OPEN) {
       throw new Error('CollabSocket: not connected');
     }
+    // Protocol: 4 (EIO message) + 2 (SIO event) + N (sequential counter) + payload
+    // e.g. 420["action",...], 421["action",...] — NOT 42, 43 (which changes the SIO type byte)
     const n = this.counter++;
-    const frame = `4${2 + n}["action",${JSON.stringify(action)}]`;
+    const frame = `42${n}["action",${JSON.stringify(action)}]`;
     await new Promise<void>((resolve, reject) => {
       this.ws!.send(frame, (err) => (err ? reject(err) : resolve()));
     });
+    // Brief yield so the server has time to process before the next send
+    await new Promise((r) => setTimeout(r, 50));
+  }
+
+  /** Send update-channels — required before ELEMENT_CREATE to register board subscriptions */
+  async updateChannels(boardId: string): Promise<void> {
+    if (!this.ws || this.ws.readyState !== WebSocket.OPEN) return;
+    const n = this.counter++;
+    const payload = {
+      joined: [this.userId, `${boardId}-LIVE`, `${this.userId}-PERSONAL`, boardId],
+      left: [],
+      bufferFlush: true,
+      replay: true,
+      monitoring: { requestMode: 'bufferFlush' },
+    };
+    const frame = `42${n}["update-channels",${JSON.stringify(payload)}]`;
+    await new Promise<void>((resolve, reject) => {
+      this.ws!.send(frame, (err) => (err ? reject(err) : resolve()));
+    });
+    await new Promise((r) => setTimeout(r, 100));
   }
 
   buildMeta(_boardId: string): Record<string, unknown> {
@@ -145,7 +169,7 @@ export class CollabSocket {
     };
   }
 
-  /** Navigate to a board (required before creating elements in it) */
+  /** Navigate to a board and subscribe to its channels (required before ELEMENT_CREATE) */
   async navigate(boardId: string): Promise<void> {
     await this.sendAction({
       ...this.baseAction('USER_NAVIGATE', boardId),
@@ -157,6 +181,7 @@ export class CollabSocket {
       monitoring: { operation: 'GENERAL', requestMode: 'bufferFlush' },
       activity: { track: true, isPreviousBoardShared: false, isNewBoardShared: false },
     });
+    await this.updateChannels(boardId);
   }
 
   /**
