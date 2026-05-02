@@ -187,17 +187,19 @@ export class CollabSocket {
     await this.updateChannels(boardId);
   }
 
-  /** Send ELEMENT_UPDATE to set content fields after creation */
+  /**
+   * Send ELEMENT_UPDATE — updates is an array of { id, data: {...fields} }.
+   * Confirmed from bundle: updates:[{id:e,data:t}] pattern.
+   */
   async updateElement(
     boardId: string,
     elementId: string,
-    updates: Record<string, unknown>,
+    data: Record<string, unknown>,
   ): Promise<void> {
     await this.navigate(boardId);
     await this.sendAction({
       ...this.baseAction('ELEMENT_UPDATE', boardId),
-      id: elementId,
-      updates,
+      updates: [{ id: elementId, data }],
     });
   }
 

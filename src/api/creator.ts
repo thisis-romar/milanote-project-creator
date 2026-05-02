@@ -76,6 +76,8 @@ export class ApiCreator implements Creator {
       title,
       ...(description ? { description } : {}),
     });
+    // Wait for server to register the new board before we create children inside it
+    await new Promise((r) => setTimeout(r, 800));
     return { id, url: `https://app.milanote.com/${id}/` };
   }
 
@@ -115,14 +117,17 @@ export class ApiCreator implements Creator {
         break;
 
       case 'link':
-        await this.socket.createElement(containerId, id, 'LINK', { url: null }, undefined, inColumn);
-        // LINK content (url, title, description) must be set via ELEMENT_UPDATE after creation
+        // Create with url in content (supported for programmatic creation)
+        await this.socket.createElement(containerId, id, 'LINK', {
+          url: card.url,
+          ...(card.title ? { title: card.title } : {}),
+          ...(card.description ? { description: card.description } : {}),
+        }, undefined, inColumn);
+        // Also send ELEMENT_UPDATE with data wrapper (confirmed bundle format: updates:[{id,data:{url}}])
         await this.socket.updateElement(parent.id, id, {
-          content: {
-            url: card.url,
-            ...(card.title ? { title: card.title } : {}),
-            ...(card.description ? { description: card.description } : {}),
-          },
+          url: card.url,
+          ...(card.title ? { title: card.title } : {}),
+          ...(card.description ? { description: card.description } : {}),
         });
         break;
 
@@ -151,7 +156,8 @@ export class ApiCreator implements Creator {
         break;
 
       case 'swatch':
-        await this.socket.createElement(containerId, id, 'SWATCH', {
+        // Milanote element type is COLOR_SWATCH (not SWATCH)
+        await this.socket.createElement(containerId, id, 'COLOR_SWATCH', {
           color: card.hex,
           ...(card.label ? { label: card.label } : {}),
         }, undefined, inColumn);
@@ -188,6 +194,8 @@ export class ApiCreator implements Creator {
       title,
       ...(description ? { description } : {}),
     });
+    // Wait for server to register new board before creating children inside it
+    await new Promise((r) => setTimeout(r, 800));
     return { id, url: `https://app.milanote.com/${id}/` };
   }
 }
