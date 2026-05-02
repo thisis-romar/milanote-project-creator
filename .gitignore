@@ -8,3 +8,4 @@ dist/
 .ms-debug/
 graphify-out/
 coverage/
+.claude/settings.local.json
