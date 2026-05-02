@@ -40,6 +40,7 @@ export class CollabSocket {
   private deviceId = `mdid-${generateElementId().slice(0, 10)}`;
   private cookieHeader = '';
   private pingInterval: ReturnType<typeof setInterval> | null = null;
+  private currentBoardId: string | null = null;
 
   async connect(page: Page): Promise<void> {
     const cookies = await getMilanoteCookies(page.context());
@@ -169,8 +170,10 @@ export class CollabSocket {
     };
   }
 
-  /** Navigate to a board and subscribe to its channels (required before ELEMENT_CREATE) */
+  /** Navigate to a board and subscribe to its channels. No-ops if already on that board. */
   async navigate(boardId: string): Promise<void> {
+    if (this.currentBoardId === boardId) return;
+    this.currentBoardId = boardId;
     await this.sendAction({
       ...this.baseAction('USER_NAVIGATE', boardId),
       newBoardId: boardId,
@@ -182,6 +185,20 @@ export class CollabSocket {
       activity: { track: true, isPreviousBoardShared: false, isNewBoardShared: false },
     });
     await this.updateChannels(boardId);
+  }
+
+  /** Send ELEMENT_UPDATE to set content fields after creation */
+  async updateElement(
+    boardId: string,
+    elementId: string,
+    updates: Record<string, unknown>,
+  ): Promise<void> {
+    await this.navigate(boardId);
+    await this.sendAction({
+      ...this.baseAction('ELEMENT_UPDATE', boardId),
+      id: elementId,
+      updates,
+    });
   }
 
   /**

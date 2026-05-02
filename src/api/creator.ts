@@ -98,6 +98,10 @@ export class ApiCreator implements Creator {
       throw new NotImplementedError('ApiCreator.createCard', 'CollabSocket required for card creation.');
     }
 
+    // Navigate to the board that owns this element so the server has a channel subscription.
+    // For freeform cards in a subboard, parent.id IS the subboard.
+    await this.socket.navigate(parent.id);
+
     // Cards inside a column are children of the column (INBOX section),
     // not children of the board (CANVAS section).
     const containerId = column?.id ?? parent.id;
@@ -111,11 +115,15 @@ export class ApiCreator implements Creator {
         break;
 
       case 'link':
-        await this.socket.createElement(containerId, id, 'LINK', {
-          url: card.url,
-          ...(card.title ? { title: card.title } : {}),
-          ...(card.description ? { description: card.description } : {}),
-        }, undefined, inColumn);
+        await this.socket.createElement(containerId, id, 'LINK', { url: null }, undefined, inColumn);
+        // LINK content (url, title, description) must be set via ELEMENT_UPDATE after creation
+        await this.socket.updateElement(parent.id, id, {
+          content: {
+            url: card.url,
+            ...(card.title ? { title: card.title } : {}),
+            ...(card.description ? { description: card.description } : {}),
+          },
+        });
         break;
 
       case 'checklist': {
