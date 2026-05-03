@@ -1,0 +1,232 @@
+{
+  "$schema": "https://example.com/milanote-template.schema.json",
+  "version": 1,
+  "variables": {
+    "venue": "Nomad Toronto",
+    "system": "VOID Acoustics"
+  },
+  "board": {
+    "title": "{{venue}} — AV Rack v2",
+    "description": "{{system}} system — component-centric layout arranged in signal flow order. Inspired by the motion-graphics pipeline structure and storyboard grid from Evan Abrams / Francesco Keep Productive tutorials.",
+    "columns": [
+      {
+        "title": "Signal Chain",
+        "cards": [
+          {
+            "type": "note",
+            "text": "CDJs / Turntables\n        ↓\nAllen & Heath CQ12  (Mixer)\n        ↓\nDrawmer SP2120  (DSP · Armonía)\n        ↓\n  ┌─────────────────┐\n  Bias V3 ×2          Q2\n  Stasys Xair ×4   Venu 215 ×2\n  └─────────────────┘"
+          },
+          {
+            "type": "link",
+            "url": "https://claude.ai/chat/61c49787-7fd9-4227-ae32-2f3c8301d7f6",
+            "title": "Master Reference — Full Audit",
+            "description": "16-speaker wiring + Armonía network — most complete single source"
+          }
+        ]
+      },
+      {
+        "title": "Rack Status",
+        "cards": [
+          {
+            "type": "checklist",
+            "title": "Commissioning",
+            "items": [
+              { "text": "CQ12 routing confirmed — CH1+2 mains, CH3+4 booth", "done": true },
+              { "text": "Drawmer SP2120 — Armonía presets saved", "done": true },
+              { "text": "Bias V3 ×2 — gain structure and speaker assignment set", "done": true },
+              { "text": "Q2 — booth monitor output configured", "done": true },
+              { "text": "Stasys Xair ×4 — L/R stacks rigged and tuned", "done": true },
+              { "text": "Venu 215 V2 ×2 — outboard subs aligned", "done": true },
+              { "text": "All cable labels printed and installed on rack", "done": false },
+              { "text": "System spec PDF filed with venue management", "done": false }
+            ]
+          }
+        ]
+      }
+    ],
+    "freeform": [
+      {
+        "type": "board",
+        "title": "CQ12 Mixer — Input Stage",
+        "description": "Allen & Heath CQ12 I/O, routing, DJ BOOTH plane. MG12 pre-upgrade baseline archived here.",
+        "freeform": [
+          {
+            "type": "link",
+            "url": "https://claude.ai/chat/c8999358-0d6d-42d2-8abd-d5e1b06ff2d8",
+            "title": "CQ12 System Diagram Audit & Refactor",
+            "description": "v12 wiring diagram — CDJs, Q2#1, booth speakers on DJ BOOTH plane"
+          },
+          {
+            "type": "link",
+            "url": "https://claude.ai/chat/bfe45378-1df0-4646-b3a1-dde53b1db8c4",
+            "title": "Yamaha MG12 I/O Baseline (pre-CQ12)",
+            "description": "Pre-upgrade reference — MG12 I/O with tracked corrections"
+          },
+          {
+            "type": "note",
+            "text": "nomad-wiring-diagram.jsx (v12)\nReact diagram: CDJs → Q2#1 → booth speakers"
+          },
+          {
+            "type": "note",
+            "text": "nomad_io_audit.txt\nFull I/O map for all devices — Y-adapter callouts"
+          },
+          {
+            "type": "note",
+            "text": "nomad725-Sound-System-Spec-Mar16-2k26-corrected.docx\nMG12 spec with tracked corrections (Mar 16, 2026)"
+          }
+        ]
+      },
+      {
+        "type": "board",
+        "title": "DSP — Drawmer SP2120 · Armonía",
+        "description": "Signal processor and Armonía Pro Audio Suite control network. Largest documentation set.",
+        "freeform": [
+          {
+            "type": "link",
+            "url": "https://claude.ai/chat/61c49787-7fd9-4227-ae32-2f3c8301d7f6",
+            "title": "Equipment Audit & Armonía Rewiring",
+            "description": "28 deliverables — Armonía screenshots, 16-speaker wiring, skill extraction"
+          },
+          {
+            "type": "note",
+            "text": "nomad_system_spec_armonia.docx\nFinal spec — Armonía control network revision"
+          },
+          {
+            "type": "note",
+            "text": "nomad_wiring_diagram_final.pdf\nFinal confirmed wiring diagram PDF"
+          },
+          {
+            "type": "note",
+            "text": "nomad_wiring_18spk_armonia.pdf\n18-speaker wiring with Armonía DSP network"
+          },
+          {
+            "type": "note",
+            "text": "nomad_system_spec_18spk.docx\n18-speaker variant system specification"
+          },
+          {
+            "type": "note",
+            "text": "audio-system-diagram.skill\nReusable Claude skill — audio wiring diagram generator"
+          }
+        ]
+      },
+      {
+        "type": "board",
+        "title": "Amp Rack — Bias V3 ×2 + Q2",
+        "description": "VOID Acoustics amplifiers — cable schedule, SVG connection diagram, label sheets.",
+        "freeform": [
+          {
+            "type": "link",
+            "url": "https://claude.ai/chat/81ef8190-238f-4f37-901d-ead397b7a6e1",
+            "title": "Amp Rack Cable Schedule & Connection Diagram",
+            "description": "Full cable schedule and signal flow diagram for the rack"
+          },
+          {
+            "type": "note",
+            "text": "nomad_cable_schedule.docx\nEvery connection documented — both-end labels"
+          },
+          {
+            "type": "note",
+            "text": "nomad_connection_diagram.svg\nSVG signal flow / connection diagram"
+          },
+          {
+            "type": "note",
+            "text": "nomad_cable_labels.pdf\nPrintable label sheet — install-ready"
+          },
+          {
+            "type": "note",
+            "text": "nomad_wiring_review.md\nCable management plan and optimisation analysis"
+          }
+        ]
+      },
+      {
+        "type": "board",
+        "title": "Speakers — Stasys Xair + Venu 215",
+        "description": "VOID Acoustics mains (4× Stasys Xair) and outboard subs (2× Venu 215 V2) — wiring and layout.",
+        "freeform": [
+          {
+            "type": "link",
+            "url": "https://claude.ai/chat/61c49787-7fd9-4227-ae32-2f3c8301d7f6",
+            "title": "16-Speaker System Wiring — Full Audit",
+            "description": "Confirmed wiring for all Stasys Xair and Venu 215 units"
+          },
+          {
+            "type": "note",
+            "text": "nomad_wiring_svg.jsx\nReact component — full 16-speaker wiring diagram"
+          },
+          {
+            "type": "note",
+            "text": "nomad_room_layout_18spk.pdf\nVenue room layout — speaker positions (18-speaker config)"
+          },
+          {
+            "type": "note",
+            "text": "nomad_system_spec.md\nComprehensive system specification — full rack"
+          }
+        ]
+      },
+      {
+        "type": "board",
+        "title": "Rack Architecture & SVG Diagrams",
+        "description": "19-inch rack standards, 12U enclosure spec, and SVG elevation diagram skill.",
+        "freeform": [
+          {
+            "type": "link",
+            "url": "https://claude.ai/chat/fb56aa22-37a8-4633-825c-6dd1c91f4db5",
+            "title": "19-Inch Rack Architectures & 12U Standards",
+            "description": "Technical report — global rack standards, 10+ cited examples"
+          },
+          {
+            "type": "link",
+            "url": "https://claude.ai/chat/77927477-ddf9-4a6e-8507-652816224db0",
+            "title": "SVG Rack Elevation Diagram Skill",
+            "description": "Reusable skill — generates SVG rack elevation diagrams"
+          },
+          {
+            "type": "note",
+            "text": "Verifying 19-Inch Rack Standards.md\nClaim-by-claim standards analysis (~21 KB)"
+          },
+          {
+            "type": "note",
+            "text": "SVG Rack Elevation Diagrams — Complete Technical Reference.md\nFull SVG rack elevation reference guide (~16 KB)"
+          }
+        ]
+      },
+      {
+        "type": "board",
+        "title": "Business & Monetization",
+        "description": "Leveraging the fully-documented VOID Acoustics profile as a commercial AV consulting asset.",
+        "freeform": [
+          {
+            "type": "link",
+            "url": "https://claude.ai/chat/5b4811a9-d684-4dd6-a647-6784a4ce8865",
+            "title": "Monetizing Nomad Toronto's AV Profile",
+            "description": "Strategy for commercial AV consulting from documented system"
+          },
+          {
+            "type": "note",
+            "text": "Venue AV Documentation as a Service — NOMAD Toronto Productization.md\nProductizing the NØMAD profile for the Canadian market (~16 KB)"
+          },
+          {
+            "type": "note",
+            "text": "Emblem Projects — Venue Technical Operations Partner Strategy.md\nVenue technical operations partner strategy (~26 KB)"
+          },
+          {
+            "type": "note",
+            "text": "Emblem Projects — Strategic Growth Paths and Exit Roadmap.md\nStrategic growth paths and exit roadmap (~36 KB)"
+          }
+        ]
+      },
+      {
+        "type": "board",
+        "title": "System Reference",
+        "description": "VOID Acoustics brand palette for rack diagrams — color-coded by signal stage (inspired by motion graphics style frame workflow).",
+        "freeform": [
+          { "type": "swatch", "hex": "#0F172A", "label": "Rack Black — enclosure/structure" },
+          { "type": "swatch", "hex": "#DC2626", "label": "Power / Alert — amplifiers" },
+          { "type": "swatch", "hex": "#16A34A", "label": "Signal / Active — speakers" },
+          { "type": "swatch", "hex": "#2563EB", "label": "Digital / Control — DSP/CQ12" },
+          { "type": "swatch", "hex": "#F59E0B", "label": "Pending / Review" }
+        ]
+      }
+    ]
+  }
+}
