@@ -41,6 +41,7 @@ export class CollabSocket {
   private cookieHeader = '';
   private pingInterval: ReturnType<typeof setInterval> | null = null;
   private currentBoardId: string | null = null;
+  private lastServerError: string | null = null;
 
   async connect(page: Page): Promise<void> {
     const cookies = await getMilanoteCookies(page.context());
@@ -99,7 +100,11 @@ export class CollabSocket {
           return;
         }
         // Ping from server
-        if (msg === '2') { this.ws!.send('3'); }
+        if (msg === '2') { this.ws!.send('3'); return; }
+        // SIO error packet (type 44) or server-side error event frame
+        if (msg.startsWith('44') || (msg.startsWith('42') && msg.includes('"error"'))) {
+          this.lastServerError = msg;
+        }
       });
     });
   }
@@ -125,6 +130,12 @@ export class CollabSocket {
     });
     // Brief yield so the server has time to process before the next send
     await new Promise((r) => setTimeout(r, 50));
+    // Surface any server-side error that arrived in the yield window
+    const serverErr = this.lastServerError;
+    if (serverErr) {
+      this.lastServerError = null;
+      throw new Error(`CollabSocket: server rejected action — ${serverErr.slice(0, 200)}`);
+    }
   }
 
   /** Send update-channels — required before ELEMENT_CREATE to register board subscriptions */

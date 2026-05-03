@@ -14,6 +14,7 @@ import chalk from 'chalk';
 import { registerProbeCommand } from './commands/probe.js';
 import { registerValidateCommand } from './commands/validate.js';
 import { registerCreateCommand } from './commands/create.js';
+import { registerDeleteCommand } from './commands/delete.js';
 import { registerWorkspacesCommand } from './commands/workspaces.js';
 
 const require = createRequire(import.meta.url);
@@ -29,6 +30,7 @@ program
 registerProbeCommand(program);
 registerValidateCommand(program);
 registerCreateCommand(program);
+registerDeleteCommand(program);
 registerWorkspacesCommand(program);
 
 program

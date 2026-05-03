@@ -9,7 +9,7 @@
  * the user's workspace state via a snapshot.
  */
 
-import { mkdir, writeFile } from 'node:fs/promises';
+import { mkdir, readdir, unlink, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import chalk from 'chalk';
 import type { MilanoteClient } from './client.js';
@@ -70,6 +70,8 @@ async function fetchWorkspaceBoards(
  * Save a workspace snapshot to .ms-debug/ for recovery reference.
  * Never throws — snapshot failure must not block the create operation.
  */
+const SNAPSHOT_KEEP = 10;
+
 export async function saveWorkspaceSnapshot(
   client: MilanoteClient,
   workspaceBoardId: string,
@@ -81,8 +83,37 @@ export async function saveWorkspaceSnapshot(
     const filePath = path.join('.ms-debug', `workspace-snapshot-${ts}.json`);
     await writeFile(filePath, JSON.stringify(snapshot, null, 2));
     console.log(chalk.dim(`  Snapshot: ${filePath} (${snapshot.boards.length} boards)`));
+
+    // Rotate — keep only the SNAPSHOT_KEEP newest snapshots
+    const entries = await readdir('.ms-debug');
+    const snaps = entries
+      .filter((f) => f.startsWith('workspace-snapshot-') && f.endsWith('.json'))
+      .sort()
+      .reverse(); // newest first (ISO timestamps sort lexicographically)
+    for (const stale of snaps.slice(SNAPSHOT_KEEP)) {
+      await unlink(path.join('.ms-debug', stale)).catch(() => {});
+    }
   } catch {
     /* snapshot failure is advisory — never block the run */
+  }
+}
+
+/**
+ * Fetch the root board back after creation to confirm elements landed.
+ * Returns { accessible, count } — never throws.
+ */
+export async function verifyBoardCreation(
+  client: MilanoteClient,
+  boardId: string,
+): Promise<{ accessible: boolean; count: number }> {
+  try {
+    const raw = await client.getJson<ElementResponse>(
+      `/api/elements?ids=${boardId}&includeChildren=true`,
+    );
+    const count = Object.keys(raw.elements ?? {}).length;
+    return { accessible: true, count };
+  } catch {
+    return { accessible: false, count: 0 };
   }
 }
 

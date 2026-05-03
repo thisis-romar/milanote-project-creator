@@ -20,7 +20,7 @@ import { MilanoteClient, getMilanoteCookies } from '../api/client.js';
 import { attachToEdge } from '../cdp/attach.js';
 import { getOrOpenMilanotePage, MILANOTE_HOST } from '../cdp/page.js';
 import { NotImplementedError } from '../creator/types.js';
-import { assertNoDuplicate, saveWorkspaceSnapshot } from '../api/inspector.js';
+import { assertNoDuplicate, saveWorkspaceSnapshot, verifyBoardCreation } from '../api/inspector.js';
 
 interface CreateOptions {
   var?: string[];
@@ -183,6 +183,14 @@ export function registerCreateCommand(program: Command): void {
         });
         console.log(chalk.green('\n✓ Board created'));
         if (root.url) console.log(`  URL: ${root.url}`);
+
+        // Post-create verification — confirm the board is readable and has children
+        const v = await verifyBoardCreation(client, root.id);
+        if (!v.accessible) {
+          console.log(chalk.yellow('  Warning: could not fetch board back to verify (it may still have been created)'));
+        } else {
+          console.log(chalk.dim(`  Verified: ${v.count} element(s) visible in root board`));
+        }
       } catch (e) {
         if (e instanceof OrchestratorError && e.cause instanceof NotImplementedError) {
           console.error(chalk.red(`\n✗ ${e.message}`));
