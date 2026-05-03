@@ -17,6 +17,7 @@ interface DeleteOptions {
   url: string;
   type: string;
   parentId?: string;
+  dryRun?: boolean;
 }
 
 interface ElementResponse {
@@ -52,6 +53,7 @@ export function registerDeleteCommand(program: Command): void {
     .description('Delete a Milanote board or element by ID')
     .option('--parent-id <id>', 'parent board ID (looked up automatically if omitted)')
     .option('--type <type>', 'element type', 'BOARD')
+    .option('--dry-run', 'print what would be deleted without actually deleting')
     .option('-u, --url <url>', 'URL to load if no Milanote tab is open', 'https://app.milanote.com')
     .action(async (boardId: string, opts: DeleteOptions) => {
       console.log(chalk.cyan('\nAttaching to Edge via CDP...'));
@@ -83,6 +85,12 @@ export function registerDeleteCommand(program: Command): void {
         elementType = meta.elementType;
         title = meta.title;
         console.log(chalk.dim(`  Found: "${title}" (${elementType}) in parent ${parentId}`));
+      }
+
+      if (opts.dryRun) {
+        console.log(chalk.yellow(`\n--dry-run: would delete "${title}" (${elementType} ${boardId}) from parent ${parentId}`));
+        await browser.close();
+        return;
       }
 
       const socket = new CollabSocket();

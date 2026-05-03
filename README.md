@@ -102,7 +102,7 @@ npm run dev -- delete <boardId>
 | `note` | `text` | Plain text |
 | `link` | `url` | Validated as URL; `title`, `description` optional |
 | `image` | `src` | Local path or URL; `caption` optional |
-| `file` | `path` | Local path — **not yet implemented** (throws) |
+| `file` | `path` | Local path — **schema validates but creation throws** (signed S3 upload not yet implemented) |
 | `swatch` | `hex` | 6-digit hex color; `label` optional |
 | `checklist` | `items[]` | Each item: `{ text, done? }` |
 | `board` | `title` | Nested subboard; supports `columns`, `freeform`, `description` |

@@ -1,41 +1,96 @@
 /**
  * @file driver.ts
- * @description UiCreator — Playwright-driven UI fallback for every primitive
- * @version 0.1.0
+ * @description UiCreator — Playwright-driven UI fallback using drag-from-toolbar gestures
+ * @version 0.2.0
  * @created 2026-04-29T00:00:00Z
- * @lastUpdated 2026-04-29T00:00:00Z
+ * @lastUpdated 2026-05-02T20:30:00Z
  *
- * Stubbed until DOM selectors are discovered via probe + DevTools inspection.
- * See src/ui/selectors.ts for the TODO selector table.
+ * Primary creation mechanism: drag from the left toolbar onto .canvas-section.
+ * Confirmed working in the 2026-05-02 probe session for: note, link, checklist,
+ * board, column. See src/ui/selectors.ts for confidence levels on each selector.
+ *
+ * Title/content input selectors are still PLACEHOLDER — elements are created but
+ * may be left with default empty titles until those selectors are confirmed via
+ * DevTools inspection. The ApiCreator (Socket.IO) is preferred; this is fallback only.
  */
 
 import type { Page } from 'playwright';
 import type { Card } from '../template/schema.js';
 import type { BoardRef, CardRef, ColumnRef, Creator } from '../creator/types.js';
 import { NotImplementedError } from '../creator/types.js';
-
-const SELECTOR_HINT =
-  'DOM selectors are TODO in src/ui/selectors.ts. Open a CDP-attached session, ' +
-  'inspect the create-board / add-column / +menu UI in DevTools, fill in the selector table, ' +
-  'then plumb each method below.';
+import { TOOLBAR, CANVAS, CREATE_FLOW } from './selectors.js';
 
 export class UiCreator implements Creator {
   readonly strategy = 'ui' as const;
 
-  constructor(private readonly page: Page) {
-    void this.page;
+  constructor(private readonly page: Page) {}
+
+  // ── Internal helpers ───────────────────────────────���──────────────────────
+
+  /** Drag a toolbar tool to the canvas. CONFIRMED gesture. */
+  private async dragTool(toolSelector: string): Promise<void> {
+    await this.page.waitForSelector(toolSelector, { timeout: 5_000 });
+    await this.page.waitForSelector(CANVAS.section, { timeout: 5_000 });
+    await this.page.dragAndDrop(toolSelector, CANVAS.section);
+    // Give Milanote time to render the new element and open any title input
+    await this.page.waitForTimeout(400);
   }
 
-  async createRootBoard(_title: string, _description?: string): Promise<BoardRef> {
-    void _title;
-    void _description;
-    throw new NotImplementedError('UiCreator.createRootBoard', SELECTOR_HINT);
+  /**
+   * Attempt to fill a PLACEHOLDER title/content input.
+   * Returns true if the input was found and filled, false if it wasn't visible.
+   * Never throws — missing inputs degrade gracefully (element created untitled).
+   */
+  private async tryFill(selector: string, text: string): Promise<boolean> {
+    try {
+      const el = await this.page.waitForSelector(selector, { timeout: 1_500 });
+      const tag = await el.evaluate((n) => n.tagName.toLowerCase());
+      if (tag === 'input' || tag === 'textarea') {
+        await el.fill(text);
+      } else {
+        // contenteditable div
+        await el.click();
+        await this.page.keyboard.type(text);
+      }
+      await this.page.keyboard.press('Escape');
+      return true;
+    } catch {
+      return false;
+    }
   }
 
-  async createColumn(_parent: BoardRef, _title: string): Promise<ColumnRef> {
-    void _parent;
-    void _title;
-    throw new NotImplementedError('UiCreator.createColumn', SELECTOR_HINT);
+  /**
+   * Read the data-element-id of the most recently added element on the canvas.
+   * Falls back to a synthetic ID if no element is found (prevents null crashes).
+   */
+  private async lastElementId(): Promise<string> {
+    const id = await this.page.evaluate(() => {
+      const els = document.querySelectorAll('[data-element-id]');
+      return els[els.length - 1]?.getAttribute('data-element-id') ?? null;
+    });
+    return id ?? `ui-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`;
+  }
+
+  // ── Creator interface ────────────────────────────���────────────────────────
+
+  async createRootBoard(title: string, _description?: string): Promise<BoardRef> {
+    await this.dragTool(TOOLBAR.board);
+    const filled = await this.tryFill(CREATE_FLOW.newBoardTitleInput, title);
+    if (!filled) {
+      console.warn(`UiCreator.createRootBoard: title input not found — board may be untitled (selector: ${CREATE_FLOW.newBoardTitleInput})`);
+    }
+    const id = await this.lastElementId();
+    return { id, url: `https://app.milanote.com/${id}/` };
+  }
+
+  async createColumn(_parent: BoardRef, title: string): Promise<ColumnRef> {
+    await this.dragTool(TOOLBAR.column);
+    const filled = await this.tryFill(CREATE_FLOW.columnTitleInput, title);
+    if (!filled) {
+      console.warn(`UiCreator.createColumn: title input not found — column may be untitled`);
+    }
+    const id = await this.lastElementId();
+    return { id };
   }
 
   async createCard(
@@ -43,21 +98,67 @@ export class UiCreator implements Creator {
     _column: ColumnRef | null,
     card: Exclude<Card, { type: 'board' }>,
   ): Promise<CardRef> {
-    void _parent;
-    void _column;
-    throw new NotImplementedError(`UiCreator.createCard(${card.type})`, SELECTOR_HINT);
+    switch (card.type) {
+      case 'note':
+        await this.dragTool(TOOLBAR.note);
+        await this.tryFill('[contenteditable]', card.text);
+        break;
+
+      case 'link':
+        await this.dragTool(TOOLBAR.link);
+        // Link URL/title entry varies by Milanote version; best-effort fill
+        await this.tryFill('input[placeholder*="url" i], input[placeholder*="link" i], input[type="url"]', card.url);
+        if (card.title) await this.tryFill('input[placeholder*="title" i], input[placeholder*="name" i]', card.title);
+        break;
+
+      case 'checklist':
+        await this.dragTool(TOOLBAR.checklist);
+        if (card.title) await this.tryFill('input[placeholder*="title" i], [class*="TaskListTitle"]', card.title);
+        break;
+
+      case 'image':
+        await this.dragTool(TOOLBAR.image);
+        // Image creation opens a file-picker which Playwright cannot drive without
+        // a real file path injected via page.setInputFiles — not yet implemented.
+        console.warn('UiCreator.createCard(image): file-picker interaction not yet implemented; image dropped but src not set');
+        break;
+
+      case 'swatch':
+        // Swatch creation requires expanding the "more" toolbar popup first
+        await this.tryFill(CREATE_FLOW.cardMenuTrigger, '');
+        throw new NotImplementedError(
+          'UiCreator.createCard(swatch)',
+          'Swatch toolbar trigger is behind the "..." overflow menu (TOOLBAR.moreTrigger). Confirm selector via DevTools.',
+        );
+
+      case 'file':
+        throw new NotImplementedError(
+          'UiCreator.createCard(file)',
+          'File upload requires a signed S3 URL flow — not implemented in either creator.',
+        );
+
+      default: {
+        const exhaustive: never = card;
+        throw new Error(`Unknown card type: ${(exhaustive as Card).type}`);
+      }
+    }
+
+    const id = await this.lastElementId();
+    return { id, type: card.type };
   }
 
   async createSubboard(
     _parent: BoardRef,
     _column: ColumnRef | null,
-    _title: string,
+    title: string,
     _description?: string,
   ): Promise<BoardRef> {
-    void _parent;
-    void _column;
-    void _title;
-    void _description;
-    throw new NotImplementedError('UiCreator.createSubboard', SELECTOR_HINT);
+    await this.dragTool(TOOLBAR.board);
+    const filled = await this.tryFill(CREATE_FLOW.newBoardTitleInput, title);
+    if (!filled) {
+      console.warn(`UiCreator.createSubboard: title input not found — subboard may be untitled`);
+    }
+    const id = await this.lastElementId();
+    return { id, url: `https://app.milanote.com/${id}/` };
   }
 }

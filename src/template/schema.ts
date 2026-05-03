@@ -49,6 +49,9 @@ const ImageCard = z
   })
   .strict();
 
+// NOTE: file cards are schema-validated but creation is not yet implemented.
+// ApiCreator.createCard('file') throws NotImplementedError — a signed S3 upload
+// flow is required. Use this type only in templates you plan to implement manually.
 const FileCard = z
   .object({
     type: z.literal('file'),
