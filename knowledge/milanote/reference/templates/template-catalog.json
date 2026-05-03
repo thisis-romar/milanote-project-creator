@@ -1,0 +1,2715 @@
+{
+  "collectionsCount": 31,
+  "collections": [
+    {
+      "id": "agencies",
+      "title": "Agencies",
+      "templates": [
+        {
+          "id": "agency-hub",
+          "displayName": "Agency Hub"
+        },
+        {
+          "id": "brand-positioning-map",
+          "displayName": "Brand Positioning Map"
+        },
+        {
+          "id": "digital-campaign-brief",
+          "displayName": "Campaign Brief"
+        },
+        {
+          "id": "graphic-design-project-plan",
+          "displayName": "Design Project Plan"
+        },
+        {
+          "id": "logo-design-project-plan",
+          "displayName": "Logo Project Plan"
+        },
+        {
+          "id": "marketing-campaign-moodboard",
+          "displayName": "Moodboard"
+        },
+        {
+          "id": "team-planner-template",
+          "displayName": "Team Planner"
+        },
+        {
+          "id": "tvc-advertising-storyboard",
+          "displayName": "Storyboard"
+        },
+        {
+          "id": "website-plan-template",
+          "displayName": "Website Project Plan"
+        }
+      ]
+    },
+    {
+      "id": "architecture",
+      "title": "Architecture",
+      "templates": [
+        {
+          "id": "architects-design-concept",
+          "displayName": "Design Concept"
+        },
+        {
+          "id": "architecture-moodboard",
+          "displayName": "Moodboard"
+        },
+        {
+          "id": "architecture-project-plan",
+          "displayName": "Architectural Project Plan"
+        },
+        {
+          "id": "interior-design-brief-template",
+          "displayName": "Design Brief"
+        },
+        {
+          "id": "interior-design-product-list",
+          "displayName": "Product List"
+        }
+      ]
+    },
+    {
+      "id": "brand-strategy",
+      "title": "Brand Strategy",
+      "templates": [
+        {
+          "id": "brand-audit",
+          "displayName": "Brand Audit"
+        },
+        {
+          "id": "brand-naming",
+          "displayName": "Brand Naming"
+        },
+        {
+          "id": "brand-personality",
+          "displayName": "Brand Personality"
+        },
+        {
+          "id": "brand-positioning-map",
+          "displayName": "Competitive Landscape"
+        },
+        {
+          "id": "brand-strategy",
+          "displayName": "Brand Strategy Project"
+        },
+        {
+          "id": "brand-swot-analysis",
+          "displayName": "Brand SWOT Analysis"
+        },
+        {
+          "id": "logo-moodboard",
+          "displayName": "Moodboard"
+        },
+        {
+          "id": "market-research",
+          "displayName": "Market Research"
+        },
+        {
+          "id": "persona-template",
+          "displayName": "Customer Persona"
+        }
+      ]
+    },
+    {
+      "id": "content-creation",
+      "title": "Content Creation",
+      "templates": [
+        {
+          "id": "youtube-channel-plan",
+          "displayName": "YouTube Channel Plan"
+        },
+        {
+          "id": "youtube-equipment-checklist",
+          "displayName": "Equipment Checklist"
+        },
+        {
+          "id": "youtube-schedule",
+          "displayName": "Posting Schedule"
+        },
+        {
+          "id": "youtube-script",
+          "displayName": "Video Script"
+        },
+        {
+          "id": "youtube-video-brainstorm",
+          "displayName": "Video Brainstorm"
+        },
+        {
+          "id": "youtube-video-plan",
+          "displayName": "Video Plan"
+        },
+        {
+          "id": "youtube-video-research",
+          "displayName": "Video Research"
+        }
+      ]
+    },
+    {
+      "id": "craft-makers",
+      "title": "Craft & Makers",
+      "templates": [
+        {
+          "id": "craft-materials-list",
+          "displayName": "Craft Materials List"
+        },
+        {
+          "id": "craft-project-brainstorm",
+          "displayName": "Craft Brainstorm"
+        },
+        {
+          "id": "craft-project-moodboard",
+          "displayName": "Craft Moodboard"
+        },
+        {
+          "id": "craft-project-plan",
+          "displayName": "Craft Project Plan"
+        },
+        {
+          "id": "craft-project-timeline",
+          "displayName": "Craft Project Timeline"
+        }
+      ]
+    },
+    {
+      "id": "creative-direction",
+      "title": "Creative Direction",
+      "templates": [
+        {
+          "id": "advertising-brief-template",
+          "displayName": "Advertising Brief"
+        },
+        {
+          "id": "campaign-plan",
+          "displayName": "Campaign Plan"
+        },
+        {
+          "id": "design-exploration",
+          "displayName": "Moodboard"
+        },
+        {
+          "id": "inspiration-library",
+          "displayName": "Inspiration Library"
+        },
+        {
+          "id": "tvc-advertising-storyboard",
+          "displayName": "Storyboard"
+        }
+      ]
+    },
+    {
+      "id": "fashion-design",
+      "title": "Fashion Design",
+      "templates": [
+        {
+          "id": "fashion-brainstorm",
+          "displayName": "Fashion Brainstorm"
+        },
+        {
+          "id": "fashion-design-brief",
+          "displayName": "Fashion Design Brief"
+        },
+        {
+          "id": "fashion-lookbook",
+          "displayName": "Fashion Lookbook"
+        },
+        {
+          "id": "fashion-moodboard",
+          "displayName": "Fashion Moodboard"
+        },
+        {
+          "id": "fashion-project-plan",
+          "displayName": "Fashion Project Plan"
+        }
+      ]
+    },
+    {
+      "id": "film-tv",
+      "title": "Film / TV",
+      "templates": [
+        {
+          "id": "beat-sheet",
+          "displayName": "Beat Sheet"
+        },
+        {
+          "id": "call-sheet",
+          "displayName": "Call Sheet"
+        },
+        {
+          "id": "character-profile-template",
+          "displayName": "Character Profile"
+        },
+        {
+          "id": "film-brainstorm-template",
+          "displayName": "Film Brainstorm"
+        },
+        {
+          "id": "film-marketing-plan",
+          "displayName": "Film Marketing Plan"
+        },
+        {
+          "id": "film-shot-list",
+          "displayName": "Shot List"
+        },
+        {
+          "id": "filmmaking-moodboard",
+          "displayName": "Film Moodboard"
+        },
+        {
+          "id": "filmmaking-storyboard",
+          "displayName": "Film Storyboard"
+        },
+        {
+          "id": "pre-production",
+          "displayName": "Pre-production Plan"
+        }
+      ]
+    },
+    {
+      "id": "game-design",
+      "title": "Game Design",
+      "templates": [
+        {
+          "id": "character-profile-game",
+          "displayName": "Game Character Profile"
+        },
+        {
+          "id": "game-design-document",
+          "displayName": "Game Design Document"
+        },
+        {
+          "id": "game-design-flow-diagram",
+          "displayName": "Game Flow Diagram"
+        },
+        {
+          "id": "game-design-mechanics",
+          "displayName": "Game Mechanics"
+        },
+        {
+          "id": "game-design-moodboard",
+          "displayName": "Game Moodboard"
+        },
+        {
+          "id": "game-design-story-outline",
+          "displayName": "Story Outline"
+        },
+        {
+          "id": "game-design-storyboard",
+          "displayName": "Game Storyboard"
+        },
+        {
+          "id": "game-level-design",
+          "displayName": "Game Level Design"
+        },
+        {
+          "id": "game-marketing-plan",
+          "displayName": "Game Marketing Plan"
+        },
+        {
+          "id": "game-world-building",
+          "displayName": "Game World Building"
+        },
+        {
+          "id": "rpg-campaign-map",
+          "displayName": "RPG Campaign Map"
+        },
+        {
+          "id": "rpg-dungeon-map",
+          "displayName": "RPG Dungeon Map"
+        }
+      ]
+    },
+    {
+      "id": "graphic-design",
+      "title": "Graphic Design",
+      "templates": [
+        {
+          "id": "agency-hub",
+          "displayName": "Design Agency Hub"
+        },
+        {
+          "id": "design-brief-template",
+          "displayName": "Design Brief"
+        },
+        {
+          "id": "graphic-design-moodboard-template",
+          "displayName": "Moodboard"
+        },
+        {
+          "id": "graphic-design-project-plan",
+          "displayName": "Design Project Plan"
+        },
+        {
+          "id": "logo-design-presentation",
+          "displayName": "Design Presentation"
+        },
+        {
+          "id": "logo-design-project-plan",
+          "displayName": "Logo Project Plan"
+        },
+        {
+          "id": "video-storyboard",
+          "displayName": "Storyboard"
+        },
+        {
+          "id": "website-plan-template",
+          "displayName": "Website Project Plan"
+        }
+      ]
+    },
+    {
+      "id": "illustration",
+      "title": "Illustration",
+      "templates": [
+        {
+          "id": "illustration-design-brief",
+          "displayName": "Design Brief"
+        },
+        {
+          "id": "illustration-project-plan",
+          "displayName": "Project Plan"
+        },
+        {
+          "id": "illustrative-moodboard",
+          "displayName": "Illustrative Moodboard"
+        }
+      ]
+    },
+    {
+      "id": "interior-design",
+      "title": "Interior Design",
+      "templates": [
+        {
+          "id": "interior-design-brief-template",
+          "displayName": "Interior Design Brief"
+        },
+        {
+          "id": "interior-design-moodboard",
+          "displayName": "Interior Design Moodboard"
+        },
+        {
+          "id": "interior-design-product-list",
+          "displayName": "Interior Design Product List"
+        },
+        {
+          "id": "interior-design-project-plan",
+          "displayName": "Interior Design Project Plan"
+        }
+      ]
+    },
+    {
+      "id": "lifestyle-personal",
+      "title": "Lifestyle & Personal",
+      "templates": [
+        {
+          "id": "fashion-storyboard",
+          "displayName": "Fashion Storyboard"
+        },
+        {
+          "id": "inspiration-board-template",
+          "displayName": "Inspiration Board"
+        },
+        {
+          "id": "vision-board",
+          "displayName": "Vision Board"
+        },
+        {
+          "id": "wedding-moodboard",
+          "displayName": "Wedding Moodboard"
+        },
+        {
+          "id": "weekly-plan-template",
+          "displayName": "Weekly Plan"
+        }
+      ]
+    },
+    {
+      "id": "logo-design",
+      "title": "Logo Design",
+      "templates": [
+        {
+          "id": "brand-positioning-map",
+          "displayName": "Brand Positioning Map"
+        },
+        {
+          "id": "logo-brainstorm",
+          "displayName": "Logo Brainstorm"
+        },
+        {
+          "id": "logo-design-assets-handover",
+          "displayName": "Assets Handover"
+        },
+        {
+          "id": "logo-design-creative-brief",
+          "displayName": "Logo Brief"
+        },
+        {
+          "id": "logo-design-presentation",
+          "displayName": "Design Presentation"
+        },
+        {
+          "id": "logo-design-project-plan",
+          "displayName": "Logo Project Plan"
+        },
+        {
+          "id": "logo-moodboard",
+          "displayName": "Logo Moodboard"
+        }
+      ]
+    },
+    {
+      "id": "management-strategy",
+      "title": "Management & Strategy",
+      "templates": [
+        {
+          "id": "brand-swot-analysis",
+          "displayName": "Brand SWOT Analysis"
+        },
+        {
+          "id": "competitor-landscape-template",
+          "displayName": "Competitor Landscape"
+        },
+        {
+          "id": "empathy-map",
+          "displayName": "Empathy Map"
+        },
+        {
+          "id": "target-audience-template",
+          "displayName": "Target Audience"
+        },
+        {
+          "id": "team-structure",
+          "displayName": "Team Structure"
+        }
+      ]
+    },
+    {
+      "id": "marketing-campaign",
+      "title": "Marketing Campaign",
+      "templates": [
+        {
+          "id": "campaign-plan",
+          "displayName": "Campaign Plan"
+        },
+        {
+          "id": "campaign-reports",
+          "displayName": "Campaign Reports"
+        },
+        {
+          "id": "campaign-strategy",
+          "displayName": "Campaign Strategy"
+        },
+        {
+          "id": "marketing-assets",
+          "displayName": "Marketing Assets"
+        },
+        {
+          "id": "marketing-calendar-template",
+          "displayName": "Marketing Calendar"
+        },
+        {
+          "id": "marketing-campaign-moodboard",
+          "displayName": "Marketing Moodboard"
+        },
+        {
+          "id": "marketing-content-plan",
+          "displayName": "Marketing Content Plan"
+        },
+        {
+          "id": "marketing-template",
+          "displayName": "Marketing Brief"
+        },
+        {
+          "id": "social-media-calendar-template",
+          "displayName": "Social Media Calendar"
+        }
+      ]
+    },
+    {
+      "id": "marketing-strategy",
+      "title": "Marketing Strategy",
+      "templates": [
+        {
+          "id": "brand-positioning-map",
+          "displayName": "Brand Positioning Map"
+        },
+        {
+          "id": "market-research",
+          "displayName": "Market Research"
+        },
+        {
+          "id": "marketing-plan",
+          "displayName": "Marketing Plan"
+        },
+        {
+          "id": "persona-template",
+          "displayName": "Customer Persona"
+        }
+      ]
+    },
+    {
+      "id": "moodboarding",
+      "title": "Moodboarding",
+      "templates": [
+        {
+          "id": "fashion-moodboard-template",
+          "displayName": "Fashion"
+        },
+        {
+          "id": "filmmaking-moodboard",
+          "displayName": "Film"
+        },
+        {
+          "id": "graphic-design-moodboard-template",
+          "displayName": "Design"
+        },
+        {
+          "id": "illustrative-moodboard",
+          "displayName": "Illustrative"
+        },
+        {
+          "id": "interior-design-moodboard",
+          "displayName": "Interior Design"
+        },
+        {
+          "id": "photography-moodboard",
+          "displayName": "Photographic"
+        },
+        {
+          "id": "poster-moodboard",
+          "displayName": "Poster"
+        }
+      ]
+    },
+    {
+      "id": "motion-design",
+      "title": "Motion Design",
+      "templates": [
+        {
+          "id": "motion-design-brainstorm-template",
+          "displayName": "Brainstorming"
+        },
+        {
+          "id": "motion-design-brief",
+          "displayName": "Design Brief"
+        },
+        {
+          "id": "motion-design-moodboard",
+          "displayName": "Moodboard"
+        },
+        {
+          "id": "motion-design-project-plan",
+          "displayName": "Motion Design Project"
+        },
+        {
+          "id": "motion-design-storyboard",
+          "displayName": "Storyboard"
+        },
+        {
+          "id": "style-frames",
+          "displayName": "Style Frames"
+        }
+      ]
+    },
+    {
+      "id": "photography",
+      "title": "Photography",
+      "templates": [
+        {
+          "id": "model-brief",
+          "displayName": "Model Brief"
+        },
+        {
+          "id": "photography-contact-sheet",
+          "displayName": "Photography Contact Sheet"
+        },
+        {
+          "id": "photography-moodboard",
+          "displayName": "Photography Moodboard"
+        },
+        {
+          "id": "photography-workflow",
+          "displayName": "Photography Workflow"
+        },
+        {
+          "id": "photoshoot-brief",
+          "displayName": "Photoshoot Brief"
+        },
+        {
+          "id": "photoshoot-call-sheet",
+          "displayName": "Photoshoot Call Sheet"
+        },
+        {
+          "id": "photoshoot-plan",
+          "displayName": "Photoshoot Plan"
+        },
+        {
+          "id": "shot-list",
+          "displayName": "Photoshoot Shot List"
+        },
+        {
+          "id": "travel-photography-plan",
+          "displayName": "Travel Photography Plan"
+        }
+      ]
+    },
+    {
+      "id": "podcasting",
+      "title": "Podcasting",
+      "templates": [
+        {
+          "id": "how-to-start-a-podcast",
+          "displayName": "Podcast Show Plan"
+        },
+        {
+          "id": "podcast-episode-plan",
+          "displayName": "Podcast Plan"
+        },
+        {
+          "id": "podcast-outline-template",
+          "displayName": "Podcast Outline"
+        },
+        {
+          "id": "podcast-research",
+          "displayName": "Podcast Research"
+        },
+        {
+          "id": "podcast-schedule",
+          "displayName": "Podcast Schedule"
+        },
+        {
+          "id": "podcast-script",
+          "displayName": "Podcast Script"
+        }
+      ]
+    },
+    {
+      "id": "product-management",
+      "title": "Product Management",
+      "templates": [
+        {
+          "id": "customer-journey-map-template",
+          "displayName": "Customer Journey Map"
+        },
+        {
+          "id": "persona-template",
+          "displayName": "Customer Persona"
+        },
+        {
+          "id": "product-hub-template",
+          "displayName": "Product Hub"
+        },
+        {
+          "id": "product-launch-plan-template",
+          "displayName": "Launch Plan"
+        },
+        {
+          "id": "product-roadmap-template",
+          "displayName": "Roadmap"
+        },
+        {
+          "id": "project-retrospective-template",
+          "displayName": "Project Retrospective"
+        }
+      ]
+    },
+    {
+      "id": "productivity",
+      "title": "Productivity",
+      "templates": [
+        {
+          "id": "eisenhower-matrix",
+          "displayName": "Eisenhower Matrix"
+        },
+        {
+          "id": "inspiration-board-template",
+          "displayName": "Inspiration Board"
+        },
+        {
+          "id": "kanban-board-template",
+          "displayName": "Kanban Board"
+        },
+        {
+          "id": "team-planner-template",
+          "displayName": "Team Planner"
+        },
+        {
+          "id": "weekly-plan-template",
+          "displayName": "Weekly Plan"
+        }
+      ]
+    },
+    {
+      "id": "renovation-diy",
+      "title": "Renovation & DIY",
+      "templates": [
+        {
+          "id": "renovation-design-brief",
+          "displayName": "Renovation Design Brief"
+        },
+        {
+          "id": "renovation-material-list",
+          "displayName": "Renovation Materials List"
+        },
+        {
+          "id": "renovation-moodboard",
+          "displayName": "Renovation Moodboard"
+        },
+        {
+          "id": "renovation-project-plan",
+          "displayName": "Renovation Project Plan"
+        }
+      ]
+    },
+    {
+      "id": "software-development",
+      "title": "Software Development",
+      "templates": [
+        {
+          "id": "agile-task-board",
+          "displayName": "Agile Task Board"
+        },
+        {
+          "id": "project-retrospective-template",
+          "displayName": "Project Retrospective"
+        },
+        {
+          "id": "technical-architecture",
+          "displayName": "Technical Architecture"
+        },
+        {
+          "id": "user-journey-map-template",
+          "displayName": "User Journey Map"
+        }
+      ]
+    },
+    {
+      "id": "startups",
+      "title": "Startups",
+      "templates": [
+        {
+          "id": "aarr-metrics",
+          "displayName": "Metrics Analysis"
+        },
+        {
+          "id": "lean-canvas-template",
+          "displayName": "Lean Canvas"
+        },
+        {
+          "id": "product-launch-plan-template",
+          "displayName": "Product Launch Plan"
+        },
+        {
+          "id": "startup-hub",
+          "displayName": "Startup Hub"
+        },
+        {
+          "id": "target-audience-template",
+          "displayName": "Target Audience"
+        }
+      ]
+    },
+    {
+      "id": "students",
+      "title": "Students",
+      "templates": [
+        {
+          "id": "academic-project-plan",
+          "displayName": "Project Plan"
+        },
+        {
+          "id": "brainstorming",
+          "displayName": "Brainstorming"
+        },
+        {
+          "id": "class-notes",
+          "displayName": "Class Notes"
+        },
+        {
+          "id": "research-proposal",
+          "displayName": "Research Proposal"
+        },
+        {
+          "id": "weekly-plan-template",
+          "displayName": "Weekly Plan"
+        }
+      ]
+    },
+    {
+      "id": "ux-ui-product-design",
+      "title": "UX/UI/Product Design",
+      "templates": [
+        {
+          "id": "brand-assets-template",
+          "displayName": "Brand Assets"
+        },
+        {
+          "id": "interface-sketches-template",
+          "displayName": "Interface Sketches"
+        },
+        {
+          "id": "persona-template",
+          "displayName": "Customer Persona"
+        },
+        {
+          "id": "site-map-template",
+          "displayName": "Site Map"
+        },
+        {
+          "id": "ui-moodboard",
+          "displayName": "Moodboard"
+        },
+        {
+          "id": "user-flow-template",
+          "displayName": "User Flow Diagram"
+        },
+        {
+          "id": "user-interview-notes-template",
+          "displayName": "User Interview Notes"
+        },
+        {
+          "id": "user-journey-map-template",
+          "displayName": "User Journey Map"
+        },
+        {
+          "id": "ux-storyboard",
+          "displayName": "UX Storyboard"
+        },
+        {
+          "id": "website-competitor-analysis",
+          "displayName": "Website Competitor Analysis"
+        },
+        {
+          "id": "website-content-plan-template",
+          "displayName": "Website Content Plan"
+        },
+        {
+          "id": "website-design-brief",
+          "displayName": "Website Design Brief"
+        },
+        {
+          "id": "website-ideas-template",
+          "displayName": "Website Ideas"
+        },
+        {
+          "id": "website-plan-template",
+          "displayName": "Website Plan"
+        }
+      ]
+    },
+    {
+      "id": "visual-art",
+      "title": "Visual Art",
+      "templates": [
+        {
+          "id": "visual-art-brainstorm",
+          "displayName": "Art Brainstorm"
+        },
+        {
+          "id": "visual-art-brief",
+          "displayName": "Art Brief"
+        },
+        {
+          "id": "visual-art-moodboard",
+          "displayName": "Art Moodboard"
+        },
+        {
+          "id": "visual-art-research",
+          "displayName": "Art Research"
+        },
+        {
+          "id": "visual-artist-project-plan",
+          "displayName": "Art Project Plan"
+        }
+      ]
+    },
+    {
+      "id": "website-design",
+      "title": "Website Design",
+      "templates": [
+        {
+          "id": "persona-template",
+          "displayName": "Customer Persona"
+        },
+        {
+          "id": "site-map-template",
+          "displayName": "Site Map"
+        },
+        {
+          "id": "user-flow-template",
+          "displayName": "User Flow Diagram"
+        },
+        {
+          "id": "web-design-moodboard",
+          "displayName": "Website Moodboard"
+        },
+        {
+          "id": "website-content-template",
+          "displayName": "Content Plan"
+        },
+        {
+          "id": "website-design-brief",
+          "displayName": "Website Brief"
+        },
+        {
+          "id": "website-ideas-template",
+          "displayName": "Website Brainstorm"
+        },
+        {
+          "id": "website-plan-template",
+          "displayName": "Website Project Plan"
+        }
+      ]
+    },
+    {
+      "id": "writing",
+      "title": "Writing",
+      "templates": [
+        {
+          "id": "character-profile-template",
+          "displayName": "Character Profile"
+        },
+        {
+          "id": "character-relationship-map",
+          "displayName": "Character Relationship Map"
+        },
+        {
+          "id": "novel-marketing-plan",
+          "displayName": "Novel Marketing Plan"
+        },
+        {
+          "id": "novel-moodboard",
+          "displayName": "Novel Moodboard"
+        },
+        {
+          "id": "novel-plan",
+          "displayName": "Novel Plan"
+        },
+        {
+          "id": "novel-research",
+          "displayName": "Research"
+        },
+        {
+          "id": "story-brainstorm",
+          "displayName": "Story Brainstorm"
+        },
+        {
+          "id": "story-map",
+          "displayName": "Story Map"
+        },
+        {
+          "id": "story-outline-template",
+          "displayName": "Story Outline"
+        },
+        {
+          "id": "three-act-structure-outline",
+          "displayName": "Three Act Structure"
+        },
+        {
+          "id": "world-building",
+          "displayName": "World Building"
+        }
+      ]
+    }
+  ],
+  "featured": null,
+  "allTemplates": {
+    "5-whys": {
+      "id": "5-whys",
+      "type": "BUILT_IN",
+      "title": "5 Whys",
+      "keywords": "Five whys, problem solving",
+      "templateBoardId": "1Kamvw1XV4iJfp",
+      "forceClear": false
+    },
+    "aarr-metrics": {
+      "id": "aarr-metrics",
+      "type": "BUILT_IN",
+      "title": "AARRR Metrics",
+      "keywords": "startup, metrics, pirate metrics, startup dashboard",
+      "templateBoardId": "1Irp3e2poegP0i",
+      "forceClear": false
+    },
+    "academic-project-plan": {
+      "id": "academic-project-plan",
+      "type": "BUILT_IN",
+      "title": "Academic Project Plan",
+      "keywords": "",
+      "templateBoardId": "1Iv69D2xwqoB1U",
+      "forceClear": false
+    },
+    "advertising-brief-template": {
+      "id": "advertising-brief-template",
+      "type": "BUILT_IN",
+      "title": "Advertising Brief",
+      "keywords": "Campaign brief, ad agency brief",
+      "templateBoardId": "1Irpay2poegP0x",
+      "forceClear": false
+    },
+    "agency-hub": {
+      "id": "agency-hub",
+      "type": "BUILT_IN",
+      "title": "Agency Hub",
+      "keywords": "",
+      "templateBoardId": "1IscB829JNGw0O",
+      "forceClear": false
+    },
+    "agile-task-board": {
+      "id": "agile-task-board",
+      "type": "BUILT_IN",
+      "title": "Agile Task Board",
+      "keywords": "",
+      "templateBoardId": "1IwQts2DP5Y1gk",
+      "forceClear": false
+    },
+    "animation-brief": {
+      "id": "animation-brief",
+      "type": "BUILT_IN",
+      "title": "Animation Brief",
+      "keywords": "",
+      "templateBoardId": "1JLprX1moHdfdv",
+      "forceClear": false
+    },
+    "animation-storyboard": {
+      "id": "animation-storyboard",
+      "type": "BUILT_IN",
+      "title": "Animation Storyboard",
+      "keywords": "",
+      "templateBoardId": "1JJbve13lRxFac",
+      "forceClear": false
+    },
+    "app-design-brief": {
+      "id": "app-design-brief",
+      "type": "BUILT_IN",
+      "title": "App Design Brief",
+      "keywords": "",
+      "templateBoardId": "1JLpru1moHdfdp",
+      "forceClear": false
+    },
+    "app-storyboard": {
+      "id": "app-storyboard",
+      "type": "BUILT_IN",
+      "title": "App Storyboard",
+      "keywords": "",
+      "templateBoardId": "1JJbex13lRxF85",
+      "forceClear": false
+    },
+    "architects-design-concept": {
+      "id": "architects-design-concept",
+      "type": "BUILT_IN",
+      "title": "Architectural Design Concept",
+      "keywords": "Design concept, architecture, building, interior, architectural",
+      "templateBoardId": "1Q72RJ1sufTu3j",
+      "forceClear": false
+    },
+    "architecture-moodboard": {
+      "id": "architecture-moodboard",
+      "type": "BUILT_IN",
+      "title": "Architecture Moodboard",
+      "keywords": "architecture, building, interior, architectural",
+      "templateBoardId": "1Q6KWt1sufTu1W",
+      "forceClear": false
+    },
+    "architecture-project-plan": {
+      "id": "architecture-project-plan",
+      "type": "BUILT_IN",
+      "title": "Architecture Project Plan",
+      "keywords": "project plan, architecture, building, interior, architectural",
+      "templateBoardId": "1Q76yd1hVJCTcR",
+      "forceClear": false
+    },
+    "beat-sheet": {
+      "id": "beat-sheet",
+      "type": "BUILT_IN",
+      "title": "Beat Sheet",
+      "keywords": "Film script, Save The Cat",
+      "templateBoardId": "1Irpi92poegP14",
+      "forceClear": false
+    },
+    "brainstorming": {
+      "id": "brainstorming",
+      "type": "BUILT_IN",
+      "title": "Brainstorming",
+      "keywords": "Brainstorming, ideas",
+      "templateBoardId": "1Irpwl2poegP2n",
+      "forceClear": false
+    },
+    "brand-assets-template": {
+      "id": "brand-assets-template",
+      "type": "BUILT_IN",
+      "title": "Brand Assets",
+      "keywords": "Brand Assets, Brand Guidelines, Branding",
+      "templateBoardId": "1NuGVF139ovOer",
+      "forceClear": false
+    },
+    "brand-audit": {
+      "id": "brand-audit",
+      "type": "BUILT_IN",
+      "title": "Brand Audit",
+      "keywords": "Brand Audit, Branding, Strategy",
+      "templateBoardId": "1Ow8hP0badrJ7R",
+      "forceClear": false
+    },
+    "brand-board": {
+      "id": "brand-board",
+      "type": "BUILT_IN",
+      "title": "Brand Board",
+      "keywords": "",
+      "templateBoardId": "1JJcmm1M5zNQ8O",
+      "forceClear": false
+    },
+    "brand-naming": {
+      "id": "brand-naming",
+      "type": "BUILT_IN",
+      "title": "Brand Naming",
+      "keywords": "Brand Naming, Business Name, Name, Strategy, Brand, Branding, Brand Name Development",
+      "templateBoardId": "1OyEj91fr3R22l",
+      "forceClear": false
+    },
+    "brand-personality": {
+      "id": "brand-personality",
+      "type": "BUILT_IN",
+      "title": "Brand Personality",
+      "keywords": "Branding, Brand Strategy, Strategy, Workshop",
+      "templateBoardId": "1OAvTz18VJuH9H",
+      "forceClear": false
+    },
+    "brand-positioning-map": {
+      "id": "brand-positioning-map",
+      "type": "BUILT_IN",
+      "title": "Brand Positioning Map",
+      "keywords": "Brand positioning, Logo Design, Brand Design, Identity, Competitor landscape, Competitive landscape",
+      "templateBoardId": "1NRvYD1CRB5I6Z",
+      "forceClear": false
+    },
+    "brand-strategy-brief": {
+      "id": "brand-strategy-brief",
+      "type": "BUILT_IN",
+      "title": "Brand Strategy Brief",
+      "keywords": "",
+      "templateBoardId": "1JLprd1moHdfdm",
+      "forceClear": false
+    },
+    "brand-strategy": {
+      "id": "brand-strategy",
+      "type": "BUILT_IN",
+      "title": "Brand Strategy",
+      "keywords": "Branding, Brand Strategy, Strategy, Workshop",
+      "templateBoardId": "1OAxCw18VJuHar",
+      "forceClear": false
+    },
+    "brand-swot-analysis": {
+      "id": "brand-swot-analysis",
+      "type": "BUILT_IN",
+      "title": "Brand SWOT Analysis",
+      "keywords": "SWOT Analysis, SWAT Analsys, SWOT, Strategy, Brand, Branding",
+      "templateBoardId": "1OvLyi1nAfaAeC",
+      "forceClear": false
+    },
+    "call-sheet": {
+      "id": "call-sheet",
+      "type": "BUILT_IN",
+      "title": "Film Call Sheet",
+      "keywords": "",
+      "templateBoardId": "1IrpFb2poegP3A",
+      "forceClear": false
+    },
+    "campaign-plan": {
+      "id": "campaign-plan",
+      "type": "BUILT_IN",
+      "title": "Campaign Plan",
+      "keywords": "campaign project plan, marketing plan, campaign plan, marketing project plan, marketing, marketer",
+      "templateBoardId": "1IscFw29JNGw0R",
+      "forceClear": false
+    },
+    "campaign-reports": {
+      "id": "campaign-reports",
+      "type": "BUILT_IN",
+      "title": "Campaign Reports",
+      "keywords": "campaign report, marketing report, reports, marketing, marketer",
+      "templateBoardId": "1RdYCK12QN4U31",
+      "forceClear": false
+    },
+    "campaign-strategy": {
+      "id": "campaign-strategy",
+      "type": "BUILT_IN",
+      "title": "Campaign Strategy",
+      "keywords": "campaign strategy, marketing strategy, marketing, marketer, strategy",
+      "templateBoardId": "1RdYCw12QN4U2Y",
+      "forceClear": false
+    },
+    "character-design-moodboard": {
+      "id": "character-design-moodboard",
+      "type": "BUILT_IN",
+      "title": "Character Design Moodboard",
+      "keywords": "",
+      "templateBoardId": "1JJczW1M5zNQah",
+      "forceClear": false
+    },
+    "character-profile-game": {
+      "id": "character-profile-game",
+      "type": "BUILT_IN",
+      "title": "Game Character Profile",
+      "keywords": "Game character, Game character profile",
+      "templateBoardId": "1IscY529JNGw10",
+      "forceClear": false
+    },
+    "character-profile-template": {
+      "id": "character-profile-template",
+      "type": "BUILT_IN",
+      "title": "Character Profile",
+      "keywords": "writing writers novel",
+      "templateBoardId": "1IrpHY2poegP3L",
+      "forceClear": false
+    },
+    "character-relationship-map": {
+      "id": "character-relationship-map",
+      "type": "BUILT_IN",
+      "title": "Character Relationship Map",
+      "keywords": "Character Map, characters, writing, writers, novel,",
+      "templateBoardId": "1MstMJ106qrneW",
+      "forceClear": false
+    },
+    "class-notes": {
+      "id": "class-notes",
+      "type": "BUILT_IN",
+      "title": "Class Notes",
+      "keywords": "",
+      "templateBoardId": "1Iv6dk2xwqoB2c",
+      "forceClear": false
+    },
+    "competitor-landscape-template": {
+      "id": "competitor-landscape-template",
+      "type": "BUILT_IN",
+      "title": "Competitor Landscape",
+      "keywords": "",
+      "templateBoardId": "1Irq1E2poegS0I",
+      "forceClear": false
+    },
+    "concept-map": {
+      "id": "concept-map",
+      "type": "BUILT_IN",
+      "title": "Concept Map",
+      "keywords": "",
+      "templateBoardId": "1KhFpQ1EgjY20A",
+      "forceClear": false
+    },
+    "craft-materials-list": {
+      "id": "craft-materials-list",
+      "type": "BUILT_IN",
+      "title": "Craft Materials List",
+      "keywords": "project plan, craft, making, design, art",
+      "templateBoardId": "1S9hdx10ptl93H",
+      "forceClear": false
+    },
+    "craft-project-brainstorm": {
+      "id": "craft-project-brainstorm",
+      "type": "BUILT_IN",
+      "title": "Craft Project Brainstorm",
+      "keywords": "project plan, craft, making, design, art",
+      "templateBoardId": "1S9hcT10ptl93A",
+      "forceClear": false
+    },
+    "craft-project-moodboard": {
+      "id": "craft-project-moodboard",
+      "type": "BUILT_IN",
+      "title": "Craft Project Moodboard",
+      "keywords": "project plan, craft, making, design, art, Craft Project Moodboard",
+      "templateBoardId": "1S9hdj10ptl93E",
+      "forceClear": false
+    },
+    "craft-project-plan": {
+      "id": "craft-project-plan",
+      "type": "BUILT_IN",
+      "title": "Craft Project Plan",
+      "keywords": "project plan, craft, making, design, art",
+      "templateBoardId": "1S9hcB10ptl93x",
+      "forceClear": false
+    },
+    "craft-project-timeline": {
+      "id": "craft-project-timeline",
+      "type": "BUILT_IN",
+      "title": "Craft Project Timeline",
+      "keywords": "project plan, craft, making, design, art",
+      "templateBoardId": "1S9hdL10ptl93K",
+      "forceClear": false
+    },
+    "creative-brief-template": {
+      "id": "creative-brief-template",
+      "type": "BUILT_IN",
+      "title": "Creative Brief",
+      "keywords": "",
+      "templateBoardId": "1Irq5F2poegS19",
+      "mobilePreviewZoomScale": 75,
+      "forceClear": false
+    },
+    "customer-journey-map-template": {
+      "id": "customer-journey-map-template",
+      "type": "BUILT_IN",
+      "title": "Customer Journey Map",
+      "keywords": "",
+      "templateBoardId": "1Irq9E2poegS1w",
+      "forceClear": false
+    },
+    "day-in-the-life-of": {
+      "id": "day-in-the-life-of",
+      "type": "BUILT_IN",
+      "title": "Day In the Life Of",
+      "keywords": "Day In The Life Of, DILO, User Dairy, Research, Diary",
+      "templateBoardId": "1OJ7jw1yMvrG96",
+      "forceClear": false
+    },
+    "design-brief-template": {
+      "id": "design-brief-template",
+      "type": "BUILT_IN",
+      "title": "Design Brief",
+      "keywords": "",
+      "templateBoardId": "1Irqc02poegS1W",
+      "forceClear": false
+    },
+    "design-exploration": {
+      "id": "design-exploration",
+      "type": "BUILT_IN",
+      "title": "Design Exploration",
+      "keywords": "",
+      "templateBoardId": "1IwQM32DP5Y6f4",
+      "forceClear": false
+    },
+    "diary-study": {
+      "id": "diary-study",
+      "type": "BUILT_IN",
+      "title": "Diary Study",
+      "keywords": "Diary Study, User Dairy, Research, Diary",
+      "templateBoardId": "1OKDKA1PCDJCdk",
+      "forceClear": false
+    },
+    "digital-campaign-brief": {
+      "id": "digital-campaign-brief",
+      "type": "BUILT_IN",
+      "title": "Digital Campaign Brief",
+      "keywords": "",
+      "templateBoardId": "1JLptn1moHdfdB",
+      "forceClear": false
+    },
+    "eisenhower-matrix": {
+      "id": "eisenhower-matrix",
+      "type": "BUILT_IN",
+      "title": "Eisenhower Matrix",
+      "keywords": "Time Management Matrix, The Eisenhower Box, The Eisenhower Method, Eisenhower",
+      "templateBoardId": "1Kfrnw11v3so6d",
+      "forceClear": false
+    },
+    "empathy-map": {
+      "id": "empathy-map",
+      "type": "BUILT_IN",
+      "title": "Empathy Map",
+      "keywords": "",
+      "templateBoardId": "1Irqfn2poegS2k",
+      "forceClear": false
+    },
+    "event-brief-template": {
+      "id": "event-brief-template",
+      "type": "BUILT_IN",
+      "title": "Event Brief",
+      "keywords": "",
+      "templateBoardId": "1Irqji2poegS2O",
+      "forceClear": false
+    },
+    "event-moodboard": {
+      "id": "event-moodboard",
+      "type": "BUILT_IN",
+      "title": "Event Moodboard",
+      "keywords": "",
+      "templateBoardId": "1JJcfg1M5zNQ7N",
+      "forceClear": false
+    },
+    "event-planning-template": {
+      "id": "event-planning-template",
+      "type": "BUILT_IN",
+      "title": "Event Planning",
+      "keywords": "",
+      "templateBoardId": "1IFcHG1dj9Dv67",
+      "forceClear": false
+    },
+    "event-storyboard": {
+      "id": "event-storyboard",
+      "type": "BUILT_IN",
+      "title": "Event Storyboard",
+      "keywords": "",
+      "templateBoardId": "1JJbKu1M5zNQ55",
+      "forceClear": false
+    },
+    "fashion-brainstorm": {
+      "id": "fashion-brainstorm",
+      "type": "BUILT_IN",
+      "title": "Fashion Brainstorm",
+      "keywords": "fashion brainstorm",
+      "templateBoardId": "1S9hgd10ptl948",
+      "forceClear": false
+    },
+    "fashion-design-brief": {
+      "id": "fashion-design-brief",
+      "type": "BUILT_IN",
+      "title": "Fashion Design Brief",
+      "keywords": "fashion design brief",
+      "templateBoardId": "1S9hgb10ptl945",
+      "forceClear": false
+    },
+    "fashion-lookbook": {
+      "id": "fashion-lookbook",
+      "type": "BUILT_IN",
+      "title": "Fashion Lookbook",
+      "keywords": "fashion lookbook",
+      "templateBoardId": "1S9hgg10ptl94e",
+      "forceClear": false
+    },
+    "fashion-moodboard-template": {
+      "id": "fashion-moodboard-template",
+      "type": "BUILT_IN",
+      "title": "Fashion Moodboard",
+      "keywords": "Mood board",
+      "templateBoardId": "1Irqrx2poegS48",
+      "forceClear": false
+    },
+    "fashion-moodboard": {
+      "id": "fashion-moodboard",
+      "type": "BUILT_IN",
+      "title": "Fashion Moodboard",
+      "keywords": "fashion moodboard",
+      "templateBoardId": "1S9hgf10ptl94b",
+      "forceClear": false
+    },
+    "fashion-project-plan": {
+      "id": "fashion-project-plan",
+      "type": "BUILT_IN",
+      "title": "Fashion Project Plan",
+      "keywords": "fashion",
+      "templateBoardId": "1S9hg110ptl942",
+      "forceClear": false
+    },
+    "fashion-storyboard": {
+      "id": "fashion-storyboard",
+      "type": "BUILT_IN",
+      "title": "Fashion Storyboard",
+      "keywords": "",
+      "templateBoardId": "1JJbhT13lRxF8Z",
+      "forceClear": false
+    },
+    "film-brainstorm-template": {
+      "id": "film-brainstorm-template",
+      "type": "BUILT_IN",
+      "title": "Film Brainstorming",
+      "keywords": "",
+      "templateBoardId": "1LNAuH1dcrGQfq",
+      "forceClear": false
+    },
+    "film-equipment-checklist": {
+      "id": "film-equipment-checklist",
+      "type": "BUILT_IN",
+      "title": "Film Equipment Checklist",
+      "keywords": "",
+      "templateBoardId": "1LM2QL1mEMYodF",
+      "forceClear": false
+    },
+    "film-location-scouting": {
+      "id": "film-location-scouting",
+      "type": "BUILT_IN",
+      "title": "Film Location Scouting",
+      "keywords": "",
+      "templateBoardId": "1LNXgp1dcwo471",
+      "forceClear": false
+    },
+    "film-marketing-plan": {
+      "id": "film-marketing-plan",
+      "type": "BUILT_IN",
+      "title": "Film Marketing Plan",
+      "keywords": "Film Marketing Plan",
+      "templateBoardId": "1THFHi1gnesk7u",
+      "forceClear": false
+    },
+    "film-shot-list": {
+      "id": "film-shot-list",
+      "type": "BUILT_IN",
+      "title": "Film Shot List",
+      "keywords": "Shot List",
+      "templateBoardId": "1LLmWA10Blf79M",
+      "forceClear": false
+    },
+    "filmmaking-moodboard": {
+      "id": "filmmaking-moodboard",
+      "type": "BUILT_IN",
+      "title": "Film Moodboard",
+      "keywords": "",
+      "templateBoardId": "1LJBv31LIHcV6u",
+      "forceClear": false
+    },
+    "filmmaking-storyboard": {
+      "id": "filmmaking-storyboard",
+      "type": "BUILT_IN",
+      "title": "Film Storyboard",
+      "keywords": "",
+      "templateBoardId": "1IscWx29JNGw0X",
+      "forceClear": false
+    },
+    "flow-chart-template": {
+      "id": "flow-chart-template",
+      "type": "BUILT_IN",
+      "title": "Flow Chart",
+      "keywords": "",
+      "templateBoardId": "1IrqCS2poegS4T",
+      "forceClear": false
+    },
+    "game-design-brainstorm-template": {
+      "id": "game-design-brainstorm-template",
+      "type": "BUILT_IN",
+      "title": "Game Design Brainstorming",
+      "keywords": "",
+      "templateBoardId": "1McWMC1MbSQibF",
+      "forceClear": false
+    },
+    "game-design-character-relationship-map": {
+      "id": "game-design-character-relationship-map",
+      "type": "BUILT_IN",
+      "title": "Game Character Relationship Map",
+      "keywords": "",
+      "templateBoardId": "1MdG1t1Mc0VN5m",
+      "forceClear": false
+    },
+    "game-design-document": {
+      "id": "game-design-document",
+      "type": "BUILT_IN",
+      "title": "Game Design Document",
+      "keywords": "",
+      "templateBoardId": "1IrqJ42poegS6t",
+      "forceClear": false
+    },
+    "game-design-flow-diagram": {
+      "id": "game-design-flow-diagram",
+      "type": "BUILT_IN",
+      "title": "Game Design Flow Diagram",
+      "keywords": "",
+      "templateBoardId": "1Mlgja1Sedh759",
+      "forceClear": false
+    },
+    "game-design-mechanics": {
+      "id": "game-design-mechanics",
+      "type": "BUILT_IN",
+      "title": "Game Mechanics",
+      "keywords": "",
+      "templateBoardId": "1MlgiN1Sedh756",
+      "forceClear": false
+    },
+    "game-design-moodboard": {
+      "id": "game-design-moodboard",
+      "type": "BUILT_IN",
+      "title": "Game Design Moodboard",
+      "keywords": "",
+      "templateBoardId": "1JJcEc1M5zNQaS",
+      "forceClear": false
+    },
+    "game-design-story-outline": {
+      "id": "game-design-story-outline",
+      "type": "BUILT_IN",
+      "title": "Game Design Story Outline",
+      "keywords": "",
+      "templateBoardId": "1Iv3Hz2EWd6Wdb",
+      "forceClear": false
+    },
+    "game-design-storyboard": {
+      "id": "game-design-storyboard",
+      "type": "BUILT_IN",
+      "title": "Game Design Storyboard",
+      "keywords": "",
+      "templateBoardId": "1IscZW29JNGw13",
+      "forceClear": false
+    },
+    "game-level-design": {
+      "id": "game-level-design",
+      "type": "BUILT_IN",
+      "title": "Game Level Design",
+      "keywords": "",
+      "templateBoardId": "1Iz5Vf25MreT98",
+      "forceClear": false
+    },
+    "game-marketing-plan": {
+      "id": "game-marketing-plan",
+      "type": "BUILT_IN",
+      "title": "Game Marketing Plan",
+      "keywords": "Game Marketing Plan",
+      "templateBoardId": "1TgsRN1fa1CIbZ",
+      "forceClear": false
+    },
+    "game-world-building": {
+      "id": "game-world-building",
+      "type": "BUILT_IN",
+      "title": "Game Worldbuilding",
+      "keywords": "world building, worldbuilding, game world building, game worldbuilding",
+      "templateBoardId": "1IsutY29JNGF1w",
+      "forceClear": false
+    },
+    "graphic-design-moodboard-template": {
+      "id": "graphic-design-moodboard-template",
+      "type": "BUILT_IN",
+      "title": "Graphic Design Moodboard",
+      "keywords": "Mood board",
+      "templateBoardId": "1Iq2C62fCpBY2P",
+      "forceClear": false
+    },
+    "graphic-design-project-plan": {
+      "id": "graphic-design-project-plan",
+      "type": "BUILT_IN",
+      "title": "Graphic Design Project Plan",
+      "keywords": "",
+      "templateBoardId": "1JJcQ81M5zTDbp",
+      "forceClear": false
+    },
+    "heros-journey": {
+      "id": "heros-journey",
+      "type": "BUILT_IN",
+      "title": "Hero's Journey",
+      "keywords": "writing writers novel",
+      "templateBoardId": "1Msumz106qrnfA",
+      "forceClear": false
+    },
+    "how-to-start-a-podcast": {
+      "id": "how-to-start-a-podcast",
+      "type": "BUILT_IN",
+      "title": "Podcast Show Plan",
+      "keywords": "Start a Podcast, Podcast Show Plan",
+      "templateBoardId": "1MMpqQ1cPJhwf4",
+      "forceClear": false
+    },
+    "illustration-design-brief": {
+      "id": "illustration-design-brief",
+      "type": "BUILT_IN",
+      "title": "Illustration Design Brief",
+      "keywords": "",
+      "templateBoardId": "1Isd1W29JNGw16",
+      "forceClear": false
+    },
+    "illustration-project-plan": {
+      "id": "illustration-project-plan",
+      "type": "BUILT_IN",
+      "title": "Illustration Project Plan",
+      "keywords": "",
+      "templateBoardId": "1IsdgI29JNGw1c",
+      "forceClear": false
+    },
+    "illustrative-moodboard": {
+      "id": "illustrative-moodboard",
+      "type": "BUILT_IN",
+      "title": "Illustrative Moodboard",
+      "keywords": "",
+      "templateBoardId": "1Isd3I29JNGw19",
+      "forceClear": false
+    },
+    "inspiration-board-template": {
+      "id": "inspiration-board-template",
+      "type": "BUILT_IN",
+      "title": "Inspiration Board",
+      "keywords": "",
+      "templateBoardId": "1IrsEW2poegU0z",
+      "forceClear": false
+    },
+    "inspiration-library": {
+      "id": "inspiration-library",
+      "type": "BUILT_IN",
+      "title": "Inspiration Library",
+      "keywords": "",
+      "templateBoardId": "1Iu1CW2u4AaD5v",
+      "forceClear": false
+    },
+    "interface-sketches-template": {
+      "id": "interface-sketches-template",
+      "type": "BUILT_IN",
+      "title": "Interface Sketches",
+      "keywords": "UI Sketches, Interface Sketches, Wireframe",
+      "templateBoardId": "1NuGXY139ovOex",
+      "forceClear": false
+    },
+    "interior-design-brief-template": {
+      "id": "interior-design-brief-template",
+      "type": "BUILT_IN",
+      "title": "Interior Design Brief",
+      "keywords": "",
+      "templateBoardId": "1IrsJS2poegU10",
+      "forceClear": false
+    },
+    "interior-design-moodboard": {
+      "id": "interior-design-moodboard",
+      "type": "BUILT_IN",
+      "title": "Interior Design Moodboard",
+      "keywords": "Mood board, interior, kitchen, living room",
+      "templateBoardId": "1IrsOl2poegU1g",
+      "forceClear": false
+    },
+    "interior-design-product-list": {
+      "id": "interior-design-product-list",
+      "type": "BUILT_IN",
+      "title": "Interior Design Product List",
+      "keywords": "",
+      "templateBoardId": "1ONUOC1dB0J62r",
+      "forceClear": false
+    },
+    "interior-design-project-plan": {
+      "id": "interior-design-project-plan",
+      "type": "BUILT_IN",
+      "title": "Interior Design Project Plan",
+      "keywords": "interior, kitchen, living room",
+      "templateBoardId": "1IsdkK29JNGw1f",
+      "forceClear": false
+    },
+    "kanban-board-template": {
+      "id": "kanban-board-template",
+      "type": "BUILT_IN",
+      "title": "Kanban Board",
+      "keywords": "",
+      "templateBoardId": "1IrsST2poegU1R",
+      "forceClear": false
+    },
+    "lean-canvas-template": {
+      "id": "lean-canvas-template",
+      "type": "BUILT_IN",
+      "title": "Lean Canvas",
+      "keywords": "",
+      "templateBoardId": "1IrsWY2poegU2g",
+      "forceClear": false
+    },
+    "lean-ux-canvas": {
+      "id": "lean-ux-canvas",
+      "type": "BUILT_IN",
+      "title": "Lean UX Canvas",
+      "keywords": "lean UX canvas, lean UX template,  lean UX design canvas",
+      "templateBoardId": "1KuiKI1LjwwQ1M",
+      "forceClear": false
+    },
+    "logo-brainstorm": {
+      "id": "logo-brainstorm",
+      "type": "BUILT_IN",
+      "title": "Logo Brainstorming",
+      "keywords": "Brainstorming, Brainstorm, Logo, Brand, Identity, Idea",
+      "templateBoardId": "1NRvZK1CRB5I73",
+      "forceClear": false
+    },
+    "logo-design-assets-handover": {
+      "id": "logo-design-assets-handover",
+      "type": "BUILT_IN",
+      "title": "Logo Design Assets Handover",
+      "keywords": "Brand Assets, Brand Guidelines, Branding, Handover, Logo Design",
+      "templateBoardId": "1NRw9B1CRB5I88",
+      "forceClear": false
+    },
+    "logo-design-creative-brief": {
+      "id": "logo-design-creative-brief",
+      "type": "BUILT_IN",
+      "title": "Logo Design Brief",
+      "keywords": "Logo brief, Logo design, brief, brand design, identity design",
+      "templateBoardId": "1JLpr11moHdfdj",
+      "forceClear": false
+    },
+    "logo-design-presentation": {
+      "id": "logo-design-presentation",
+      "type": "BUILT_IN",
+      "title": "Logo Design Presentation",
+      "keywords": "Presentation, Design, Concept, Concepts, Logo, Brand",
+      "templateBoardId": "1NRw8b1CRB5I85",
+      "forceClear": false
+    },
+    "logo-design-project-plan": {
+      "id": "logo-design-project-plan",
+      "type": "BUILT_IN",
+      "title": "Logo Design Project Plan",
+      "keywords": "Logo Design Plan, Project plan",
+      "templateBoardId": "1NRvDA1CRB242d",
+      "forceClear": false
+    },
+    "logo-moodboard": {
+      "id": "logo-moodboard",
+      "type": "BUILT_IN",
+      "title": "Logo Moodboard",
+      "keywords": "Logo Moodboard, Brand Moodboard, Brand Strategy, Branding, Logo Design",
+      "templateBoardId": "1JJcry1M5zNQ9K",
+      "forceClear": false
+    },
+    "market-research-brief": {
+      "id": "market-research-brief",
+      "type": "BUILT_IN",
+      "title": "Market Research Brief",
+      "keywords": "",
+      "templateBoardId": "1J0ZcB1H7dQEfN",
+      "forceClear": false
+    },
+    "market-research": {
+      "id": "market-research",
+      "type": "BUILT_IN",
+      "title": "Market Research",
+      "keywords": "Brand market research, Market research, Researach, Marketing, Marketer, Branding, Brand Strategy, Strategy",
+      "templateBoardId": "1Ovnvx1k75WUaT",
+      "forceClear": false
+    },
+    "marketing-assets": {
+      "id": "marketing-assets",
+      "type": "BUILT_IN",
+      "title": "Marketing Assets",
+      "keywords": "marketing assets, marketing brand assets, brand assets, campaign assets, marketing, marketer",
+      "templateBoardId": "1RdYC512QN4U2S",
+      "forceClear": false
+    },
+    "marketing-calendar-template": {
+      "id": "marketing-calendar-template",
+      "type": "BUILT_IN",
+      "title": "Marketing Calendar",
+      "keywords": "",
+      "templateBoardId": "1Irt2E2poegU2X",
+      "forceClear": false
+    },
+    "marketing-campaign-moodboard": {
+      "id": "marketing-campaign-moodboard",
+      "type": "BUILT_IN",
+      "title": "Marketing Campaign Moodboard",
+      "keywords": "marketing campaign moodboard, marketing moodboard, campaign moodboard, marketing, marketer",
+      "templateBoardId": "1JJcjd1M5zNQ8m",
+      "forceClear": false
+    },
+    "marketing-content-plan": {
+      "id": "marketing-content-plan",
+      "type": "BUILT_IN",
+      "title": "Marketing Content Plan",
+      "keywords": "campaign content plan, marketing content plan, content plan, marketing, marketer",
+      "templateBoardId": "1RdYCh12QN4U2V",
+      "forceClear": false
+    },
+    "marketing-plan": {
+      "id": "marketing-plan",
+      "type": "BUILT_IN",
+      "title": "Marketing Plan",
+      "keywords": "",
+      "templateBoardId": "1Irte42poegU3V",
+      "forceClear": false
+    },
+    "marketing-template": {
+      "id": "marketing-template",
+      "type": "BUILT_IN",
+      "title": "Marketing Brief",
+      "keywords": "marketing brief, campaign brief, marketing campaign brief",
+      "templateBoardId": "1IrsZo2poegU2F",
+      "forceClear": false
+    },
+    "media-planning-brief": {
+      "id": "media-planning-brief",
+      "type": "BUILT_IN",
+      "title": "Media Planning Brief",
+      "keywords": "",
+      "templateBoardId": "1JLpsl1moHdfdy",
+      "forceClear": false
+    },
+    "mind-map-template": {
+      "id": "mind-map-template",
+      "type": "BUILT_IN",
+      "title": "Mind Map",
+      "keywords": "mindmap",
+      "templateBoardId": "1Irthi2poegU46",
+      "forceClear": false
+    },
+    "model-brief": {
+      "id": "model-brief",
+      "type": "BUILT_IN",
+      "title": "Model Brief",
+      "keywords": "",
+      "templateBoardId": "1JLpqt1moHdfdd",
+      "forceClear": false
+    },
+    "moodboard-template": {
+      "id": "moodboard-template",
+      "type": "BUILT_IN",
+      "title": "Moodboard",
+      "keywords": "Mood board",
+      "templateBoardId": "1IrtkU2poegU5K",
+      "forceClear": false
+    },
+    "motion-design-brainstorm-template": {
+      "id": "motion-design-brainstorm-template",
+      "type": "BUILT_IN",
+      "title": "Motion Design Brainstorming",
+      "keywords": "",
+      "templateBoardId": "1M0cR01BNw0b6K",
+      "forceClear": false
+    },
+    "motion-design-brief": {
+      "id": "motion-design-brief",
+      "type": "BUILT_IN",
+      "title": "Motion Design Brief",
+      "keywords": "",
+      "templateBoardId": "1Isubh29JNGF13",
+      "forceClear": false
+    },
+    "motion-design-moodboard": {
+      "id": "motion-design-moodboard",
+      "type": "BUILT_IN",
+      "title": "Motion Design Moodboard",
+      "keywords": "",
+      "templateBoardId": "1Isuds29JNGF18",
+      "forceClear": false
+    },
+    "motion-design-project-plan": {
+      "id": "motion-design-project-plan",
+      "type": "BUILT_IN",
+      "title": "Motion Design Project Plan",
+      "keywords": "",
+      "templateBoardId": "1Isuh929JNGF1b",
+      "forceClear": false
+    },
+    "motion-design-storyboard": {
+      "id": "motion-design-storyboard",
+      "type": "BUILT_IN",
+      "title": "Motion Design Storyboard",
+      "keywords": "",
+      "templateBoardId": "1IsuiN29JNGF1e",
+      "forceClear": false
+    },
+    "novel-marketing-plan": {
+      "id": "novel-marketing-plan",
+      "type": "BUILT_IN",
+      "title": "Novel Marketing Plan",
+      "keywords": "Novel Marketing Plan",
+      "templateBoardId": "1Toph2131HCL27",
+      "forceClear": false
+    },
+    "novel-moodboard": {
+      "id": "novel-moodboard",
+      "type": "BUILT_IN",
+      "title": "Novel Moodboard",
+      "keywords": "writing, writers, novel",
+      "templateBoardId": "1MxyH317yFZt1b",
+      "forceClear": false
+    },
+    "novel-plan": {
+      "id": "novel-plan",
+      "type": "BUILT_IN",
+      "title": "Novel Plan",
+      "keywords": "novel plan, writing, writers novel, book plan, story plan, book",
+      "templateBoardId": "1IsulH29JNGF1k",
+      "forceClear": false
+    },
+    "novel-research": {
+      "id": "novel-research",
+      "type": "BUILT_IN",
+      "title": "Research",
+      "keywords": "research",
+      "templateBoardId": "1MxyLR17yFZt1s",
+      "forceClear": false
+    },
+    "packaging-design-moodboard": {
+      "id": "packaging-design-moodboard",
+      "type": "BUILT_IN",
+      "title": "Packaging Design Moodboard",
+      "keywords": "",
+      "templateBoardId": "1JJcEq1M5zNQaV",
+      "forceClear": false
+    },
+    "persona-template": {
+      "id": "persona-template",
+      "type": "BUILT_IN",
+      "title": "Customer Persona",
+      "keywords": "Persona, Personas, Audience, Target Audience, Customer, Buyer",
+      "templateBoardId": "1IrtoS2poegU67",
+      "forceClear": false
+    },
+    "photography-contact-sheet": {
+      "id": "photography-contact-sheet",
+      "type": "BUILT_IN",
+      "title": "Photography Contact Sheet",
+      "keywords": "",
+      "templateBoardId": "1LlXu91bme0a6T",
+      "forceClear": false
+    },
+    "photography-moodboard": {
+      "id": "photography-moodboard",
+      "type": "BUILT_IN",
+      "title": "Photography Moodboard",
+      "keywords": "Mood board",
+      "templateBoardId": "1Irtxe2poegU75",
+      "forceClear": false
+    },
+    "photography-storyboard": {
+      "id": "photography-storyboard",
+      "type": "BUILT_IN",
+      "title": "Photography Storyboard",
+      "keywords": "",
+      "templateBoardId": "1JJbz213lRxFaL",
+      "forceClear": false
+    },
+    "photography-workflow": {
+      "id": "photography-workflow",
+      "type": "BUILT_IN",
+      "title": "Photography Workflow",
+      "keywords": "",
+      "templateBoardId": "1IrtA42poegU7k",
+      "forceClear": false
+    },
+    "photoshoot-brief": {
+      "id": "photoshoot-brief",
+      "type": "BUILT_IN",
+      "title": "Photoshoot Brief",
+      "keywords": "",
+      "templateBoardId": "1IrtVy2poegWaG",
+      "forceClear": false
+    },
+    "photoshoot-call-sheet": {
+      "id": "photoshoot-call-sheet",
+      "type": "BUILT_IN",
+      "title": "Photoshoot Call Sheet",
+      "keywords": "",
+      "templateBoardId": "1Li0nA1gFqwdbA",
+      "forceClear": false
+    },
+    "photoshoot-plan": {
+      "id": "photoshoot-plan",
+      "type": "BUILT_IN",
+      "title": "Photoshoot Plan",
+      "keywords": "",
+      "templateBoardId": "1LBBzf1YNRnVaB",
+      "forceClear": false
+    },
+    "podcast-episode-plan": {
+      "id": "podcast-episode-plan",
+      "type": "BUILT_IN",
+      "title": "Podcast Episode Plan",
+      "keywords": "",
+      "templateBoardId": "1MINI71mWIry5E",
+      "forceClear": false
+    },
+    "podcast-outline-template": {
+      "id": "podcast-outline-template",
+      "type": "BUILT_IN",
+      "title": "Podcast Outline",
+      "keywords": "Podcast Outline, Podcast Script",
+      "templateBoardId": "1MIsnT1mWD1M8H",
+      "forceClear": false
+    },
+    "podcast-research": {
+      "id": "podcast-research",
+      "type": "BUILT_IN",
+      "title": "Podcast Research",
+      "keywords": "Podcast Research",
+      "templateBoardId": "1MIsVR1mWD8KbR",
+      "forceClear": false
+    },
+    "podcast-schedule": {
+      "id": "podcast-schedule",
+      "type": "BUILT_IN",
+      "title": "Podcast Schedule",
+      "keywords": "",
+      "templateBoardId": "1MIoYM1bMlqafs",
+      "forceClear": false
+    },
+    "podcast-script": {
+      "id": "podcast-script",
+      "type": "BUILT_IN",
+      "title": "Podcast Script",
+      "keywords": "Podcast Script, Podcast Outline",
+      "templateBoardId": "1MKBWH1zLFHha1",
+      "forceClear": false
+    },
+    "podcast-storyboard-template": {
+      "id": "podcast-storyboard-template",
+      "type": "BUILT_IN",
+      "title": "Podcast Storyboard",
+      "keywords": "",
+      "templateBoardId": "1JJbmI13lRxF9q",
+      "forceClear": false
+    },
+    "porters-five-forces": {
+      "id": "porters-five-forces",
+      "type": "BUILT_IN",
+      "title": "Porter's Five Forces",
+      "keywords": "",
+      "templateBoardId": "1IrueA2poegWbF",
+      "forceClear": false
+    },
+    "poster-moodboard": {
+      "id": "poster-moodboard",
+      "type": "BUILT_IN",
+      "title": "Poster Moodboard",
+      "keywords": "Poster",
+      "templateBoardId": "1KKHbH1xh3u8cX",
+      "forceClear": false
+    },
+    "pre-production": {
+      "id": "pre-production",
+      "type": "BUILT_IN",
+      "title": "Film Pre-production",
+      "keywords": "film plan, pre-production, short film",
+      "templateBoardId": "1IrukB2poegWc4",
+      "forceClear": false
+    },
+    "press-release-brief-template": {
+      "id": "press-release-brief-template",
+      "type": "BUILT_IN",
+      "title": "Press Release Brief",
+      "keywords": "",
+      "templateBoardId": "1Is8al2poehbfi",
+      "forceClear": false
+    },
+    "product-hub-template": {
+      "id": "product-hub-template",
+      "type": "BUILT_IN",
+      "title": "Product Hub",
+      "keywords": "",
+      "templateBoardId": "1IsuZH29JNGF1A",
+      "forceClear": false
+    },
+    "product-launch-plan-template": {
+      "id": "product-launch-plan-template",
+      "type": "BUILT_IN",
+      "title": "Product Launch Plan",
+      "keywords": "",
+      "templateBoardId": "1Is8eq2poehbft",
+      "forceClear": false
+    },
+    "product-roadmap-template": {
+      "id": "product-roadmap-template",
+      "type": "BUILT_IN",
+      "title": "Product Roadmap",
+      "keywords": "",
+      "templateBoardId": "1Is8k32poehbfO",
+      "forceClear": false
+    },
+    "project-plan-template": {
+      "id": "project-plan-template",
+      "type": "BUILT_IN",
+      "title": "Project Plan",
+      "keywords": "",
+      "templateBoardId": "1Is8Y72poehbgf",
+      "forceClear": false
+    },
+    "project-retrospective-template": {
+      "id": "project-retrospective-template",
+      "type": "BUILT_IN",
+      "title": "Project Retrospective",
+      "keywords": "",
+      "templateBoardId": "1Is90O2poehbgt",
+      "forceClear": false
+    },
+    "renovation-design-brief": {
+      "id": "renovation-design-brief",
+      "type": "BUILT_IN",
+      "title": "Renovation Design Brief",
+      "keywords": "renovation design brief",
+      "templateBoardId": "1S9hha10ptl94k",
+      "forceClear": false
+    },
+    "renovation-material-list": {
+      "id": "renovation-material-list",
+      "type": "BUILT_IN",
+      "title": "Renovation Materials List",
+      "keywords": "renovation materials list",
+      "templateBoardId": "1S9hhe10ptl94q",
+      "forceClear": false
+    },
+    "renovation-moodboard": {
+      "id": "renovation-moodboard",
+      "type": "BUILT_IN",
+      "title": "Renovation Moodboard",
+      "keywords": "home renovation moodboard",
+      "templateBoardId": "1S9hhc10ptl94n",
+      "forceClear": false
+    },
+    "renovation-project-plan": {
+      "id": "renovation-project-plan",
+      "type": "BUILT_IN",
+      "title": "Renovation Project Plan",
+      "keywords": "renovation project plan",
+      "templateBoardId": "1S9iBQ1DM2ua9H",
+      "forceClear": false
+    },
+    "research-proposal": {
+      "id": "research-proposal",
+      "type": "BUILT_IN",
+      "title": "Research Proposal",
+      "keywords": "",
+      "templateBoardId": "1Iv6gx2xwqoB2v",
+      "forceClear": false
+    },
+    "rpg-campaign-map": {
+      "id": "rpg-campaign-map",
+      "type": "BUILT_IN",
+      "title": "RPG Campaign Map",
+      "keywords": "rpg, d&d, pointcrawl, dungeon, fantasy, roleplaying, game, dnd, map, story, dungeon master, dm, gm, pointcrawl, hex, sandbox, adventure, campaign",
+      "templateBoardId": "1IxDP82DP5Z5e8",
+      "forceClear": false
+    },
+    "rpg-dungeon-map": {
+      "id": "rpg-dungeon-map",
+      "type": "BUILT_IN",
+      "title": "RPG Dungeon Map",
+      "keywords": "rpg, d&d, dungeon, fantasy, roleplaying, game, dnd, map, story, dungeon master, dm, gm, adventure",
+      "templateBoardId": "1IuJT42kYaJP5n",
+      "forceClear": false
+    },
+    "seo-brief-template": {
+      "id": "seo-brief-template",
+      "type": "BUILT_IN",
+      "title": "SEO Brief",
+      "keywords": "",
+      "templateBoardId": "1Is9dK2poehbi2",
+      "forceClear": false
+    },
+    "shot-list": {
+      "id": "shot-list",
+      "type": "BUILT_IN",
+      "title": "Photoshoot Shot List",
+      "keywords": "",
+      "templateBoardId": "1LlZLD1bmeki2S",
+      "forceClear": false
+    },
+    "site-map-template": {
+      "id": "site-map-template",
+      "type": "BUILT_IN",
+      "title": "Site Map",
+      "keywords": "Sitemap, Site Map, Website Map, IA, Information Architecture",
+      "templateBoardId": "1Is9gk2poehbig",
+      "forceClear": false
+    },
+    "social-media-calendar-template": {
+      "id": "social-media-calendar-template",
+      "type": "BUILT_IN",
+      "title": "Social Media Calendar",
+      "keywords": "social media calendar, marketing calendar, campaign calendar, marketing, marketer",
+      "templateBoardId": "1Is9jv2poehbj7",
+      "forceClear": false
+    },
+    "social-media-campaign-brief": {
+      "id": "social-media-campaign-brief",
+      "type": "BUILT_IN",
+      "title": "Social Media Campaign Brief",
+      "keywords": "",
+      "templateBoardId": "1JLpqJ1moHdfdg",
+      "forceClear": false
+    },
+    "stakeholder-mapping": {
+      "id": "stakeholder-mapping",
+      "type": "BUILT_IN",
+      "title": "Stakeholder Map",
+      "keywords": "",
+      "templateBoardId": "1Is9yW2poehbg9",
+      "forceClear": false
+    },
+    "startup-hub": {
+      "id": "startup-hub",
+      "type": "BUILT_IN",
+      "title": "Startup Hub",
+      "keywords": "",
+      "templateBoardId": "1Isuk429JNGF1h",
+      "forceClear": false
+    },
+    "story-arc": {
+      "id": "story-arc",
+      "type": "BUILT_IN",
+      "title": "Story Arc",
+      "keywords": "writing writers novel",
+      "templateBoardId": "1MsutI106qrngt",
+      "forceClear": false
+    },
+    "story-brainstorm": {
+      "id": "story-brainstorm",
+      "type": "BUILT_IN",
+      "title": "Brainstorming",
+      "keywords": "writing writers novel",
+      "templateBoardId": "1MxydG17yFZt10",
+      "forceClear": false
+    },
+    "story-map": {
+      "id": "story-map",
+      "type": "BUILT_IN",
+      "title": "Story Map",
+      "keywords": "",
+      "templateBoardId": "1Is9CN2poehicI",
+      "forceClear": false
+    },
+    "story-outline-template": {
+      "id": "story-outline-template",
+      "type": "BUILT_IN",
+      "title": "Story Outline",
+      "keywords": "Story outline, outline, story map",
+      "templateBoardId": "1Is9FV2poehicX",
+      "forceClear": false
+    },
+    "storyboard-template": {
+      "id": "storyboard-template",
+      "type": "BUILT_IN",
+      "title": "Storyboard",
+      "keywords": "storyboard, scene planning, visual script, sequence",
+      "templateBoardId": "1Is9IK2poehidh",
+      "forceClear": false
+    },
+    "style-frames": {
+      "id": "style-frames",
+      "type": "BUILT_IN",
+      "title": "Motion Design Style Frames",
+      "keywords": "Style, Style frame, Style Frames",
+      "templateBoardId": "1M0xwb1BNAuOaH",
+      "forceClear": false
+    },
+    "target-audience-template": {
+      "id": "target-audience-template",
+      "type": "BUILT_IN",
+      "title": "Target Audience",
+      "keywords": "",
+      "templateBoardId": "1Is9O02poehl8M",
+      "forceClear": false
+    },
+    "team-planner-template": {
+      "id": "team-planner-template",
+      "type": "BUILT_IN",
+      "title": "Team Planner",
+      "keywords": "",
+      "templateBoardId": "1Is9QK2poehl9e",
+      "forceClear": false
+    },
+    "team-structure": {
+      "id": "team-structure",
+      "type": "BUILT_IN",
+      "title": "Team Structure",
+      "keywords": "",
+      "templateBoardId": "1Is9W22poehl9E",
+      "forceClear": false
+    },
+    "technical-architecture": {
+      "id": "technical-architecture",
+      "type": "BUILT_IN",
+      "title": "Technical Architecture",
+      "keywords": "",
+      "templateBoardId": "1IwQlo2DP5Y1fq",
+      "forceClear": false
+    },
+    "three-act-structure-outline": {
+      "id": "three-act-structure-outline",
+      "type": "BUILT_IN",
+      "title": "Three Act Structure",
+      "keywords": "writing writers novel",
+      "templateBoardId": "1Msu8e106qrnf1",
+      "forceClear": false
+    },
+    "travel-photography-plan": {
+      "id": "travel-photography-plan",
+      "type": "BUILT_IN",
+      "title": "Travel Photography Plan",
+      "keywords": "Travel Photography",
+      "templateBoardId": "1UgPty1gofHUb1",
+      "forceClear": false
+    },
+    "tvc-advertising-storyboard": {
+      "id": "tvc-advertising-storyboard",
+      "type": "BUILT_IN",
+      "title": "TVC Advertising Storyboard",
+      "keywords": "",
+      "templateBoardId": "1JJcSR1M5zTDbE",
+      "forceClear": false
+    },
+    "ui-design-brief": {
+      "id": "ui-design-brief",
+      "type": "BUILT_IN",
+      "title": "UI Design Brief",
+      "keywords": "",
+      "templateBoardId": "1JLpq91moHdfda",
+      "forceClear": false
+    },
+    "ui-moodboard": {
+      "id": "ui-moodboard",
+      "type": "BUILT_IN",
+      "title": "Website Design Moodboard",
+      "keywords": "Mood board",
+      "templateBoardId": "1Isunm29JNGF1n",
+      "forceClear": false
+    },
+    "usability-report-template": {
+      "id": "usability-report-template",
+      "type": "BUILT_IN",
+      "title": "Usability Report",
+      "keywords": "Usability Report, Research Report, Analysis",
+      "templateBoardId": "1NuGSM139ovOel",
+      "forceClear": false
+    },
+    "usability-testing-plan": {
+      "id": "usability-testing-plan",
+      "type": "BUILT_IN",
+      "title": "Usability Testing Plan",
+      "keywords": "Usability testing, usability test plan, usability test checklist, usability testing",
+      "templateBoardId": "1KuiHM1LjwwQ1H",
+      "forceClear": false
+    },
+    "user-flow-template": {
+      "id": "user-flow-template",
+      "type": "BUILT_IN",
+      "title": "User Flow Diagram",
+      "keywords": "User Journey Map, User Flow, Diagram",
+      "templateBoardId": "1Is9Zr2poehla7",
+      "forceClear": false
+    },
+    "user-interview-notes-template": {
+      "id": "user-interview-notes-template",
+      "type": "BUILT_IN",
+      "title": "User Interview Notes",
+      "keywords": "User Interview, Customer Interview, Research, Notes",
+      "templateBoardId": "1NuGRa139ovOdK",
+      "forceClear": false
+    },
+    "user-journey-map-template": {
+      "id": "user-journey-map-template",
+      "type": "BUILT_IN",
+      "title": "User Journey Map",
+      "keywords": "",
+      "templateBoardId": "1Isa1X2poehlaQ",
+      "forceClear": false
+    },
+    "user-story-template": {
+      "id": "user-story-template",
+      "type": "BUILT_IN",
+      "title": "User Story",
+      "keywords": "",
+      "templateBoardId": "1Isa4d2poehlbi",
+      "forceClear": false
+    },
+    "ux-research-brief": {
+      "id": "ux-research-brief",
+      "type": "BUILT_IN",
+      "title": "UX Research Brief",
+      "keywords": "",
+      "templateBoardId": "1J1k4T1XDfDE4i",
+      "forceClear": false
+    },
+    "ux-storyboard": {
+      "id": "ux-storyboard",
+      "type": "BUILT_IN",
+      "title": "UX Storyboard",
+      "keywords": "Wireframe, UX Storyboard, Interface Sketches, Sketch, App Design",
+      "templateBoardId": "1JJbPL1M5zNQ6p",
+      "forceClear": false
+    },
+    "ux-ui-project-plan": {
+      "id": "ux-ui-project-plan",
+      "type": "BUILT_IN",
+      "title": "UX Project Plan",
+      "keywords": "",
+      "templateBoardId": "1IsuoA29JNGF1q",
+      "forceClear": false
+    },
+    "value-proposition-canvas-template": {
+      "id": "value-proposition-canvas-template",
+      "type": "BUILT_IN",
+      "title": "Value Proposition Canvas",
+      "keywords": "",
+      "templateBoardId": "1Isa7c2poehlbC",
+      "forceClear": false
+    },
+    "video-creative-brief-template": {
+      "id": "video-creative-brief-template",
+      "type": "BUILT_IN",
+      "title": "Video Creative Brief",
+      "keywords": "",
+      "templateBoardId": "1Isaaf2poehlcR",
+      "forceClear": false
+    },
+    "video-storyboard": {
+      "id": "video-storyboard",
+      "type": "BUILT_IN",
+      "title": "Video Storyboard",
+      "keywords": "Video",
+      "templateBoardId": "1JJb6n13lRxF7o",
+      "forceClear": false
+    },
+    "vision-board": {
+      "id": "vision-board",
+      "type": "BUILT_IN",
+      "title": "Vision Board",
+      "keywords": "",
+      "templateBoardId": "1VF6tW00KusEbQ",
+      "forceClear": false
+    },
+    "visual-art-brainstorm": {
+      "id": "visual-art-brainstorm",
+      "type": "BUILT_IN",
+      "title": "Visual Art Brainstorming",
+      "keywords": "visual art brainstorm",
+      "templateBoardId": "1S9hfg10ptl93T",
+      "forceClear": false
+    },
+    "visual-art-brief": {
+      "id": "visual-art-brief",
+      "type": "BUILT_IN",
+      "title": "Visual Art Brief",
+      "keywords": "visual art brief",
+      "templateBoardId": "1S9hf610ptl93Q",
+      "forceClear": false
+    },
+    "visual-art-moodboard": {
+      "id": "visual-art-moodboard",
+      "type": "BUILT_IN",
+      "title": "Visual Art Moodboard",
+      "keywords": "visual art moodboard",
+      "templateBoardId": "1S9hfK10ptl93Z",
+      "forceClear": false
+    },
+    "visual-art-research": {
+      "id": "visual-art-research",
+      "type": "BUILT_IN",
+      "title": "Visual Art Research",
+      "keywords": "visual art research",
+      "templateBoardId": "1S9hfu10ptl93W",
+      "forceClear": false
+    },
+    "visual-artist-project-plan": {
+      "id": "visual-artist-project-plan",
+      "type": "BUILT_IN",
+      "title": "Visual Art Project Plan",
+      "keywords": "visual art",
+      "templateBoardId": "1S9heS10ptl93N",
+      "forceClear": false
+    },
+    "web-design-moodboard": {
+      "id": "web-design-moodboard",
+      "type": "BUILT_IN",
+      "title": "Website Design Moodboard",
+      "keywords": "Website moodboard, Moodboard, Web site design, vision",
+      "templateBoardId": "1JJcay1M5zNQ7g",
+      "forceClear": false
+    },
+    "website-competitor-analysis": {
+      "id": "website-competitor-analysis",
+      "type": "BUILT_IN",
+      "title": "Website Competitor Analysis",
+      "keywords": "Competitor Analysis",
+      "templateBoardId": "1NuGU2139ovOeo",
+      "forceClear": false
+    },
+    "website-content-plan-template": {
+      "id": "website-content-plan-template",
+      "type": "BUILT_IN",
+      "title": "Website Content Plan",
+      "keywords": "",
+      "templateBoardId": "1IsacE2poehldb",
+      "forceClear": false
+    },
+    "website-content-template": {
+      "id": "website-content-template",
+      "type": "BUILT_IN",
+      "title": "Website Content",
+      "keywords": "Website Content, Content Plan, Sitemap, Site Map, Website Map",
+      "templateBoardId": "1O4eES0e6kr69V",
+      "forceClear": false
+    },
+    "website-design-brief": {
+      "id": "website-design-brief",
+      "type": "BUILT_IN",
+      "title": "Website Design Brief",
+      "keywords": "Brief, Website Brief",
+      "templateBoardId": "1JLprL1moHdfds",
+      "forceClear": false
+    },
+    "website-ideas-template": {
+      "id": "website-ideas-template",
+      "type": "BUILT_IN",
+      "title": "Website Ideas",
+      "keywords": "Website Ideas, Website Brainstorm, Brainstorming",
+      "templateBoardId": "1NuH2C1GZrvV0c",
+      "forceClear": false
+    },
+    "website-plan-template": {
+      "id": "website-plan-template",
+      "type": "BUILT_IN",
+      "title": "Website Plan",
+      "keywords": "Website, Website Plan, Web Site, Website Design",
+      "templateBoardId": "1NuGEp139ovObk",
+      "forceClear": false
+    },
+    "website-storyboard": {
+      "id": "website-storyboard",
+      "type": "BUILT_IN",
+      "title": "Website Storyboard",
+      "keywords": "",
+      "templateBoardId": "1JJbED13lRxFbn",
+      "forceClear": false
+    },
+    "wedding-moodboard": {
+      "id": "wedding-moodboard",
+      "type": "BUILT_IN",
+      "title": "Wedding Moodboard",
+      "keywords": "",
+      "templateBoardId": "1KcAMx1nQ0YEbU",
+      "forceClear": false
+    },
+    "weekly-plan-template": {
+      "id": "weekly-plan-template",
+      "type": "BUILT_IN",
+      "title": "Weekly Plan",
+      "keywords": "",
+      "templateBoardId": "1Isafu2poehldL",
+      "forceClear": false
+    },
+    "world-building": {
+      "id": "world-building",
+      "type": "BUILT_IN",
+      "title": "World Building",
+      "keywords": "writing writers novel",
+      "templateBoardId": "1IsusF29JNGF1t",
+      "forceClear": false
+    },
+    "youtube-channel-plan": {
+      "id": "youtube-channel-plan",
+      "type": "BUILT_IN",
+      "title": "YouTube Channel Plan",
+      "keywords": "",
+      "templateBoardId": "1SLESQ1PrASWcF",
+      "forceClear": false
+    },
+    "youtube-equipment-checklist": {
+      "id": "youtube-equipment-checklist",
+      "type": "BUILT_IN",
+      "title": "YouTube Equipment Checklist",
+      "keywords": "",
+      "templateBoardId": "1SLEVz1PrASWcU",
+      "forceClear": false
+    },
+    "youtube-schedule": {
+      "id": "youtube-schedule",
+      "type": "BUILT_IN",
+      "title": "YouTube Video Schedule",
+      "keywords": "",
+      "templateBoardId": "1SLEVS1PrASWcX",
+      "forceClear": false
+    },
+    "youtube-script": {
+      "id": "youtube-script",
+      "type": "BUILT_IN",
+      "title": "YouTube Script",
+      "keywords": "",
+      "templateBoardId": "1SLG0w1jgolZ0F",
+      "forceClear": false
+    },
+    "youtube-video-brainstorm": {
+      "id": "youtube-video-brainstorm",
+      "type": "BUILT_IN",
+      "title": "YouTube Video Brainstorming",
+      "keywords": "youtube brainstorm, video ideas",
+      "templateBoardId": "1SLETx1PrASWcL",
+      "forceClear": false
+    },
+    "youtube-video-plan": {
+      "id": "youtube-video-plan",
+      "type": "BUILT_IN",
+      "title": "YouTube Video Plan",
+      "keywords": "",
+      "templateBoardId": "1SLET11PrASWcI",
+      "forceClear": false
+    },
+    "youtube-video-research": {
+      "id": "youtube-video-research",
+      "type": "BUILT_IN",
+      "title": "YouTube Video Research",
+      "keywords": "",
+      "templateBoardId": "1SLEUO1PrASWcR",
+      "forceClear": false
+    }
+  }
+}
