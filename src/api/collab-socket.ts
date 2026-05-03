@@ -188,6 +188,29 @@ export class CollabSocket {
   }
 
   /**
+   * Delete an element from a board.
+   * Confirmed payload shape from probe-ws2.json ELEMENT_DELETE frames:
+   *   { type, id, location: { parentId }, elementType, sync, user, tokens:[],
+   *     activity: { track:false, boardId, elementTypes:{id:type} }, channels, ... }
+   */
+  async deleteElement(boardId: string, elementId: string, elementType = 'BOARD'): Promise<void> {
+    await this.navigate(boardId);
+    await this.sendAction({
+      ...this.baseAction('ELEMENT_DELETE', boardId),
+      id: elementId,
+      location: { parentId: boardId },
+      elementType,
+      tokens: [],
+      activity: {
+        track: false,
+        boardId,
+        elementTypes: { [elementId]: elementType },
+      },
+    });
+    await new Promise((r) => setTimeout(r, 300));
+  }
+
+  /**
    * Send ELEMENT_UPDATE — updates is an array of { id, data: {...fields} }.
    * Confirmed from bundle: updates:[{id:e,data:t}] pattern.
    */
