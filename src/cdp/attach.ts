@@ -12,6 +12,7 @@ import { CDP_PORT, launchEdgeWithCDP, waitForCDP } from './edge.js';
 export async function attachToEdge(initialUrl = 'about:blank'): Promise<Browser> {
   await launchEdgeWithCDP(initialUrl);
   await waitForCDP();
-  const browser = await chromium.connectOverCDP(`http://127.0.0.1:${CDP_PORT}`);
+  // Use a longer timeout — many open tabs slow the CDP protocol handshake
+  const browser = await chromium.connectOverCDP(`http://127.0.0.1:${CDP_PORT}`, { timeout: 120_000 });
   return browser;
 }
