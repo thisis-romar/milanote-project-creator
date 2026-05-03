@@ -207,9 +207,9 @@
       "captured_at": "2026-04-29T00:00:00Z",
       "author": null,
       "contributor": null,
-      "id": "readme_milanote_brain",
       "community": 11,
-      "norm_label": "milanote brain corpus"
+      "norm_label": "milanote brain corpus",
+      "id": "readme_milanote_brain"
     },
     {
       "label": "Corpus Structure (reference + playbooks + audit)",
@@ -220,9 +220,9 @@
       "captured_at": "2026-04-29T00:00:00Z",
       "author": null,
       "contributor": null,
-      "id": "readme_corpus_structure",
       "community": 11,
-      "norm_label": "corpus structure (reference + playbooks + audit)"
+      "norm_label": "corpus structure (reference + playbooks + audit)",
+      "id": "readme_corpus_structure"
     },
     {
       "label": "Post-mutation Protocol",
@@ -233,9 +233,9 @@
       "captured_at": "2026-04-29T00:00:00Z",
       "author": null,
       "contributor": null,
-      "id": "readme_post_mutation_protocol",
       "community": 11,
-      "norm_label": "post-mutation protocol"
+      "norm_label": "post-mutation protocol",
+      "id": "readme_post_mutation_protocol"
     },
     {
       "label": "graphify build command",
@@ -246,9 +246,9 @@
       "captured_at": "2026-04-29T00:00:00Z",
       "author": null,
       "contributor": null,
-      "id": "readme_graphify_command",
       "community": 11,
-      "norm_label": "graphify build command"
+      "norm_label": "graphify build command",
+      "id": "readme_graphify_command"
     },
     {
       "label": "Columnar layout (lists, headings, ordered)",
@@ -259,9 +259,9 @@
       "captured_at": "2026-04-29T00:00:00Z",
       "author": null,
       "contributor": null,
-      "id": "layout_columns_concept",
-      "community": 9,
-      "norm_label": "columnar layout (lists, headings, ordered)"
+      "community": 2,
+      "norm_label": "columnar layout (lists, headings, ordered)",
+      "id": "layout_columns_concept"
     },
     {
       "label": "Freeform canvas layout (spatial, moodboard)",
@@ -272,9 +272,9 @@
       "captured_at": "2026-04-29T00:00:00Z",
       "author": null,
       "contributor": null,
-      "id": "layout_freeform_concept",
-      "community": 9,
-      "norm_label": "freeform canvas layout (spatial, moodboard)"
+      "community": 2,
+      "norm_label": "freeform canvas layout (spatial, moodboard)",
+      "id": "layout_freeform_concept"
     },
     {
       "label": "position {x,y} semantics",
@@ -285,9 +285,9 @@
       "captured_at": "2026-04-29T00:00:00Z",
       "author": null,
       "contributor": null,
-      "id": "layout_position_semantics",
-      "community": 9,
-      "norm_label": "position {x,y} semantics"
+      "community": 2,
+      "norm_label": "position {x,y} semantics",
+      "id": "layout_position_semantics"
     },
     {
       "label": "Default to columns rationale (deterministic, readable)",
@@ -298,9 +298,9 @@
       "captured_at": "2026-04-29T00:00:00Z",
       "author": null,
       "contributor": null,
-      "id": "layout_default_columns_rationale",
-      "community": 9,
-      "norm_label": "default to columns rationale (deterministic, readable)"
+      "community": 2,
+      "norm_label": "default to columns rationale (deterministic, readable)",
+      "id": "layout_default_columns_rationale"
     },
     {
       "label": "Token-bucket rate limit (3 burst, 1/s)",
@@ -311,9 +311,9 @@
       "captured_at": "2026-04-29T00:00:00Z",
       "author": null,
       "contributor": null,
-      "id": "ratelimit_token_bucket_policy",
-      "community": 0,
-      "norm_label": "token-bucket rate limit (3 burst, 1/s)"
+      "community": 2,
+      "norm_label": "token-bucket rate limit (3 burst, 1/s)",
+      "id": "ratelimit_token_bucket_policy"
     },
     {
       "label": "429 Retry-After + 5xx 2s retry",
@@ -324,9 +324,9 @@
       "captured_at": "2026-04-29T00:00:00Z",
       "author": null,
       "contributor": null,
-      "id": "ratelimit_429_5xx_handling",
-      "community": 0,
-      "norm_label": "429 retry-after + 5xx 2s retry"
+      "community": 2,
+      "norm_label": "429 retry-after + 5xx 2s retry",
+      "id": "ratelimit_429_5xx_handling"
     },
     {
       "label": "Overrun symptoms (429, Cloudflare 403, 401, 5xx)",
@@ -337,9 +337,9 @@
       "captured_at": "2026-04-29T00:00:00Z",
       "author": null,
       "contributor": null,
-      "id": "ratelimit_overrun_symptoms",
-      "community": 0,
-      "norm_label": "overrun symptoms (429, cloudflare 403, 401, 5xx)"
+      "community": 2,
+      "norm_label": "overrun symptoms (429, cloudflare 403, 401, 5xx)",
+      "id": "ratelimit_overrun_symptoms"
     },
     {
       "label": "Serial bulk creates rationale (avoid optimistic-update races)",
@@ -350,9 +350,9 @@
       "captured_at": "2026-04-29T00:00:00Z",
       "author": null,
       "contributor": null,
-      "id": "ratelimit_serial_creates_rationale",
-      "community": 0,
-      "norm_label": "serial bulk creates rationale (avoid optimistic-update races)"
+      "community": 2,
+      "norm_label": "serial bulk creates rationale (avoid optimistic-update races)",
+      "id": "ratelimit_serial_creates_rationale"
     },
     {
       "label": "Pattern from claude-conversation-reader src/api/client.ts:23-99",
@@ -363,9 +363,9 @@
       "captured_at": "2026-04-29T00:00:00Z",
       "author": null,
       "contributor": null,
-      "id": "ratelimit_ccr_source_citation",
-      "community": 0,
-      "norm_label": "pattern from claude-conversation-reader src/api/client.ts:23-99"
+      "community": 2,
+      "norm_label": "pattern from claude-conversation-reader src/api/client.ts:23-99",
+      "id": "ratelimit_ccr_source_citation"
     },
     {
       "label": "MilanoteClient (src/api/client.ts)",
@@ -376,9 +376,9 @@
       "captured_at": "2026-04-29T00:00:00Z",
       "author": null,
       "contributor": null,
-      "id": "milanote_client",
-      "community": 0,
-      "norm_label": "milanoteclient (src/api/client.ts)"
+      "community": 2,
+      "norm_label": "milanoteclient (src/api/client.ts)",
+      "id": "milanote_client"
     },
     {
       "label": "Subboard (nested board card)",
@@ -389,9 +389,9 @@
       "captured_at": "2026-04-29T00:00:00Z",
       "author": null,
       "contributor": null,
-      "id": "nesting_subboard_concept",
       "community": 10,
-      "norm_label": "subboard (nested board card)"
+      "norm_label": "subboard (nested board card)",
+      "id": "nesting_subboard_concept"
     },
     {
       "label": "MAX_BOARD_DEPTH = 5",
@@ -402,9 +402,9 @@
       "captured_at": "2026-04-29T00:00:00Z",
       "author": null,
       "contributor": null,
-      "id": "nesting_max_depth_5",
-      "community": 0,
-      "norm_label": "max_board_depth = 5"
+      "community": 2,
+      "norm_label": "max_board_depth = 5",
+      "id": "nesting_max_depth_5"
     },
     {
       "label": "Why cap at 5 levels (UX + bug-trap)",
@@ -415,9 +415,9 @@
       "captured_at": "2026-04-29T00:00:00Z",
       "author": null,
       "contributor": null,
-      "id": "nesting_depth_rationale",
-      "community": 0,
-      "norm_label": "why cap at 5 levels (ux + bug-trap)"
+      "community": 2,
+      "norm_label": "why cap at 5 levels (ux + bug-trap)",
+      "id": "nesting_depth_rationale"
     },
     {
       "label": "Orchestrator depth-first parent-chain walk",
@@ -428,9 +428,9 @@
       "captured_at": "2026-04-29T00:00:00Z",
       "author": null,
       "contributor": null,
-      "id": "nesting_orchestrator_walk",
-      "community": 0,
-      "norm_label": "orchestrator depth-first parent-chain walk"
+      "community": 2,
+      "norm_label": "orchestrator depth-first parent-chain walk",
+      "id": "nesting_orchestrator_walk"
     },
     {
       "label": "src/creator/orchestrator.ts",
@@ -441,9 +441,9 @@
       "captured_at": "2026-04-29T00:00:00Z",
       "author": null,
       "contributor": null,
-      "id": "orchestrator_module",
-      "community": 0,
-      "norm_label": "src/creator/orchestrator.ts"
+      "community": 2,
+      "norm_label": "src/creator/orchestrator.ts",
+      "id": "orchestrator_module"
     },
     {
       "label": "classifySource() url vs local",
@@ -454,9 +454,9 @@
       "captured_at": "2026-04-29T00:00:00Z",
       "author": null,
       "contributor": null,
-      "id": "uploading_classify_source",
       "community": 10,
-      "norm_label": "classifysource() url vs local"
+      "norm_label": "classifysource() url vs local",
+      "id": "uploading_classify_source"
     },
     {
       "label": "Three-step upload (sign + PUT + element-create)",
@@ -467,9 +467,9 @@
       "captured_at": "2026-04-29T00:00:00Z",
       "author": null,
       "contributor": null,
-      "id": "uploading_api_path_three_step",
-      "community": 0,
-      "norm_label": "three-step upload (sign + put + element-create)"
+      "community": 2,
+      "norm_label": "three-step upload (sign + put + element-create)",
+      "id": "uploading_api_path_three_step"
     },
     {
       "label": "UI fallback via Playwright setInputFiles",
@@ -480,9 +480,9 @@
       "captured_at": "2026-04-29T00:00:00Z",
       "author": null,
       "contributor": null,
-      "id": "uploading_ui_fallback",
-      "community": 0,
-      "norm_label": "ui fallback via playwright setinputfiles"
+      "community": 2,
+      "norm_label": "ui fallback via playwright setinputfiles",
+      "id": "uploading_ui_fallback"
     },
     {
       "label": "URL-source image creation flow",
@@ -493,9 +493,9 @@
       "captured_at": "2026-04-29T00:00:00Z",
       "author": null,
       "contributor": null,
-      "id": "uploading_url_source_path",
       "community": 16,
-      "norm_label": "url-source image creation flow"
+      "norm_label": "url-source image creation flow",
+      "id": "uploading_url_source_path"
     },
     {
       "label": "src/template/assets.ts AssetUploader",
@@ -506,9 +506,9 @@
       "captured_at": "2026-04-29T00:00:00Z",
       "author": null,
       "contributor": null,
-      "id": "asset_uploader_module",
-      "community": 0,
-      "norm_label": "src/template/assets.ts assetuploader"
+      "community": 2,
+      "norm_label": "src/template/assets.ts assetuploader",
+      "id": "asset_uploader_module"
     },
     {
       "label": "Link primitive",
@@ -519,9 +519,9 @@
       "captured_at": "2026-04-29T00:00:00Z",
       "author": null,
       "contributor": null,
-      "id": "primitive_link",
       "community": 10,
-      "norm_label": "link primitive"
+      "norm_label": "link primitive",
+      "id": "primitive_link"
     },
     {
       "label": "File primitive",
@@ -532,9 +532,9 @@
       "captured_at": "2026-04-29T00:00:00Z",
       "author": null,
       "contributor": null,
-      "id": "primitive_file",
       "community": 10,
-      "norm_label": "file primitive"
+      "norm_label": "file primitive",
+      "id": "primitive_file"
     },
     {
       "label": "Element types INDEX (7 primitives + board)",
@@ -545,9 +545,9 @@
       "captured_at": "2026-04-29T00:00:00Z",
       "author": null,
       "contributor": null,
-      "id": "elements_index",
       "community": 10,
-      "norm_label": "element types index (7 primitives + board)"
+      "norm_label": "element types index (7 primitives + board)",
+      "id": "elements_index"
     },
     {
       "label": "Template top-level shape ($schema, version, variables, board)",
@@ -558,9 +558,9 @@
       "captured_at": "2026-04-29T00:00:00Z",
       "author": null,
       "contributor": null,
-      "id": "format_spec_top_level",
-      "community": 9,
-      "norm_label": "template top-level shape ($schema, version, variables, board)"
+      "community": 2,
+      "norm_label": "template top-level shape ($schema, version, variables, board)",
+      "id": "format_spec_top_level"
     },
     {
       "label": "Card primitives table (type to required/optional fields)",
@@ -571,9 +571,9 @@
       "captured_at": "2026-04-29T00:00:00Z",
       "author": null,
       "contributor": null,
-      "id": "format_spec_card_table",
       "community": 10,
-      "norm_label": "card primitives table (type to required/optional fields)"
+      "norm_label": "card primitives table (type to required/optional fields)",
+      "id": "format_spec_card_table"
     },
     {
       "label": "Variable substitution (var, env.NAME, env.NAME?)",
@@ -584,9 +584,9 @@
       "captured_at": "2026-04-29T00:00:00Z",
       "author": null,
       "contributor": null,
-      "id": "format_spec_variable_substitution",
-      "community": 9,
-      "norm_label": "variable substitution (var, env.name, env.name?)"
+      "community": 2,
+      "norm_label": "variable substitution (var, env.name, env.name?)",
+      "id": "format_spec_variable_substitution"
     },
     {
       "label": "Three-pass validation (Zod, resolve, depth)",
@@ -597,9 +597,9 @@
       "captured_at": "2026-04-29T00:00:00Z",
       "author": null,
       "contributor": null,
-      "id": "format_spec_three_pass_validation",
-      "community": 0,
-      "norm_label": "three-pass validation (zod, resolve, depth)"
+      "community": 2,
+      "norm_label": "three-pass validation (zod, resolve, depth)",
+      "id": "format_spec_three_pass_validation"
     },
     {
       "label": "src/template/schema.ts (Zod canonical)",
@@ -610,9 +610,9 @@
       "captured_at": "2026-04-29T00:00:00Z",
       "author": null,
       "contributor": null,
-      "id": "template_schema_module",
-      "community": 0,
-      "norm_label": "src/template/schema.ts (zod canonical)"
+      "community": 2,
+      "norm_label": "src/template/schema.ts (zod canonical)",
+      "id": "template_schema_module"
     },
     {
       "label": "Milanote - Sharing & Collaboration (transcript)",
@@ -623,9 +623,9 @@
       "captured_at": "2026-04-29T00:00:00Z",
       "author": null,
       "contributor": null,
-      "id": "video_sharing_collaboration",
       "community": 12,
-      "norm_label": "milanote - sharing & collaboration (transcript)"
+      "norm_label": "milanote - sharing & collaboration (transcript)",
+      "id": "video_sharing_collaboration"
     },
     {
       "label": "Invite editors (collaboration)",
@@ -636,9 +636,9 @@
       "captured_at": "2026-04-29T00:00:00Z",
       "author": null,
       "contributor": null,
-      "id": "concept_invite_editors",
       "community": 12,
-      "norm_label": "invite editors (collaboration)"
+      "norm_label": "invite editors (collaboration)",
+      "id": "concept_invite_editors"
     },
     {
       "label": "Read-only share link (with comments, password)",
@@ -649,9 +649,9 @@
       "captured_at": "2026-04-29T00:00:00Z",
       "author": null,
       "contributor": null,
-      "id": "concept_readonly_link",
       "community": 12,
-      "norm_label": "read-only share link (with comments, password)"
+      "norm_label": "read-only share link (with comments, password)",
+      "id": "concept_readonly_link"
     },
     {
       "label": "Milanote Web Clipper (transcript unavailable)",
@@ -662,9 +662,9 @@
       "captured_at": "2026-04-29T00:00:00Z",
       "author": null,
       "contributor": null,
-      "id": "video_web_clipper",
       "community": 17,
-      "norm_label": "milanote web clipper (transcript unavailable)"
+      "norm_label": "milanote web clipper (transcript unavailable)",
+      "id": "video_web_clipper"
     },
     {
       "label": "Implementation Snapshot 2026-04-29",
@@ -675,9 +675,9 @@
       "captured_at": "2026-04-29T00:00:00Z",
       "author": null,
       "contributor": null,
-      "id": "audit_implementation_snapshot",
-      "community": 0,
-      "norm_label": "implementation snapshot 2026-04-29"
+      "community": 2,
+      "norm_label": "implementation snapshot 2026-04-29",
+      "id": "audit_implementation_snapshot"
     },
     {
       "label": "What works end-to-end table",
@@ -688,9 +688,9 @@
       "captured_at": "2026-04-29T00:00:00Z",
       "author": null,
       "contributor": null,
-      "id": "audit_what_works",
-      "community": 0,
-      "norm_label": "what works end-to-end table"
+      "community": 2,
+      "norm_label": "what works end-to-end table",
+      "id": "audit_what_works"
     },
     {
       "label": "Stubbed pending probe (ApiCreator/UiCreator/AssetUploader)",
@@ -701,9 +701,9 @@
       "captured_at": "2026-04-29T00:00:00Z",
       "author": null,
       "contributor": null,
-      "id": "audit_stubbed_components",
-      "community": 0,
-      "norm_label": "stubbed pending probe (apicreator/uicreator/assetuploader)"
+      "community": 2,
+      "norm_label": "stubbed pending probe (apicreator/uicreator/assetuploader)",
+      "id": "audit_stubbed_components"
     },
     {
       "label": "Architecture src/ tree",
@@ -714,9 +714,9 @@
       "captured_at": "2026-04-29T00:00:00Z",
       "author": null,
       "contributor": null,
-      "id": "audit_architecture_tree",
-      "community": 0,
-      "norm_label": "architecture src/ tree"
+      "community": 2,
+      "norm_label": "architecture src/ tree",
+      "id": "audit_architecture_tree"
     },
     {
       "label": "Milanote Collab Socket.IO Protocol",
@@ -727,9 +727,9 @@
       "captured_at": "2026-05-02T16:08:54Z",
       "author": null,
       "contributor": null,
-      "id": "collab_protocol",
       "community": 14,
-      "norm_label": "milanote collab socket.io protocol"
+      "norm_label": "milanote collab socket.io protocol",
+      "id": "collab_protocol"
     },
     {
       "label": "Socket.IO v4",
@@ -740,9 +740,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "socket_io_v4",
       "community": 14,
-      "norm_label": "socket.io v4"
+      "norm_label": "socket.io v4",
+      "id": "socket_io_v4"
     },
     {
       "label": "POST /api/elements",
@@ -753,9 +753,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "post_api_elements",
       "community": 13,
-      "norm_label": "post /api/elements"
+      "norm_label": "post /api/elements",
+      "id": "post_api_elements"
     },
     {
       "label": "ApiCreator",
@@ -766,9 +766,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "api_creator",
       "community": 13,
-      "norm_label": "apicreator"
+      "norm_label": "apicreator",
+      "id": "api_creator"
     },
     {
       "label": "UiCreator Playwright fallback",
@@ -779,9 +779,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "ui_creator",
       "community": 18,
-      "norm_label": "uicreator playwright fallback"
+      "norm_label": "uicreator playwright fallback",
+      "id": "ui_creator"
     },
     {
       "label": "Primitive Nested Board Subboard",
@@ -792,9 +792,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "primitive_nested_board",
       "community": 13,
-      "norm_label": "primitive nested board subboard"
+      "norm_label": "primitive nested board subboard",
+      "id": "primitive_nested_board"
     },
     {
       "label": "Canvas Unit 7px at 100 zoom",
@@ -805,9 +805,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "canvas_unit_finding",
       "community": 15,
-      "norm_label": "canvas unit 7px at 100 zoom"
+      "norm_label": "canvas unit 7px at 100 zoom",
+      "id": "canvas_unit_finding"
     },
     {
       "label": "Audit Subboard Template Redesign",
@@ -818,9 +818,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "audit_subboard",
       "community": 15,
-      "norm_label": "audit subboard template redesign"
+      "norm_label": "audit subboard template redesign",
+      "id": "audit_subboard"
     },
     {
       "label": "Essential Milanote Tips & Tricks Masterclass",
@@ -831,9 +831,9 @@
       "captured_at": "2026-05-02T16:25:20Z",
       "author": "Steve Gates",
       "contributor": null,
-      "id": "tips_tricks_masterclass",
-      "community": 1,
-      "norm_label": "essential milanote tips & tricks masterclass"
+      "community": 4,
+      "norm_label": "essential milanote tips & tricks masterclass",
+      "id": "tips_tricks_masterclass"
     },
     {
       "label": "Double-click to create note",
@@ -844,9 +844,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "tips_double_click_create_note",
-      "community": 1,
-      "norm_label": "double-click to create note"
+      "community": 4,
+      "norm_label": "double-click to create note",
+      "id": "tips_double_click_create_note"
     },
     {
       "label": "Cmd+Return shortcut for new note",
@@ -857,9 +857,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "tips_cmd_return_new_note",
-      "community": 1,
-      "norm_label": "cmd+return shortcut for new note"
+      "community": 4,
+      "norm_label": "cmd+return shortcut for new note",
+      "id": "tips_cmd_return_new_note"
     },
     {
       "label": "Layer notes (bring to front / send to back)",
@@ -870,9 +870,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "tips_layer_notes_z_depth",
-      "community": 1,
-      "norm_label": "layer notes (bring to front / send to back)"
+      "community": 4,
+      "norm_label": "layer notes (bring to front / send to back)",
+      "id": "tips_layer_notes_z_depth"
     },
     {
       "label": "Image placeholder",
@@ -883,9 +883,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "tips_image_placeholder",
-      "community": 1,
-      "norm_label": "image placeholder"
+      "community": 4,
+      "norm_label": "image placeholder",
+      "id": "tips_image_placeholder"
     },
     {
       "label": "Upload files (PDF, sketch, doc)",
@@ -896,9 +896,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "tips_upload_files",
-      "community": 1,
-      "norm_label": "upload files (pdf, sketch, doc)"
+      "community": 4,
+      "norm_label": "upload files (pdf, sketch, doc)",
+      "id": "tips_upload_files"
     },
     {
       "label": "Transparent note via Power-ups",
@@ -909,9 +909,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "tips_transparent_note_powerup",
-      "community": 1,
-      "norm_label": "transparent note via power-ups"
+      "community": 4,
+      "norm_label": "transparent note via power-ups",
+      "id": "tips_transparent_note_powerup"
     },
     {
       "label": "Power-ups panel",
@@ -922,9 +922,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "tips_powerups_panel",
-      "community": 1,
-      "norm_label": "power-ups panel"
+      "community": 4,
+      "norm_label": "power-ups panel",
+      "id": "tips_powerups_panel"
     },
     {
       "label": "Convert note to long-form",
@@ -935,9 +935,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "tips_long_form_conversion",
-      "community": 1,
-      "norm_label": "convert note to long-form"
+      "community": 4,
+      "norm_label": "convert note to long-form",
+      "id": "tips_long_form_conversion"
     },
     {
       "label": "Shift+Cmd+Arrow level navigation",
@@ -948,9 +948,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "tips_navigate_shift_cmd_arrow",
-      "community": 1,
-      "norm_label": "shift+cmd+arrow level navigation"
+      "community": 4,
+      "norm_label": "shift+cmd+arrow level navigation",
+      "id": "tips_navigate_shift_cmd_arrow"
     },
     {
       "label": "Cmd+F search across boards",
@@ -961,9 +961,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "tips_search_cmd_f",
-      "community": 1,
-      "norm_label": "cmd+f search across boards"
+      "community": 4,
+      "norm_label": "cmd+f search across boards",
+      "id": "tips_search_cmd_f"
     },
     {
       "label": "Change board background color",
@@ -974,9 +974,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "tips_board_background_color",
-      "community": 1,
-      "norm_label": "change board background color"
+      "community": 4,
+      "norm_label": "change board background color",
+      "id": "tips_board_background_color"
     },
     {
       "label": "Toggle dot grid",
@@ -987,9 +987,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "tips_dot_grid_toggle",
-      "community": 1,
-      "norm_label": "toggle dot grid"
+      "community": 4,
+      "norm_label": "toggle dot grid",
+      "id": "tips_dot_grid_toggle"
     },
     {
       "label": "Zoom in/out (+/-)",
@@ -1000,9 +1000,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "tips_zoom_in_out",
-      "community": 1,
-      "norm_label": "zoom in/out (+/-)"
+      "community": 4,
+      "norm_label": "zoom in/out (+/-)",
+      "id": "tips_zoom_in_out"
     },
     {
       "label": "Markdown shortcuts (#, -, 1., >, *)",
@@ -1013,9 +1013,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "tips_markdown_shortcuts",
-      "community": 1,
-      "norm_label": "markdown shortcuts (#, -, 1., >, *)"
+      "community": 4,
+      "norm_label": "markdown shortcuts (#, -, 1., >, *)",
+      "id": "tips_markdown_shortcuts"
     },
     {
       "label": "Embed media (YouTube, Maps, Instagram, SoundCloud, CodePen, Slideshare, Marvel, Airtable)",
@@ -1026,9 +1026,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "tips_embed_media",
-      "community": 3,
-      "norm_label": "embed media (youtube, maps, instagram, soundcloud, codepen, slideshare, marvel, airtable)"
+      "community": 8,
+      "norm_label": "embed media (youtube, maps, instagram, soundcloud, codepen, slideshare, marvel, airtable)",
+      "id": "tips_embed_media"
     },
     {
       "label": "Color swatch from hex value",
@@ -1039,9 +1039,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "tips_color_swatch_hex",
-      "community": 7,
-      "norm_label": "color swatch from hex value"
+      "community": 5,
+      "norm_label": "color swatch from hex value",
+      "id": "tips_color_swatch_hex"
     },
     {
       "label": "Connect with lines (curved, arrow, color)",
@@ -1052,9 +1052,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "tips_connect_with_lines",
-      "community": 6,
-      "norm_label": "connect with lines (curved, arrow, color)"
+      "community": 5,
+      "norm_label": "connect with lines (curved, arrow, color)",
+      "id": "tips_connect_with_lines"
     },
     {
       "label": "Convert board to template",
@@ -1065,9 +1065,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "tips_convert_to_template",
-      "community": 1,
-      "norm_label": "convert board to template"
+      "community": 4,
+      "norm_label": "convert board to template",
+      "id": "tips_convert_to_template"
     },
     {
       "label": "Create shortcut to board",
@@ -1078,9 +1078,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "tips_create_shortcut_board",
-      "community": 4,
-      "norm_label": "create shortcut to board"
+      "community": 9,
+      "norm_label": "create shortcut to board",
+      "id": "tips_create_shortcut_board"
     },
     {
       "label": "Web Clipper browser extension",
@@ -1091,9 +1091,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "tips_web_clipper_extension",
-      "community": 1,
-      "norm_label": "web clipper browser extension"
+      "community": 4,
+      "norm_label": "web clipper browser extension",
+      "id": "tips_web_clipper_extension"
     },
     {
       "label": "Pro vs Free plan limits",
@@ -1104,9 +1104,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "tips_pro_vs_free_plan",
-      "community": 1,
-      "norm_label": "pro vs free plan limits"
+      "community": 4,
+      "norm_label": "pro vs free plan limits",
+      "id": "tips_pro_vs_free_plan"
     },
     {
       "label": "Dark/light theme preference (Mac)",
@@ -1117,9 +1117,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "tips_dark_light_theme",
-      "community": 1,
-      "norm_label": "dark/light theme preference (mac)"
+      "community": 4,
+      "norm_label": "dark/light theme preference (mac)",
+      "id": "tips_dark_light_theme"
     },
     {
       "label": "Product Launch Milanote Walkthrough",
@@ -1130,9 +1130,9 @@
       "captured_at": "2026-05-02T16:25:20Z",
       "author": "Monica (Monica's Collective)",
       "contributor": null,
-      "id": "product_launch_walkthrough",
-      "community": 3,
-      "norm_label": "product launch milanote walkthrough"
+      "community": 8,
+      "norm_label": "product launch milanote walkthrough",
+      "id": "product_launch_walkthrough"
     },
     {
       "label": "Text box note with color/style",
@@ -1143,9 +1143,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "pl_text_box_note",
-      "community": 3,
-      "norm_label": "text box note with color/style"
+      "community": 8,
+      "norm_label": "text box note with color/style",
+      "id": "pl_text_box_note"
     },
     {
       "label": "Drag-and-drop images from Pinterest/computer",
@@ -1156,9 +1156,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "pl_drag_drop_images",
-      "community": 6,
-      "norm_label": "drag-and-drop images from pinterest/computer"
+      "community": 5,
+      "norm_label": "drag-and-drop images from pinterest/computer",
+      "id": "pl_drag_drop_images"
     },
     {
       "label": "Color swatches for cohesive scheme",
@@ -1169,9 +1169,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "pl_color_swatches",
-      "community": 3,
-      "norm_label": "color swatches for cohesive scheme"
+      "community": 8,
+      "norm_label": "color swatches for cohesive scheme",
+      "id": "pl_color_swatches"
     },
     {
       "label": "Checklist for product launch tasks",
@@ -1182,9 +1182,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "pl_checklist_card",
-      "community": 3,
-      "norm_label": "checklist for product launch tasks"
+      "community": 8,
+      "norm_label": "checklist for product launch tasks",
+      "id": "pl_checklist_card"
     },
     {
       "label": "Embed YouTube videos in board",
@@ -1195,9 +1195,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "pl_youtube_embed",
-      "community": 3,
-      "norm_label": "embed youtube videos in board"
+      "community": 8,
+      "norm_label": "embed youtube videos in board",
+      "id": "pl_youtube_embed"
     },
     {
       "label": "Table for expense tracking",
@@ -1208,9 +1208,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "pl_table_card",
-      "community": 3,
-      "norm_label": "table for expense tracking"
+      "community": 8,
+      "norm_label": "table for expense tracking",
+      "id": "pl_table_card"
     },
     {
       "label": "Document card for product details",
@@ -1221,9 +1221,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "pl_document_card",
-      "community": 3,
-      "norm_label": "document card for product details"
+      "community": 8,
+      "norm_label": "document card for product details",
+      "id": "pl_document_card"
     },
     {
       "label": "Add collaborators with edit/view access",
@@ -1234,9 +1234,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "pl_collaborators_access",
-      "community": 3,
-      "norm_label": "add collaborators with edit/view access"
+      "community": 8,
+      "norm_label": "add collaborators with edit/view access",
+      "id": "pl_collaborators_access"
     },
     {
       "label": "iPad app with Apple Pencil drawing",
@@ -1247,9 +1247,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "pl_ipad_apple_pencil",
-      "community": 3,
-      "norm_label": "ipad app with apple pencil drawing"
+      "community": 8,
+      "norm_label": "ipad app with apple pencil drawing",
+      "id": "pl_ipad_apple_pencil"
     },
     {
       "label": "Zoom canvas in/out",
@@ -1260,9 +1260,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "pl_zoom_canvas",
-      "community": 3,
-      "norm_label": "zoom canvas in/out"
+      "community": 8,
+      "norm_label": "zoom canvas in/out",
+      "id": "pl_zoom_canvas"
     },
     {
       "label": "How I Use Milanote (Dan)",
@@ -1273,9 +1273,9 @@
       "captured_at": "2026-05-02T16:25:20Z",
       "author": "Dan",
       "contributor": null,
-      "id": "how_i_use_milanote",
-      "community": 2,
-      "norm_label": "how i use milanote (dan)"
+      "community": 3,
+      "norm_label": "how i use milanote (dan)",
+      "id": "how_i_use_milanote"
     },
     {
       "label": "Use case: Planning YouTube videos",
@@ -1286,9 +1286,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "uc_youtube_planning",
-      "community": 2,
-      "norm_label": "use case: planning youtube videos"
+      "community": 3,
+      "norm_label": "use case: planning youtube videos",
+      "id": "uc_youtube_planning"
     },
     {
       "label": "Use case: Moodboards",
@@ -1299,9 +1299,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "uc_moodboards",
-      "community": 2,
-      "norm_label": "use case: moodboards"
+      "community": 3,
+      "norm_label": "use case: moodboards",
+      "id": "uc_moodboards"
     },
     {
       "label": "Use case: Planning photoshoots",
@@ -1312,9 +1312,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "uc_photoshoot_planning",
-      "community": 2,
-      "norm_label": "use case: planning photoshoots"
+      "community": 3,
+      "norm_label": "use case: planning photoshoots",
+      "id": "uc_photoshoot_planning"
     },
     {
       "label": "YouTube template (todos, shot list, titles, inspirations)",
@@ -1325,9 +1325,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "uc_youtube_template",
-      "community": 2,
-      "norm_label": "youtube template (todos, shot list, titles, inspirations)"
+      "community": 3,
+      "norm_label": "youtube template (todos, shot list, titles, inspirations)",
+      "id": "uc_youtube_template"
     },
     {
       "label": "Link moodboards to existing project boards",
@@ -1338,9 +1338,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "uc_link_moodboards_to_projects",
-      "community": 2,
-      "norm_label": "link moodboards to existing project boards"
+      "community": 3,
+      "norm_label": "link moodboards to existing project boards",
+      "id": "uc_link_moodboards_to_projects"
     },
     {
       "label": "How to Get Started with Milanote Masterclass",
@@ -1351,9 +1351,9 @@
       "captured_at": "2026-05-02T16:25:20Z",
       "author": "Steve Gates",
       "contributor": null,
-      "id": "getting_started_masterclass",
-      "community": 5,
-      "norm_label": "how to get started with milanote masterclass"
+      "community": 7,
+      "norm_label": "how to get started with milanote masterclass",
+      "id": "getting_started_masterclass"
     },
     {
       "label": "Note card primitive",
@@ -1364,9 +1364,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "gs_note_card",
-      "community": 5,
-      "norm_label": "note card primitive"
+      "community": 7,
+      "norm_label": "note card primitive",
+      "id": "gs_note_card"
     },
     {
       "label": "Link card primitive",
@@ -1377,9 +1377,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "gs_link_card",
-      "community": 8,
-      "norm_label": "link card primitive"
+      "community": 7,
+      "norm_label": "link card primitive",
+      "id": "gs_link_card"
     },
     {
       "label": "To-do list primitive",
@@ -1390,9 +1390,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "gs_todo_list",
-      "community": 5,
-      "norm_label": "to-do list primitive"
+      "community": 7,
+      "norm_label": "to-do list primitive",
+      "id": "gs_todo_list"
     },
     {
       "label": "Arrow design element",
@@ -1403,9 +1403,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "gs_arrow_element",
-      "community": 5,
-      "norm_label": "arrow design element"
+      "community": 7,
+      "norm_label": "arrow design element",
+      "id": "gs_arrow_element"
     },
     {
       "label": "Column organizational container",
@@ -1416,9 +1416,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "gs_column_container",
-      "community": 5,
-      "norm_label": "column organizational container"
+      "community": 7,
+      "norm_label": "column organizational container",
+      "id": "gs_column_container"
     },
     {
       "label": "Board (project) container",
@@ -1429,9 +1429,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "gs_board_container",
-      "community": 5,
-      "norm_label": "board (project) container"
+      "community": 7,
+      "norm_label": "board (project) container",
+      "id": "gs_board_container"
     },
     {
       "label": "Customizable board icon and color",
@@ -1442,9 +1442,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "gs_board_icon_color",
-      "community": 5,
-      "norm_label": "customizable board icon and color"
+      "community": 7,
+      "norm_label": "customizable board icon and color",
+      "id": "gs_board_icon_color"
     },
     {
       "label": "Template picker for new boards",
@@ -1455,9 +1455,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "gs_template_picker",
-      "community": 5,
-      "norm_label": "template picker for new boards"
+      "community": 7,
+      "norm_label": "template picker for new boards",
+      "id": "gs_template_picker"
     },
     {
       "label": "Idea-Rough-Polish-Finish workflow pipeline",
@@ -1468,9 +1468,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "gs_workflow_pipeline",
-      "community": 4,
-      "norm_label": "idea-rough-polish-finish workflow pipeline"
+      "community": 9,
+      "norm_label": "idea-rough-polish-finish workflow pipeline",
+      "id": "gs_workflow_pipeline"
     },
     {
       "label": "Invite collaborators (edit/view/comment)",
@@ -1481,9 +1481,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "gs_collab_invite",
-      "community": 5,
-      "norm_label": "invite collaborators (edit/view/comment)"
+      "community": 7,
+      "norm_label": "invite collaborators (edit/view/comment)",
+      "id": "gs_collab_invite"
     },
     {
       "label": "Text formatting (headline, bold, italic, list, quote, code, strikethrough)",
@@ -1494,9 +1494,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "gs_text_formatting",
-      "community": 5,
-      "norm_label": "text formatting (headline, bold, italic, list, quote, code, strikethrough)"
+      "community": 7,
+      "norm_label": "text formatting (headline, bold, italic, list, quote, code, strikethrough)",
+      "id": "gs_text_formatting"
     },
     {
       "label": "How to Plan a Photoshoot in Milanote",
@@ -1507,9 +1507,9 @@
       "captured_at": "2026-05-02T16:25:20Z",
       "author": "Kaylee",
       "contributor": null,
-      "id": "photoshoot_plan_video",
-      "community": 2,
-      "norm_label": "how to plan a photoshoot in milanote"
+      "community": 3,
+      "norm_label": "how to plan a photoshoot in milanote",
+      "id": "photoshoot_plan_video"
     },
     {
       "label": "Photoshoot Plan template",
@@ -1520,9 +1520,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "ps_template_photoshoot",
-      "community": 2,
-      "norm_label": "photoshoot plan template"
+      "community": 3,
+      "norm_label": "photoshoot plan template",
+      "id": "ps_template_photoshoot"
     },
     {
       "label": "Brief section",
@@ -1533,9 +1533,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "ps_brief_section",
-      "community": 2,
-      "norm_label": "brief section"
+      "community": 3,
+      "norm_label": "brief section",
+      "id": "ps_brief_section"
     },
     {
       "label": "Moodboard section",
@@ -1546,9 +1546,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "ps_moodboard_section",
-      "community": 2,
-      "norm_label": "moodboard section"
+      "community": 3,
+      "norm_label": "moodboard section",
+      "id": "ps_moodboard_section"
     },
     {
       "label": "Shot list",
@@ -1559,9 +1559,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "ps_shot_list",
-      "community": 2,
-      "norm_label": "shot list"
+      "community": 3,
+      "norm_label": "shot list",
+      "id": "ps_shot_list"
     },
     {
       "label": "Call sheet for crew/models",
@@ -1572,9 +1572,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "ps_call_sheet",
-      "community": 2,
-      "norm_label": "call sheet for crew/models"
+      "community": 3,
+      "norm_label": "call sheet for crew/models",
+      "id": "ps_call_sheet"
     },
     {
       "label": "Final gallery for client review",
@@ -1585,9 +1585,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "ps_gallery",
-      "community": 2,
-      "norm_label": "final gallery for client review"
+      "community": 3,
+      "norm_label": "final gallery for client review",
+      "id": "ps_gallery"
     },
     {
       "label": "Workflow & gear checklists",
@@ -1598,9 +1598,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "ps_workflow_checklists",
-      "community": 2,
-      "norm_label": "workflow & gear checklists"
+      "community": 3,
+      "norm_label": "workflow & gear checklists",
+      "id": "ps_workflow_checklists"
     },
     {
       "label": "Milanote Tutorial Videos Index",
@@ -1608,12 +1608,12 @@
       "source_file": "knowledge/milanote/reference/videos/INDEX.md",
       "source_location": null,
       "source_url": "https://youtube.com/playlist?list=PLL70IGe015YYP_pWdMoswd_2EHp5oSrFt",
-      "captured_at": "2026-04-29T00:00:00Z",
+      "captured_at": "2026-05-02T21:30:00Z",
       "author": null,
       "contributor": null,
-      "id": "videos_index",
-      "community": 2,
-      "norm_label": "milanote tutorial videos index"
+      "community": 3,
+      "norm_label": "milanote tutorial videos index",
+      "id": "videos_index"
     },
     {
       "label": "Milanote \u00e2\u20ac\u201d Getting Started (short)",
@@ -1624,9 +1624,9 @@
       "captured_at": "2026-04-29T00:00:00Z",
       "author": null,
       "contributor": null,
-      "id": "milanote_getting_started_short",
-      "community": 7,
-      "norm_label": "milanote a\u20ac\u201d getting started (short)"
+      "community": 5,
+      "norm_label": "milanote a\u20ac\u201d getting started (short)",
+      "id": "milanote_getting_started_short"
     },
     {
       "label": "Logo project example (sneaker brand)",
@@ -1637,9 +1637,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "mgs_logo_project_example",
-      "community": 7,
-      "norm_label": "logo project example (sneaker brand)"
+      "community": 5,
+      "norm_label": "logo project example (sneaker brand)",
+      "id": "mgs_logo_project_example"
     },
     {
       "label": "Built-in image library",
@@ -1650,9 +1650,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "mgs_image_library",
-      "community": 7,
-      "norm_label": "built-in image library"
+      "community": 5,
+      "norm_label": "built-in image library",
+      "id": "mgs_image_library"
     },
     {
       "label": "Swatch cards for color palettes",
@@ -1663,9 +1663,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "mgs_swatch_card",
-      "community": 7,
-      "norm_label": "swatch cards for color palettes"
+      "community": 5,
+      "norm_label": "swatch cards for color palettes",
+      "id": "mgs_swatch_card"
     },
     {
       "label": "Nested boards (subboards)",
@@ -1676,9 +1676,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "mgs_nested_boards",
-      "community": 7,
-      "norm_label": "nested boards (subboards)"
+      "community": 5,
+      "norm_label": "nested boards (subboards)",
+      "id": "mgs_nested_boards"
     },
     {
       "label": "Moodboard template",
@@ -1689,9 +1689,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "mgs_moodboard_template",
-      "community": 7,
-      "norm_label": "moodboard template"
+      "community": 5,
+      "norm_label": "moodboard template",
+      "id": "mgs_moodboard_template"
     },
     {
       "label": "Top-left breadcrumb navigation",
@@ -1702,9 +1702,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "mgs_top_left_nav",
-      "community": 7,
-      "norm_label": "top-left breadcrumb navigation"
+      "community": 5,
+      "norm_label": "top-left breadcrumb navigation",
+      "id": "mgs_top_left_nav"
     },
     {
       "label": "Plan & Design My New Home Milanote Tour",
@@ -1715,9 +1715,9 @@
       "captured_at": "2026-05-02T16:25:20Z",
       "author": null,
       "contributor": null,
-      "id": "home_design_tour",
-      "community": 6,
-      "norm_label": "plan & design my new home milanote tour"
+      "community": 5,
+      "norm_label": "plan & design my new home milanote tour",
+      "id": "home_design_tour"
     },
     {
       "label": "Home master board with project columns",
@@ -1728,9 +1728,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "hd_home_board",
-      "community": 6,
-      "norm_label": "home master board with project columns"
+      "community": 5,
+      "norm_label": "home master board with project columns",
+      "id": "hd_home_board"
     },
     {
       "label": "Room-by-room subboards",
@@ -1741,9 +1741,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "hd_room_subboards",
-      "community": 6,
-      "norm_label": "room-by-room subboards"
+      "community": 5,
+      "norm_label": "room-by-room subboards",
+      "id": "hd_room_subboards"
     },
     {
       "label": "Color picker / hex code swatch",
@@ -1754,9 +1754,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "hd_color_picker_hex",
-      "community": 7,
-      "norm_label": "color picker / hex code swatch"
+      "community": 5,
+      "norm_label": "color picker / hex code swatch",
+      "id": "hd_color_picker_hex"
     },
     {
       "label": "Pinterest-to-Milanote image workflow",
@@ -1767,9 +1767,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "hd_pinterest_workflow",
-      "community": 6,
-      "norm_label": "pinterest-to-milanote image workflow"
+      "community": 5,
+      "norm_label": "pinterest-to-milanote image workflow",
+      "id": "hd_pinterest_workflow"
     },
     {
       "label": "Milanote + Notion combined workflow",
@@ -1780,9 +1780,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "hd_milanote_plus_notion",
-      "community": 6,
-      "norm_label": "milanote + notion combined workflow"
+      "community": 5,
+      "norm_label": "milanote + notion combined workflow",
+      "id": "hd_milanote_plus_notion"
     },
     {
       "label": "Lines pointing to favorites",
@@ -1793,9 +1793,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "hd_lines_arrows",
-      "community": 6,
-      "norm_label": "lines pointing to favorites"
+      "community": 5,
+      "norm_label": "lines pointing to favorites",
+      "id": "hd_lines_arrows"
     },
     {
       "label": "Hand drawing on iPad",
@@ -1806,9 +1806,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "hd_hand_draw_ipad",
-      "community": 6,
-      "norm_label": "hand drawing on ipad"
+      "community": 5,
+      "norm_label": "hand drawing on ipad",
+      "id": "hd_hand_draw_ipad"
     },
     {
       "label": "Bird Photography Planning with Milanote",
@@ -1819,9 +1819,9 @@
       "captured_at": "2026-05-02T16:25:20Z",
       "author": "Tron Westby",
       "contributor": null,
-      "id": "bird_photography_video",
-      "community": 8,
-      "norm_label": "bird photography planning with milanote"
+      "community": 3,
+      "norm_label": "bird photography planning with milanote",
+      "id": "bird_photography_video"
     },
     {
       "label": "Target species subboard",
@@ -1832,9 +1832,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "bp_target_species_subboard",
-      "community": 8,
-      "norm_label": "target species subboard"
+      "community": 3,
+      "norm_label": "target species subboard",
+      "id": "bp_target_species_subboard"
     },
     {
       "label": "Field notes capture (mobile + desktop sync)",
@@ -1845,9 +1845,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "bp_field_notes",
-      "community": 8,
-      "norm_label": "field notes capture (mobile + desktop sync)"
+      "community": 3,
+      "norm_label": "field notes capture (mobile + desktop sync)",
+      "id": "bp_field_notes"
     },
     {
       "label": "Link card to research webpage",
@@ -1858,9 +1858,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "bp_link_card_research",
-      "community": 8,
-      "norm_label": "link card to research webpage"
+      "community": 7,
+      "norm_label": "link card to research webpage",
+      "id": "bp_link_card_research"
     },
     {
       "label": "Shot logistics column (location/maps/gear)",
@@ -1871,9 +1871,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "bp_shot_logistics_column",
-      "community": 8,
-      "norm_label": "shot logistics column (location/maps/gear)"
+      "community": 3,
+      "norm_label": "shot logistics column (location/maps/gear)",
+      "id": "bp_shot_logistics_column"
     },
     {
       "label": "Social media planning board",
@@ -1884,9 +1884,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "bp_social_media_board",
-      "community": 8,
-      "norm_label": "social media planning board"
+      "community": 3,
+      "norm_label": "social media planning board",
+      "id": "bp_social_media_board"
     },
     {
       "label": "100+ built-in templates",
@@ -1897,9 +1897,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "bp_built_in_templates",
-      "community": 8,
-      "norm_label": "100+ built-in templates"
+      "community": 3,
+      "norm_label": "100+ built-in templates",
+      "id": "bp_built_in_templates"
     },
     {
       "label": "Milanote First Look (Visual Note-Taking)",
@@ -1910,9 +1910,9 @@
       "captured_at": "2026-05-02T16:25:20Z",
       "author": "Tiago Forte",
       "contributor": null,
-      "id": "first_look_visual",
-      "community": 4,
-      "norm_label": "milanote first look (visual note-taking)"
+      "community": 9,
+      "norm_label": "milanote first look (visual note-taking)",
+      "id": "first_look_visual"
     },
     {
       "label": "PARA method (Projects, Areas, Resources, Archives)",
@@ -1923,9 +1923,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "fl_para_method",
-      "community": 4,
-      "norm_label": "para method (projects, areas, resources, archives)"
+      "community": 9,
+      "norm_label": "para method (projects, areas, resources, archives)",
+      "id": "fl_para_method"
     },
     {
       "label": "Second Brain workspace concept",
@@ -1936,9 +1936,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "fl_second_brain",
-      "community": 4,
-      "norm_label": "second brain workspace concept"
+      "community": 9,
+      "norm_label": "second brain workspace concept",
+      "id": "fl_second_brain"
     },
     {
       "label": "Open canvas free-form view",
@@ -1949,9 +1949,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "fl_open_canvas",
-      "community": 4,
-      "norm_label": "open canvas free-form view"
+      "community": 9,
+      "norm_label": "open canvas free-form view",
+      "id": "fl_open_canvas"
     },
     {
       "label": "Unsorted panel (right-side staging area)",
@@ -1962,9 +1962,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "fl_unsorted_panel",
-      "community": 4,
-      "norm_label": "unsorted panel (right-side staging area)"
+      "community": 9,
+      "norm_label": "unsorted panel (right-side staging area)",
+      "id": "fl_unsorted_panel"
     },
     {
       "label": "Kanban-style columns (future/upcoming/active/completed/archived)",
@@ -1975,9 +1975,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "fl_kanban_columns",
-      "community": 4,
-      "norm_label": "kanban-style columns (future/upcoming/active/completed/archived)"
+      "community": 9,
+      "norm_label": "kanban-style columns (future/upcoming/active/completed/archived)",
+      "id": "fl_kanban_columns"
     },
     {
       "label": "Connector lines between notes (arrow/dotted/normal)",
@@ -1988,9 +1988,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "fl_connector_lines",
-      "community": 6,
-      "norm_label": "connector lines between notes (arrow/dotted/normal)"
+      "community": 5,
+      "norm_label": "connector lines between notes (arrow/dotted/normal)",
+      "id": "fl_connector_lines"
     },
     {
       "label": "Draw feature for sketching/annotation",
@@ -2001,9 +2001,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "fl_draw_feature",
-      "community": 4,
-      "norm_label": "draw feature for sketching/annotation"
+      "community": 9,
+      "norm_label": "draw feature for sketching/annotation",
+      "id": "fl_draw_feature"
     },
     {
       "label": "Progressive summarization technique",
@@ -2014,9 +2014,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "fl_progressive_summarization",
-      "community": 4,
-      "norm_label": "progressive summarization technique"
+      "community": 9,
+      "norm_label": "progressive summarization technique",
+      "id": "fl_progressive_summarization"
     },
     {
       "label": "Create a shortcut for this board",
@@ -2027,9 +2027,1010 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "fl_shortcut_to_board",
-      "community": 4,
-      "norm_label": "create a shortcut for this board"
+      "community": 9,
+      "norm_label": "create a shortcut for this board",
+      "id": "fl_shortcut_to_board"
+    },
+    {
+      "label": "Design a Visual Workspace Using Milanote",
+      "file_type": "document",
+      "source_file": "knowledge/milanote/reference/videos/design-a-visual-workspace-using-milanote.md",
+      "source_location": null,
+      "source_url": "https://youtube.com/watch?v=Iub56491bWA",
+      "captured_at": "2026-05-02T00:00:00Z",
+      "author": "Franchesco",
+      "contributor": null,
+      "id": "design_visual_workspace",
+      "community": 0,
+      "norm_label": "design a visual workspace using milanote"
+    },
+    {
+      "label": "How I Stay Organized With Milanote",
+      "file_type": "document",
+      "source_file": "knowledge/milanote/reference/videos/how-i-stay-organized-with-milanote.md",
+      "source_location": null,
+      "source_url": "https://youtube.com/watch?v=_RYUkEp2p_I",
+      "captured_at": "2026-05-02T00:00:00Z",
+      "author": "Sakura",
+      "contributor": null,
+      "id": "how_i_stay_organized",
+      "community": 0,
+      "norm_label": "how i stay organized with milanote"
+    },
+    {
+      "label": "How To Organize Your Blog and Team With Milanote",
+      "file_type": "document",
+      "source_file": "knowledge/milanote/reference/videos/how-to-organize-your-blog-and-team-with-milanote.md",
+      "source_location": null,
+      "source_url": "https://youtube.com/watch?v=fcSLEfrlC5E",
+      "captured_at": "2026-05-02T00:00:00Z",
+      "author": "Lina Blogger Studios",
+      "contributor": null,
+      "id": "organize_blog_team",
+      "community": 0,
+      "norm_label": "how to organize your blog and team with milanote"
+    },
+    {
+      "label": "Motion Graphics Design Process How to Create a Moodboard",
+      "file_type": "document",
+      "source_file": "knowledge/milanote/reference/videos/motion-graphics-how-to-create-a-moodboard.md",
+      "source_location": null,
+      "source_url": "https://youtube.com/watch?v=4M4H4AzDzAI",
+      "captured_at": "2026-05-02T00:00:00Z",
+      "author": "Evan Abrams",
+      "contributor": null,
+      "id": "motion_graphics_moodboard",
+      "community": 0,
+      "norm_label": "motion graphics design process how to create a moodboard"
+    },
+    {
+      "label": "Board Milanote Primitive",
+      "file_type": "concept",
+      "source_file": "knowledge/milanote/reference/videos/design-a-visual-workspace-using-milanote.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "concept_board",
+      "community": 0,
+      "norm_label": "board milanote primitive"
+    },
+    {
+      "label": "Note Card Milanote Primitive",
+      "file_type": "concept",
+      "source_file": "knowledge/milanote/reference/videos/design-a-visual-workspace-using-milanote.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "concept_note_card",
+      "community": 0,
+      "norm_label": "note card milanote primitive"
+    },
+    {
+      "label": "Checklist Milanote Primitive",
+      "file_type": "concept",
+      "source_file": "knowledge/milanote/reference/videos/design-a-visual-workspace-using-milanote.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "concept_checklist",
+      "community": 0,
+      "norm_label": "checklist milanote primitive"
+    },
+    {
+      "label": "Column Milanote Primitive",
+      "file_type": "concept",
+      "source_file": "knowledge/milanote/reference/videos/design-a-visual-workspace-using-milanote.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "concept_column",
+      "community": 0,
+      "norm_label": "column milanote primitive"
+    },
+    {
+      "label": "Image Upload Milanote Feature",
+      "file_type": "concept",
+      "source_file": "knowledge/milanote/reference/videos/design-a-visual-workspace-using-milanote.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "concept_image_upload",
+      "community": 0,
+      "norm_label": "image upload milanote feature"
+    },
+    {
+      "label": "Nested Boards Boards Within Boards",
+      "file_type": "concept",
+      "source_file": "knowledge/milanote/reference/videos/design-a-visual-workspace-using-milanote.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "concept_nested_boards",
+      "community": 0,
+      "norm_label": "nested boards boards within boards"
+    },
+    {
+      "label": "Color Coding Cards",
+      "file_type": "concept",
+      "source_file": "knowledge/milanote/reference/videos/design-a-visual-workspace-using-milanote.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "concept_color_coding",
+      "community": 0,
+      "norm_label": "color coding cards"
+    },
+    {
+      "label": "Card Limit Free Plan 100 Cards",
+      "file_type": "concept",
+      "source_file": "knowledge/milanote/reference/videos/design-a-visual-workspace-using-milanote.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "concept_card_limit",
+      "community": 0,
+      "norm_label": "card limit free plan 100 cards"
+    },
+    {
+      "label": "Infinite Canvas",
+      "file_type": "concept",
+      "source_file": "knowledge/milanote/reference/videos/how-i-stay-organized-with-milanote.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "concept_canvas",
+      "community": 0,
+      "norm_label": "infinite canvas"
+    },
+    {
+      "label": "Collaboration Board Sharing",
+      "file_type": "concept",
+      "source_file": "knowledge/milanote/reference/videos/how-i-stay-organized-with-milanote.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "concept_collaboration",
+      "community": 0,
+      "norm_label": "collaboration board sharing"
+    },
+    {
+      "label": "Link Card Milanote Primitive",
+      "file_type": "concept",
+      "source_file": "knowledge/milanote/reference/videos/how-i-stay-organized-with-milanote.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "concept_link_card",
+      "community": 0,
+      "norm_label": "link card milanote primitive"
+    },
+    {
+      "label": "Comment Milanote Feature",
+      "file_type": "concept",
+      "source_file": "knowledge/milanote/reference/videos/how-i-stay-organized-with-milanote.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "concept_comment",
+      "community": 0,
+      "norm_label": "comment milanote feature"
+    },
+    {
+      "label": "Browser Extension Web Clipper",
+      "file_type": "concept",
+      "source_file": "knowledge/milanote/reference/videos/how-i-stay-organized-with-milanote.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "concept_browser_extension",
+      "community": 0,
+      "norm_label": "browser extension web clipper"
+    },
+    {
+      "label": "Built-in Templates Milanote Feature",
+      "file_type": "concept",
+      "source_file": "knowledge/milanote/reference/videos/how-i-stay-organized-with-milanote.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "concept_templates",
+      "community": 0,
+      "norm_label": "built-in templates milanote feature"
+    },
+    {
+      "label": "Moodboard Workflow",
+      "file_type": "concept",
+      "source_file": "knowledge/milanote/reference/videos/motion-graphics-how-to-create-a-moodboard.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "concept_moodboard",
+      "community": 0,
+      "norm_label": "moodboard workflow"
+    },
+    {
+      "label": "Line Connector Milanote Primitive",
+      "file_type": "concept",
+      "source_file": "knowledge/milanote/reference/videos/how-to-organize-your-blog-and-team-with-milanote.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "concept_line_connector",
+      "community": 0,
+      "norm_label": "line connector milanote primitive"
+    },
+    {
+      "label": "Editorial Calendar Use-Case",
+      "file_type": "concept",
+      "source_file": "knowledge/milanote/reference/videos/how-i-stay-organized-with-milanote.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "concept_editorial_calendar",
+      "community": 0,
+      "norm_label": "editorial calendar use-case"
+    },
+    {
+      "label": "Team Management Use-Case",
+      "file_type": "concept",
+      "source_file": "knowledge/milanote/reference/videos/how-i-stay-organized-with-milanote.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "concept_team_management",
+      "community": 0,
+      "norm_label": "team management use-case"
+    },
+    {
+      "label": "Pre-production Process Motion Graphics",
+      "file_type": "concept",
+      "source_file": "knowledge/milanote/reference/videos/motion-graphics-how-to-create-a-moodboard.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "concept_preproduction",
+      "community": 0,
+      "norm_label": "pre-production process motion graphics"
+    },
+    {
+      "label": "Visual Direction via Moodboard",
+      "file_type": "concept",
+      "source_file": "knowledge/milanote/reference/videos/motion-graphics-how-to-create-a-moodboard.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "concept_visual_direction",
+      "community": 0,
+      "norm_label": "visual direction via moodboard"
+    },
+    {
+      "label": "Hex Color Note hash shortcut",
+      "file_type": "concept",
+      "source_file": "knowledge/milanote/reference/videos/motion-graphics-how-to-create-a-moodboard.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "concept_hex_color_note",
+      "community": 0,
+      "norm_label": "hex color note hash shortcut"
+    },
+    {
+      "label": "Video Embed in Board",
+      "file_type": "concept",
+      "source_file": "knowledge/milanote/reference/videos/motion-graphics-how-to-create-a-moodboard.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "concept_video_embed",
+      "community": 0,
+      "norm_label": "video embed in board"
+    },
+    {
+      "label": "Board Icon Emoji",
+      "file_type": "concept",
+      "source_file": "knowledge/milanote/reference/videos/design-a-visual-workspace-using-milanote.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "concept_icon_emoji",
+      "community": 0,
+      "norm_label": "board icon emoji"
+    },
+    {
+      "label": "Click and Drag Interaction Model",
+      "file_type": "concept",
+      "source_file": "knowledge/milanote/reference/videos/how-to-organize-your-blog-and-team-with-milanote.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "concept_drag_drop",
+      "community": 0,
+      "norm_label": "click and drag interaction model"
+    },
+    {
+      "label": "Milanote Mac App",
+      "file_type": "concept",
+      "source_file": "knowledge/milanote/reference/videos/design-a-visual-workspace-using-milanote.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "concept_mac_app",
+      "community": 0,
+      "norm_label": "milanote mac app"
+    },
+    {
+      "label": "Rationale Size and Placement Convey Importance in Moodboard",
+      "file_type": "rationale",
+      "source_file": "knowledge/milanote/reference/videos/motion-graphics-how-to-create-a-moodboard.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": "Evan Abrams",
+      "contributor": null,
+      "id": "rationale_moodboard_size_placement",
+      "community": 0,
+      "norm_label": "rationale size and placement convey importance in moodboard"
+    },
+    {
+      "label": "Rationale Pre-production Steps Reduce Project Ambiguity",
+      "file_type": "rationale",
+      "source_file": "knowledge/milanote/reference/videos/motion-graphics-how-to-create-a-moodboard.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": "Evan Abrams",
+      "contributor": null,
+      "id": "rationale_preproduction_saves_time",
+      "community": 0,
+      "norm_label": "rationale pre-production steps reduce project ambiguity"
+    },
+    {
+      "label": "Rationale Iterating with Duplicate Boards Enables Style Exploration",
+      "file_type": "rationale",
+      "source_file": "knowledge/milanote/reference/videos/motion-graphics-how-to-create-a-moodboard.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": "Evan Abrams",
+      "contributor": null,
+      "id": "rationale_iterate_boards",
+      "community": 0,
+      "norm_label": "rationale iterating with duplicate boards enables style exploration"
+    },
+    {
+      "label": "Rationale Left Panel as Team Landing Page for Clarity",
+      "file_type": "rationale",
+      "source_file": "knowledge/milanote/reference/videos/how-to-organize-your-blog-and-team-with-milanote.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": "Lina Blogger Studios",
+      "contributor": null,
+      "id": "rationale_left_panel_team",
+      "community": 0,
+      "norm_label": "rationale left panel as team landing page for clarity"
+    },
+    {
+      "file_type": "document",
+      "label": "Motion Graphics: How to Create a Storyboard (Video)",
+      "captured_at": "2026-05-02T00:00:00Z",
+      "source_file": "knowledge/milanote/reference/videos/motion-graphics-how-to-create-a-storyboard.md",
+      "source_location": null,
+      "contributor": null,
+      "source_url": "https://youtube.com/watch?v=JuKYnSMLkF4",
+      "author": "Evan Abrams",
+      "id": "storyboard_video_storyboard_tutorial",
+      "community": 6,
+      "norm_label": "motion graphics: how to create a storyboard (video)"
+    },
+    {
+      "file_type": "document",
+      "label": "Storyboard",
+      "captured_at": null,
+      "source_file": "knowledge/milanote/reference/videos/motion-graphics-how-to-create-a-storyboard.md",
+      "source_location": null,
+      "contributor": null,
+      "source_url": null,
+      "author": null,
+      "id": "storyboard_video_storyboard_concept",
+      "community": 6,
+      "norm_label": "storyboard"
+    },
+    {
+      "file_type": "document",
+      "label": "Animatic",
+      "captured_at": null,
+      "source_file": "knowledge/milanote/reference/videos/motion-graphics-how-to-create-a-storyboard.md",
+      "source_location": null,
+      "contributor": null,
+      "source_url": null,
+      "author": null,
+      "id": "storyboard_video_animatic",
+      "community": 6,
+      "norm_label": "animatic"
+    },
+    {
+      "file_type": "document",
+      "label": "Pre-Production Process",
+      "captured_at": null,
+      "source_file": "knowledge/milanote/reference/videos/motion-graphics-how-to-create-a-storyboard.md",
+      "source_location": null,
+      "contributor": null,
+      "source_url": null,
+      "author": null,
+      "id": "storyboard_video_preproduction",
+      "community": 6,
+      "norm_label": "pre-production process"
+    },
+    {
+      "file_type": "document",
+      "label": "Script (Motion Design)",
+      "captured_at": null,
+      "source_file": "knowledge/milanote/reference/videos/motion-graphics-how-to-create-a-storyboard.md",
+      "source_location": null,
+      "contributor": null,
+      "source_url": null,
+      "author": null,
+      "id": "storyboard_video_script",
+      "community": 6,
+      "norm_label": "script (motion design)"
+    },
+    {
+      "file_type": "document",
+      "label": "Milanote Grid Layout for Storyboards",
+      "captured_at": null,
+      "source_file": "knowledge/milanote/reference/videos/motion-graphics-how-to-create-a-storyboard.md",
+      "source_location": null,
+      "contributor": null,
+      "source_url": null,
+      "author": null,
+      "id": "storyboard_video_milanote_grid_layout",
+      "community": 6,
+      "norm_label": "milanote grid layout for storyboards"
+    },
+    {
+      "file_type": "document",
+      "label": "Captions on Storyboard Frames",
+      "captured_at": null,
+      "source_file": "knowledge/milanote/reference/videos/motion-graphics-how-to-create-a-storyboard.md",
+      "source_location": null,
+      "contributor": null,
+      "source_url": null,
+      "author": null,
+      "id": "storyboard_video_captions",
+      "community": 6,
+      "norm_label": "captions on storyboard frames"
+    },
+    {
+      "file_type": "document",
+      "label": "Rationale: Start on Paper for Storyboarding",
+      "captured_at": null,
+      "source_file": "knowledge/milanote/reference/videos/motion-graphics-how-to-create-a-storyboard.md",
+      "source_location": null,
+      "contributor": null,
+      "source_url": null,
+      "author": null,
+      "id": "storyboard_video_rationale_paper_sketches",
+      "community": 6,
+      "norm_label": "rationale: start on paper for storyboarding"
+    },
+    {
+      "file_type": "document",
+      "label": "Motion Graphics: How to Create Style Frames (Video)",
+      "captured_at": "2026-05-02T00:00:00Z",
+      "source_file": "knowledge/milanote/reference/videos/motion-graphics-how-to-create-style-frames.md",
+      "source_location": null,
+      "contributor": null,
+      "source_url": "https://youtube.com/watch?v=G1AK-mrDrnw",
+      "author": "Evan Abrams",
+      "id": "styleframes_video_styleframes_tutorial",
+      "community": 6,
+      "norm_label": "motion graphics: how to create style frames (video)"
+    },
+    {
+      "file_type": "document",
+      "label": "Style Frame",
+      "captured_at": null,
+      "source_file": "knowledge/milanote/reference/videos/motion-graphics-how-to-create-style-frames.md",
+      "source_location": null,
+      "contributor": null,
+      "source_url": null,
+      "author": null,
+      "id": "styleframes_video_style_frame_concept",
+      "community": 6,
+      "norm_label": "style frame"
+    },
+    {
+      "file_type": "document",
+      "label": "Mood Board",
+      "captured_at": null,
+      "source_file": "knowledge/milanote/reference/videos/motion-graphics-how-to-create-style-frames.md",
+      "source_location": null,
+      "contributor": null,
+      "source_url": null,
+      "author": null,
+      "id": "styleframes_video_mood_board",
+      "community": 6,
+      "norm_label": "mood board"
+    },
+    {
+      "file_type": "document",
+      "label": "Client Presentation of Style Frames",
+      "captured_at": null,
+      "source_file": "knowledge/milanote/reference/videos/motion-graphics-how-to-create-style-frames.md",
+      "source_location": null,
+      "contributor": null,
+      "source_url": null,
+      "author": null,
+      "id": "styleframes_video_client_presentation",
+      "community": 6,
+      "norm_label": "client presentation of style frames"
+    },
+    {
+      "file_type": "document",
+      "label": "Adobe Illustrator (Style Frame Tool)",
+      "captured_at": null,
+      "source_file": "knowledge/milanote/reference/videos/motion-graphics-how-to-create-style-frames.md",
+      "source_location": null,
+      "contributor": null,
+      "source_url": null,
+      "author": null,
+      "id": "styleframes_video_adobe_illustrator",
+      "community": 6,
+      "norm_label": "adobe illustrator (style frame tool)"
+    },
+    {
+      "file_type": "document",
+      "label": "Milanote Comments for Client Feedback",
+      "captured_at": null,
+      "source_file": "knowledge/milanote/reference/videos/motion-graphics-how-to-create-style-frames.md",
+      "source_location": null,
+      "contributor": null,
+      "source_url": null,
+      "author": null,
+      "id": "styleframes_video_milanote_comments",
+      "community": 6,
+      "norm_label": "milanote comments for client feedback"
+    },
+    {
+      "file_type": "document",
+      "label": "Rationale: Create Style Frames Before Animation Starts",
+      "captured_at": null,
+      "source_file": "knowledge/milanote/reference/videos/motion-graphics-how-to-create-style-frames.md",
+      "source_location": null,
+      "contributor": null,
+      "source_url": null,
+      "author": null,
+      "id": "styleframes_video_rationale_before_animation",
+      "community": 6,
+      "norm_label": "rationale: create style frames before animation starts"
+    },
+    {
+      "file_type": "document",
+      "label": "Rationale: Present Multiple Style Frame Variations",
+      "captured_at": null,
+      "source_file": "knowledge/milanote/reference/videos/motion-graphics-how-to-create-style-frames.md",
+      "source_location": null,
+      "contributor": null,
+      "source_url": null,
+      "author": null,
+      "id": "styleframes_video_rationale_multiple_variations",
+      "community": 6,
+      "norm_label": "rationale: present multiple style frame variations"
+    },
+    {
+      "file_type": "document",
+      "label": "Motion Graphics Pre-Production Series",
+      "captured_at": null,
+      "source_file": "knowledge/milanote/reference/videos/motion-graphics-how-to-create-style-frames.md",
+      "source_location": null,
+      "contributor": null,
+      "source_url": null,
+      "author": null,
+      "id": "styleframes_video_preproduction_series",
+      "community": 6,
+      "norm_label": "motion graphics pre-production series"
+    },
+    {
+      "file_type": "document",
+      "label": "My Creative Process with Milanote UI/UX (Video)",
+      "captured_at": "2026-05-02T00:00:00Z",
+      "source_file": "knowledge/milanote/reference/videos/my-creative-process-with-milanote-plan-organize-ui-ux-design-projects.md",
+      "source_location": null,
+      "contributor": null,
+      "source_url": "https://youtube.com/watch?v=-y6NGqoWzBQ",
+      "author": "Kaler",
+      "id": "uiux_video_uiux_tutorial",
+      "community": 1,
+      "norm_label": "my creative process with milanote ui/ux (video)"
+    },
+    {
+      "file_type": "document",
+      "label": "Infinite Canvas",
+      "captured_at": null,
+      "source_file": "knowledge/milanote/reference/videos/my-creative-process-with-milanote-plan-organize-ui-ux-design-projects.md",
+      "source_location": null,
+      "contributor": null,
+      "source_url": null,
+      "author": null,
+      "id": "uiux_video_infinite_canvas",
+      "community": 1,
+      "norm_label": "infinite canvas"
+    },
+    {
+      "file_type": "document",
+      "label": "Board (Milanote Primitive)",
+      "captured_at": null,
+      "source_file": "knowledge/milanote/reference/videos/my-creative-process-with-milanote-plan-organize-ui-ux-design-projects.md",
+      "source_location": null,
+      "contributor": null,
+      "source_url": null,
+      "author": null,
+      "id": "uiux_video_board_primitive",
+      "community": 1,
+      "norm_label": "board (milanote primitive)"
+    },
+    {
+      "file_type": "document",
+      "label": "Note (Milanote Primitive)",
+      "captured_at": null,
+      "source_file": "knowledge/milanote/reference/videos/my-creative-process-with-milanote-plan-organize-ui-ux-design-projects.md",
+      "source_location": null,
+      "contributor": null,
+      "source_url": null,
+      "author": null,
+      "id": "uiux_video_note_primitive",
+      "community": 1,
+      "norm_label": "note (milanote primitive)"
+    },
+    {
+      "file_type": "document",
+      "label": "To-Do List (Milanote Primitive)",
+      "captured_at": null,
+      "source_file": "knowledge/milanote/reference/videos/my-creative-process-with-milanote-plan-organize-ui-ux-design-projects.md",
+      "source_location": null,
+      "contributor": null,
+      "source_url": null,
+      "author": null,
+      "id": "uiux_video_todo_list",
+      "community": 1,
+      "norm_label": "to-do list (milanote primitive)"
+    },
+    {
+      "file_type": "document",
+      "label": "Column (Milanote Primitive)",
+      "captured_at": null,
+      "source_file": "knowledge/milanote/reference/videos/my-creative-process-with-milanote-plan-organize-ui-ux-design-projects.md",
+      "source_location": null,
+      "contributor": null,
+      "source_url": null,
+      "author": null,
+      "id": "uiux_video_column_primitive",
+      "community": 1,
+      "norm_label": "column (milanote primitive)"
+    },
+    {
+      "file_type": "document",
+      "label": "Arrow / Connector (Milanote Primitive)",
+      "captured_at": null,
+      "source_file": "knowledge/milanote/reference/videos/my-creative-process-with-milanote-plan-organize-ui-ux-design-projects.md",
+      "source_location": null,
+      "contributor": null,
+      "source_url": null,
+      "author": null,
+      "id": "uiux_video_arrow_connector",
+      "community": 1,
+      "norm_label": "arrow / connector (milanote primitive)"
+    },
+    {
+      "file_type": "document",
+      "label": "User Flow Board",
+      "captured_at": null,
+      "source_file": "knowledge/milanote/reference/videos/my-creative-process-with-milanote-plan-organize-ui-ux-design-projects.md",
+      "source_location": null,
+      "contributor": null,
+      "source_url": null,
+      "author": null,
+      "id": "uiux_video_user_flow",
+      "community": 1,
+      "norm_label": "user flow board"
+    },
+    {
+      "file_type": "document",
+      "label": "Milanote Chrome Extension",
+      "captured_at": null,
+      "source_file": "knowledge/milanote/reference/videos/my-creative-process-with-milanote-plan-organize-ui-ux-design-projects.md",
+      "source_location": null,
+      "contributor": null,
+      "source_url": null,
+      "author": null,
+      "id": "uiux_video_chrome_extension",
+      "community": 1,
+      "norm_label": "milanote chrome extension"
+    },
+    {
+      "file_type": "document",
+      "label": "Team Invite and Sharing",
+      "captured_at": null,
+      "source_file": "knowledge/milanote/reference/videos/my-creative-process-with-milanote-plan-organize-ui-ux-design-projects.md",
+      "source_location": null,
+      "contributor": null,
+      "source_url": null,
+      "author": null,
+      "id": "uiux_video_team_invite",
+      "community": 1,
+      "norm_label": "team invite and sharing"
+    },
+    {
+      "file_type": "document",
+      "label": "Power-Ups (Milanote Feature)",
+      "captured_at": null,
+      "source_file": "knowledge/milanote/reference/videos/my-creative-process-with-milanote-plan-organize-ui-ux-design-projects.md",
+      "source_location": null,
+      "contributor": null,
+      "source_url": null,
+      "author": null,
+      "id": "uiux_video_power_ups",
+      "community": 1,
+      "norm_label": "power-ups (milanote feature)"
+    },
+    {
+      "file_type": "document",
+      "label": "Breadcrumb Navigation",
+      "captured_at": null,
+      "source_file": "knowledge/milanote/reference/videos/my-creative-process-with-milanote-plan-organize-ui-ux-design-projects.md",
+      "source_location": null,
+      "contributor": null,
+      "source_url": null,
+      "author": null,
+      "id": "uiux_video_breadcrumb_navigation",
+      "community": 1,
+      "norm_label": "breadcrumb navigation"
+    },
+    {
+      "file_type": "document",
+      "label": "Adobe XD Wireframes",
+      "captured_at": null,
+      "source_file": "knowledge/milanote/reference/videos/my-creative-process-with-milanote-plan-organize-ui-ux-design-projects.md",
+      "source_location": null,
+      "contributor": null,
+      "source_url": null,
+      "author": null,
+      "id": "uiux_video_adobe_xd_wireframes",
+      "community": 1,
+      "norm_label": "adobe xd wireframes"
+    },
+    {
+      "file_type": "document",
+      "label": "Milanote Templates",
+      "captured_at": null,
+      "source_file": "knowledge/milanote/reference/videos/my-creative-process-with-milanote-plan-organize-ui-ux-design-projects.md",
+      "source_location": null,
+      "contributor": null,
+      "source_url": null,
+      "author": null,
+      "id": "uiux_video_templates",
+      "community": 1,
+      "norm_label": "milanote templates"
+    },
+    {
+      "file_type": "document",
+      "label": "Recap: Milanote Creative Workspace (Video)",
+      "captured_at": "2026-05-02T00:00:00Z",
+      "source_file": "knowledge/milanote/reference/videos/recap-milanote-creative-workspace.md",
+      "source_location": null,
+      "contributor": null,
+      "source_url": "https://youtube.com/watch?v=vErOhxkeLho",
+      "author": "Keep Productive",
+      "id": "recap_video_recap_tutorial",
+      "community": 1,
+      "norm_label": "recap: milanote creative workspace (video)"
+    },
+    {
+      "file_type": "document",
+      "label": "Milanote Free Plan",
+      "captured_at": null,
+      "source_file": "knowledge/milanote/reference/videos/recap-milanote-creative-workspace.md",
+      "source_location": null,
+      "contributor": null,
+      "source_url": null,
+      "author": null,
+      "id": "recap_video_free_plan",
+      "community": 1,
+      "norm_label": "milanote free plan"
+    },
+    {
+      "file_type": "document",
+      "label": "Milanote Pro Plan",
+      "captured_at": null,
+      "source_file": "knowledge/milanote/reference/videos/recap-milanote-creative-workspace.md",
+      "source_location": null,
+      "contributor": null,
+      "source_url": null,
+      "author": null,
+      "id": "recap_video_pro_plan",
+      "community": 1,
+      "norm_label": "milanote pro plan"
+    },
+    {
+      "file_type": "document",
+      "label": "Export to PNG/PDF/Markdown/Plain Text",
+      "captured_at": null,
+      "source_file": "knowledge/milanote/reference/videos/recap-milanote-creative-workspace.md",
+      "source_location": null,
+      "contributor": null,
+      "source_url": null,
+      "author": null,
+      "id": "recap_video_export_png_pdf",
+      "community": 1,
+      "norm_label": "export to png/pdf/markdown/plain text"
+    },
+    {
+      "file_type": "document",
+      "label": "Image (Milanote Primitive)",
+      "captured_at": null,
+      "source_file": "knowledge/milanote/reference/videos/recap-milanote-creative-workspace.md",
+      "source_location": null,
+      "contributor": null,
+      "source_url": null,
+      "author": null,
+      "id": "recap_video_image_primitive",
+      "community": 1,
+      "norm_label": "image (milanote primitive)"
+    },
+    {
+      "file_type": "document",
+      "label": "Link Card (Milanote Primitive)",
+      "captured_at": null,
+      "source_file": "knowledge/milanote/reference/videos/recap-milanote-creative-workspace.md",
+      "source_location": null,
+      "contributor": null,
+      "source_url": null,
+      "author": null,
+      "id": "recap_video_link_card",
+      "community": 1,
+      "norm_label": "link card (milanote primitive)"
+    },
+    {
+      "file_type": "document",
+      "label": "Line / Connector (Milanote Primitive)",
+      "captured_at": null,
+      "source_file": "knowledge/milanote/reference/videos/recap-milanote-creative-workspace.md",
+      "source_location": null,
+      "contributor": null,
+      "source_url": null,
+      "author": null,
+      "id": "recap_video_line_connector",
+      "community": 1,
+      "norm_label": "line / connector (milanote primitive)"
+    },
+    {
+      "file_type": "document",
+      "label": "Notifications (Milanote Feature)",
+      "captured_at": null,
+      "source_file": "knowledge/milanote/reference/videos/recap-milanote-creative-workspace.md",
+      "source_location": null,
+      "contributor": null,
+      "source_url": null,
+      "author": null,
+      "id": "recap_video_notifications",
+      "community": 1,
+      "norm_label": "notifications (milanote feature)"
+    },
+    {
+      "file_type": "document",
+      "label": "Lock Position (Milanote Feature)",
+      "captured_at": null,
+      "source_file": "knowledge/milanote/reference/videos/recap-milanote-creative-workspace.md",
+      "source_location": null,
+      "contributor": null,
+      "source_url": null,
+      "author": null,
+      "id": "recap_video_lock_position",
+      "community": 1,
+      "norm_label": "lock position (milanote feature)"
+    },
+    {
+      "file_type": "document",
+      "label": "Comment (Milanote Primitive)",
+      "captured_at": null,
+      "source_file": "knowledge/milanote/reference/videos/recap-milanote-creative-workspace.md",
+      "source_location": null,
+      "contributor": null,
+      "source_url": null,
+      "author": null,
+      "id": "recap_video_comment_primitive",
+      "community": 1,
+      "norm_label": "comment (milanote primitive)"
+    },
+    {
+      "file_type": "document",
+      "label": "Card Limit (Free Plan)",
+      "captured_at": null,
+      "source_file": "knowledge/milanote/reference/videos/recap-milanote-creative-workspace.md",
+      "source_location": null,
+      "contributor": null,
+      "source_url": null,
+      "author": null,
+      "id": "recap_video_card_limit",
+      "community": 1,
+      "norm_label": "card limit (free plan)"
+    },
+    {
+      "file_type": "document",
+      "label": "iOS App (Coming Soon at Recap Time)",
+      "captured_at": null,
+      "source_file": "knowledge/milanote/reference/videos/recap-milanote-creative-workspace.md",
+      "source_location": null,
+      "contributor": null,
+      "source_url": null,
+      "author": null,
+      "id": "recap_video_ios_app_coming",
+      "community": 1,
+      "norm_label": "ios app (coming soon at recap time)"
+    },
+    {
+      "file_type": "document",
+      "label": "Mac App (Coming Soon at Recap Time)",
+      "captured_at": null,
+      "source_file": "knowledge/milanote/reference/videos/recap-milanote-creative-workspace.md",
+      "source_location": null,
+      "contributor": null,
+      "source_url": null,
+      "author": null,
+      "id": "recap_video_mac_app_coming",
+      "community": 1,
+      "norm_label": "mac app (coming soon at recap time)"
     }
   ],
   "links": [
@@ -3489,6 +4490,54 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
+      "source_file": "knowledge/milanote/reference/videos/INDEX.md",
+      "source_location": "row: design-a-visual-workspace-using-milanote.md",
+      "weight": 1.0,
+      "_src": "videos_index",
+      "_tgt": "design_visual_workspace",
+      "source": "videos_index",
+      "target": "design_visual_workspace"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "knowledge/milanote/reference/videos/INDEX.md",
+      "source_location": "row: how-i-stay-organized-with-milanote.md",
+      "weight": 1.0,
+      "_src": "videos_index",
+      "_tgt": "how_i_stay_organized",
+      "source": "videos_index",
+      "target": "how_i_stay_organized"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "knowledge/milanote/reference/videos/INDEX.md",
+      "source_location": "row: how-to-organize-your-blog-and-team-with-milanote.md",
+      "weight": 1.0,
+      "_src": "videos_index",
+      "_tgt": "organize_blog_team",
+      "source": "videos_index",
+      "target": "organize_blog_team"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "knowledge/milanote/reference/videos/INDEX.md",
+      "source_location": "row: motion-graphics-how-to-create-a-moodboard.md",
+      "weight": 1.0,
+      "_src": "videos_index",
+      "_tgt": "motion_graphics_moodboard",
+      "source": "videos_index",
+      "target": "motion_graphics_moodboard"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
       "source_file": "knowledge/milanote/reference/videos/milanote-getting-started.md",
       "source_location": null,
       "weight": 1.0,
@@ -3832,6 +4881,1614 @@
       "_tgt": "fl_second_brain",
       "source": "fl_para_method",
       "target": "fl_second_brain"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "knowledge/milanote/reference/videos/design-a-visual-workspace-using-milanote.md",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "design_visual_workspace",
+      "_tgt": "concept_board",
+      "source": "design_visual_workspace",
+      "target": "concept_board"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "knowledge/milanote/reference/videos/design-a-visual-workspace-using-milanote.md",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "design_visual_workspace",
+      "_tgt": "concept_note_card",
+      "source": "design_visual_workspace",
+      "target": "concept_note_card"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "knowledge/milanote/reference/videos/design-a-visual-workspace-using-milanote.md",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "design_visual_workspace",
+      "_tgt": "concept_checklist",
+      "source": "design_visual_workspace",
+      "target": "concept_checklist"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "knowledge/milanote/reference/videos/design-a-visual-workspace-using-milanote.md",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "design_visual_workspace",
+      "_tgt": "concept_column",
+      "source": "design_visual_workspace",
+      "target": "concept_column"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "knowledge/milanote/reference/videos/design-a-visual-workspace-using-milanote.md",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "design_visual_workspace",
+      "_tgt": "concept_nested_boards",
+      "source": "design_visual_workspace",
+      "target": "concept_nested_boards"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "knowledge/milanote/reference/videos/design-a-visual-workspace-using-milanote.md",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "design_visual_workspace",
+      "_tgt": "concept_color_coding",
+      "source": "design_visual_workspace",
+      "target": "concept_color_coding"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "knowledge/milanote/reference/videos/design-a-visual-workspace-using-milanote.md",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "design_visual_workspace",
+      "_tgt": "concept_image_upload",
+      "source": "design_visual_workspace",
+      "target": "concept_image_upload"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "knowledge/milanote/reference/videos/design-a-visual-workspace-using-milanote.md",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "design_visual_workspace",
+      "_tgt": "concept_card_limit",
+      "source": "design_visual_workspace",
+      "target": "concept_card_limit"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "knowledge/milanote/reference/videos/design-a-visual-workspace-using-milanote.md",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "design_visual_workspace",
+      "_tgt": "concept_mac_app",
+      "source": "design_visual_workspace",
+      "target": "concept_mac_app"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "knowledge/milanote/reference/videos/design-a-visual-workspace-using-milanote.md",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "design_visual_workspace",
+      "_tgt": "concept_icon_emoji",
+      "source": "design_visual_workspace",
+      "target": "concept_icon_emoji"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "knowledge/milanote/reference/videos/INDEX.md",
+      "source_location": null,
+      "weight": 0.75,
+      "_src": "design_visual_workspace",
+      "_tgt": "how_i_stay_organized",
+      "source": "design_visual_workspace",
+      "target": "how_i_stay_organized"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "knowledge/milanote/reference/videos/how-i-stay-organized-with-milanote.md",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "how_i_stay_organized",
+      "_tgt": "concept_canvas",
+      "source": "how_i_stay_organized",
+      "target": "concept_canvas"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "knowledge/milanote/reference/videos/how-i-stay-organized-with-milanote.md",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "how_i_stay_organized",
+      "_tgt": "concept_board",
+      "source": "how_i_stay_organized",
+      "target": "concept_board"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "knowledge/milanote/reference/videos/how-i-stay-organized-with-milanote.md",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "how_i_stay_organized",
+      "_tgt": "concept_note_card",
+      "source": "how_i_stay_organized",
+      "target": "concept_note_card"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "knowledge/milanote/reference/videos/how-i-stay-organized-with-milanote.md",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "how_i_stay_organized",
+      "_tgt": "concept_checklist",
+      "source": "how_i_stay_organized",
+      "target": "concept_checklist"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "knowledge/milanote/reference/videos/how-i-stay-organized-with-milanote.md",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "how_i_stay_organized",
+      "_tgt": "concept_column",
+      "source": "how_i_stay_organized",
+      "target": "concept_column"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "knowledge/milanote/reference/videos/how-i-stay-organized-with-milanote.md",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "how_i_stay_organized",
+      "_tgt": "concept_collaboration",
+      "source": "how_i_stay_organized",
+      "target": "concept_collaboration"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "knowledge/milanote/reference/videos/how-i-stay-organized-with-milanote.md",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "how_i_stay_organized",
+      "_tgt": "concept_link_card",
+      "source": "how_i_stay_organized",
+      "target": "concept_link_card"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "knowledge/milanote/reference/videos/how-i-stay-organized-with-milanote.md",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "how_i_stay_organized",
+      "_tgt": "concept_comment",
+      "source": "how_i_stay_organized",
+      "target": "concept_comment"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "knowledge/milanote/reference/videos/how-i-stay-organized-with-milanote.md",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "how_i_stay_organized",
+      "_tgt": "concept_browser_extension",
+      "source": "how_i_stay_organized",
+      "target": "concept_browser_extension"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "knowledge/milanote/reference/videos/how-i-stay-organized-with-milanote.md",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "how_i_stay_organized",
+      "_tgt": "concept_templates",
+      "source": "how_i_stay_organized",
+      "target": "concept_templates"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "knowledge/milanote/reference/videos/how-i-stay-organized-with-milanote.md",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "how_i_stay_organized",
+      "_tgt": "concept_nested_boards",
+      "source": "how_i_stay_organized",
+      "target": "concept_nested_boards"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "knowledge/milanote/reference/videos/how-i-stay-organized-with-milanote.md",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "how_i_stay_organized",
+      "_tgt": "concept_moodboard",
+      "source": "how_i_stay_organized",
+      "target": "concept_moodboard"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "knowledge/milanote/reference/videos/how-i-stay-organized-with-milanote.md",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "how_i_stay_organized",
+      "_tgt": "concept_editorial_calendar",
+      "source": "how_i_stay_organized",
+      "target": "concept_editorial_calendar"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "knowledge/milanote/reference/videos/how-i-stay-organized-with-milanote.md",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "how_i_stay_organized",
+      "_tgt": "concept_team_management",
+      "source": "how_i_stay_organized",
+      "target": "concept_team_management"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "knowledge/milanote/reference/videos/INDEX.md",
+      "source_location": null,
+      "weight": 0.8,
+      "_src": "how_i_stay_organized",
+      "_tgt": "organize_blog_team",
+      "source": "how_i_stay_organized",
+      "target": "organize_blog_team"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "knowledge/milanote/reference/videos/how-to-organize-your-blog-and-team-with-milanote.md",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "organize_blog_team",
+      "_tgt": "concept_board",
+      "source": "organize_blog_team",
+      "target": "concept_board"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "knowledge/milanote/reference/videos/how-to-organize-your-blog-and-team-with-milanote.md",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "organize_blog_team",
+      "_tgt": "concept_note_card",
+      "source": "organize_blog_team",
+      "target": "concept_note_card"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "knowledge/milanote/reference/videos/how-to-organize-your-blog-and-team-with-milanote.md",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "organize_blog_team",
+      "_tgt": "concept_column",
+      "source": "organize_blog_team",
+      "target": "concept_column"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "knowledge/milanote/reference/videos/how-to-organize-your-blog-and-team-with-milanote.md",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "organize_blog_team",
+      "_tgt": "concept_checklist",
+      "source": "organize_blog_team",
+      "target": "concept_checklist"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "knowledge/milanote/reference/videos/how-to-organize-your-blog-and-team-with-milanote.md",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "organize_blog_team",
+      "_tgt": "concept_link_card",
+      "source": "organize_blog_team",
+      "target": "concept_link_card"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "knowledge/milanote/reference/videos/how-to-organize-your-blog-and-team-with-milanote.md",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "organize_blog_team",
+      "_tgt": "concept_collaboration",
+      "source": "organize_blog_team",
+      "target": "concept_collaboration"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "knowledge/milanote/reference/videos/how-to-organize-your-blog-and-team-with-milanote.md",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "organize_blog_team",
+      "_tgt": "concept_comment",
+      "source": "organize_blog_team",
+      "target": "concept_comment"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "knowledge/milanote/reference/videos/how-to-organize-your-blog-and-team-with-milanote.md",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "organize_blog_team",
+      "_tgt": "concept_templates",
+      "source": "organize_blog_team",
+      "target": "concept_templates"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "knowledge/milanote/reference/videos/how-to-organize-your-blog-and-team-with-milanote.md",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "organize_blog_team",
+      "_tgt": "concept_nested_boards",
+      "source": "organize_blog_team",
+      "target": "concept_nested_boards"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "knowledge/milanote/reference/videos/how-to-organize-your-blog-and-team-with-milanote.md",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "organize_blog_team",
+      "_tgt": "concept_line_connector",
+      "source": "organize_blog_team",
+      "target": "concept_line_connector"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "knowledge/milanote/reference/videos/how-to-organize-your-blog-and-team-with-milanote.md",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "organize_blog_team",
+      "_tgt": "concept_drag_drop",
+      "source": "organize_blog_team",
+      "target": "concept_drag_drop"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "knowledge/milanote/reference/videos/how-to-organize-your-blog-and-team-with-milanote.md",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "organize_blog_team",
+      "_tgt": "concept_image_upload",
+      "source": "organize_blog_team",
+      "target": "concept_image_upload"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "knowledge/milanote/reference/videos/how-to-organize-your-blog-and-team-with-milanote.md",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "organize_blog_team",
+      "_tgt": "concept_team_management",
+      "source": "organize_blog_team",
+      "target": "concept_team_management"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "knowledge/milanote/reference/videos/how-to-organize-your-blog-and-team-with-milanote.md",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "organize_blog_team",
+      "_tgt": "concept_editorial_calendar",
+      "source": "organize_blog_team",
+      "target": "concept_editorial_calendar"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "knowledge/milanote/reference/videos/how-to-organize-your-blog-and-team-with-milanote.md",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "organize_blog_team",
+      "_tgt": "concept_moodboard",
+      "source": "organize_blog_team",
+      "target": "concept_moodboard"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "knowledge/milanote/reference/videos/how-to-organize-your-blog-and-team-with-milanote.md",
+      "source_location": "transcript: left side is what my team will see first and foremost",
+      "weight": 1.0,
+      "_src": "organize_blog_team",
+      "_tgt": "rationale_left_panel_team",
+      "source": "organize_blog_team",
+      "target": "rationale_left_panel_team"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "knowledge/milanote/reference/videos/motion-graphics-how-to-create-a-moodboard.md",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "motion_graphics_moodboard",
+      "_tgt": "concept_moodboard",
+      "source": "motion_graphics_moodboard",
+      "target": "concept_moodboard"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "knowledge/milanote/reference/videos/motion-graphics-how-to-create-a-moodboard.md",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "motion_graphics_moodboard",
+      "_tgt": "concept_board",
+      "source": "motion_graphics_moodboard",
+      "target": "concept_board"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "knowledge/milanote/reference/videos/motion-graphics-how-to-create-a-moodboard.md",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "motion_graphics_moodboard",
+      "_tgt": "concept_nested_boards",
+      "source": "motion_graphics_moodboard",
+      "target": "concept_nested_boards"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "knowledge/milanote/reference/videos/motion-graphics-how-to-create-a-moodboard.md",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "motion_graphics_moodboard",
+      "_tgt": "concept_image_upload",
+      "source": "motion_graphics_moodboard",
+      "target": "concept_image_upload"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "knowledge/milanote/reference/videos/motion-graphics-how-to-create-a-moodboard.md",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "motion_graphics_moodboard",
+      "_tgt": "concept_browser_extension",
+      "source": "motion_graphics_moodboard",
+      "target": "concept_browser_extension"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "knowledge/milanote/reference/videos/motion-graphics-how-to-create-a-moodboard.md",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "motion_graphics_moodboard",
+      "_tgt": "concept_note_card",
+      "source": "motion_graphics_moodboard",
+      "target": "concept_note_card"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "knowledge/milanote/reference/videos/motion-graphics-how-to-create-a-moodboard.md",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "motion_graphics_moodboard",
+      "_tgt": "concept_hex_color_note",
+      "source": "motion_graphics_moodboard",
+      "target": "concept_hex_color_note"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "knowledge/milanote/reference/videos/motion-graphics-how-to-create-a-moodboard.md",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "motion_graphics_moodboard",
+      "_tgt": "concept_video_embed",
+      "source": "motion_graphics_moodboard",
+      "target": "concept_video_embed"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "knowledge/milanote/reference/videos/motion-graphics-how-to-create-a-moodboard.md",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "motion_graphics_moodboard",
+      "_tgt": "concept_preproduction",
+      "source": "motion_graphics_moodboard",
+      "target": "concept_preproduction"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "knowledge/milanote/reference/videos/motion-graphics-how-to-create-a-moodboard.md",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "motion_graphics_moodboard",
+      "_tgt": "concept_visual_direction",
+      "source": "motion_graphics_moodboard",
+      "target": "concept_visual_direction"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "knowledge/milanote/reference/videos/motion-graphics-how-to-create-a-moodboard.md",
+      "source_location": "transcript: larger and more central = more important",
+      "weight": 1.0,
+      "_src": "motion_graphics_moodboard",
+      "_tgt": "rationale_moodboard_size_placement",
+      "source": "motion_graphics_moodboard",
+      "target": "rationale_moodboard_size_placement"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "knowledge/milanote/reference/videos/motion-graphics-how-to-create-a-moodboard.md",
+      "source_location": "transcript: pre-production steps make project less nebulous",
+      "weight": 1.0,
+      "_src": "motion_graphics_moodboard",
+      "_tgt": "rationale_preproduction_saves_time",
+      "source": "motion_graphics_moodboard",
+      "target": "rationale_preproduction_saves_time"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "knowledge/milanote/reference/videos/motion-graphics-how-to-create-a-moodboard.md",
+      "source_location": "transcript: copy to a new board and name it bright version",
+      "weight": 1.0,
+      "_src": "motion_graphics_moodboard",
+      "_tgt": "rationale_iterate_boards",
+      "source": "motion_graphics_moodboard",
+      "target": "rationale_iterate_boards"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "knowledge/milanote/reference/videos/design-a-visual-workspace-using-milanote.md",
+      "source_location": null,
+      "weight": 0.9,
+      "_src": "concept_nested_boards",
+      "_tgt": "concept_board",
+      "source": "concept_board",
+      "target": "concept_nested_boards"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "knowledge/milanote/reference/videos/how-to-organize-your-blog-and-team-with-milanote.md",
+      "source_location": null,
+      "weight": 0.8,
+      "_src": "concept_column",
+      "_tgt": "concept_board",
+      "source": "concept_board",
+      "target": "concept_column"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "knowledge/milanote/reference/videos/how-i-stay-organized-with-milanote.md",
+      "source_location": null,
+      "weight": 0.8,
+      "_src": "concept_editorial_calendar",
+      "_tgt": "concept_note_card",
+      "source": "concept_note_card",
+      "target": "concept_editorial_calendar"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "knowledge/milanote/reference/videos/motion-graphics-how-to-create-a-moodboard.md",
+      "source_location": null,
+      "weight": 0.8,
+      "_src": "concept_hex_color_note",
+      "_tgt": "concept_note_card",
+      "source": "concept_note_card",
+      "target": "concept_hex_color_note"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "knowledge/milanote/reference/videos/how-i-stay-organized-with-milanote.md",
+      "source_location": null,
+      "weight": 0.8,
+      "_src": "concept_editorial_calendar",
+      "_tgt": "concept_column",
+      "source": "concept_column",
+      "target": "concept_editorial_calendar"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "knowledge/milanote/reference/videos/motion-graphics-how-to-create-a-moodboard.md",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "rationale_iterate_boards",
+      "_tgt": "concept_nested_boards",
+      "source": "concept_nested_boards",
+      "target": "rationale_iterate_boards"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "knowledge/milanote/reference/videos/how-to-organize-your-blog-and-team-with-milanote.md",
+      "source_location": null,
+      "weight": 0.8,
+      "_src": "concept_drag_drop",
+      "_tgt": "concept_canvas",
+      "source": "concept_canvas",
+      "target": "concept_drag_drop"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "knowledge/milanote/reference/videos/how-i-stay-organized-with-milanote.md",
+      "source_location": null,
+      "weight": 0.9,
+      "_src": "concept_team_management",
+      "_tgt": "concept_collaboration",
+      "source": "concept_collaboration",
+      "target": "concept_team_management"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "knowledge/milanote/reference/videos/motion-graphics-how-to-create-a-moodboard.md",
+      "source_location": null,
+      "weight": 0.9,
+      "_src": "concept_moodboard",
+      "_tgt": "concept_visual_direction",
+      "source": "concept_moodboard",
+      "target": "concept_visual_direction"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "knowledge/milanote/reference/videos/motion-graphics-how-to-create-a-moodboard.md",
+      "source_location": null,
+      "weight": 0.9,
+      "_src": "concept_moodboard",
+      "_tgt": "concept_preproduction",
+      "source": "concept_moodboard",
+      "target": "concept_preproduction"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "knowledge/milanote/reference/videos/motion-graphics-how-to-create-a-moodboard.md",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "rationale_moodboard_size_placement",
+      "_tgt": "concept_moodboard",
+      "source": "concept_moodboard",
+      "target": "rationale_moodboard_size_placement"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "knowledge/milanote/reference/videos/how-to-organize-your-blog-and-team-with-milanote.md",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "rationale_left_panel_team",
+      "_tgt": "concept_team_management",
+      "source": "concept_team_management",
+      "target": "rationale_left_panel_team"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "knowledge/milanote/reference/videos/motion-graphics-how-to-create-a-moodboard.md",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "rationale_preproduction_saves_time",
+      "_tgt": "concept_preproduction",
+      "source": "concept_preproduction",
+      "target": "rationale_preproduction_saves_time"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "knowledge/milanote/reference/videos/motion-graphics-how-to-create-a-storyboard.md",
+      "confidence_score": 1,
+      "source_location": null,
+      "weight": 1,
+      "_src": "storyboard_video_storyboard_tutorial",
+      "_tgt": "storyboard_video_storyboard_concept",
+      "source": "storyboard_video_storyboard_tutorial",
+      "target": "storyboard_video_storyboard_concept"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "knowledge/milanote/reference/videos/motion-graphics-how-to-create-a-storyboard.md",
+      "confidence_score": 1,
+      "source_location": null,
+      "weight": 1,
+      "_src": "storyboard_video_storyboard_tutorial",
+      "_tgt": "storyboard_video_animatic",
+      "source": "storyboard_video_storyboard_tutorial",
+      "target": "storyboard_video_animatic"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "knowledge/milanote/reference/videos/motion-graphics-how-to-create-a-storyboard.md",
+      "confidence_score": 1,
+      "source_location": null,
+      "weight": 1,
+      "_src": "storyboard_video_storyboard_tutorial",
+      "_tgt": "storyboard_video_preproduction",
+      "source": "storyboard_video_storyboard_tutorial",
+      "target": "storyboard_video_preproduction"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "knowledge/milanote/reference/videos/motion-graphics-how-to-create-a-storyboard.md",
+      "confidence_score": 1,
+      "source_location": null,
+      "weight": 1,
+      "_src": "storyboard_video_storyboard_tutorial",
+      "_tgt": "storyboard_video_script",
+      "source": "storyboard_video_storyboard_tutorial",
+      "target": "storyboard_video_script"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "knowledge/milanote/reference/videos/motion-graphics-how-to-create-a-storyboard.md",
+      "confidence_score": 1,
+      "source_location": null,
+      "weight": 1,
+      "_src": "storyboard_video_storyboard_tutorial",
+      "_tgt": "storyboard_video_milanote_grid_layout",
+      "source": "storyboard_video_storyboard_tutorial",
+      "target": "storyboard_video_milanote_grid_layout"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "knowledge/milanote/reference/videos/motion-graphics-how-to-create-a-storyboard.md",
+      "confidence_score": 1,
+      "source_location": null,
+      "weight": 1,
+      "_src": "storyboard_video_storyboard_tutorial",
+      "_tgt": "storyboard_video_captions",
+      "source": "storyboard_video_storyboard_tutorial",
+      "target": "storyboard_video_captions"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "knowledge/milanote/reference/videos/motion-graphics-how-to-create-a-storyboard.md",
+      "confidence_score": 1,
+      "source_location": null,
+      "weight": 1,
+      "_src": "storyboard_video_storyboard_tutorial",
+      "_tgt": "storyboard_video_rationale_paper_sketches",
+      "source": "storyboard_video_storyboard_tutorial",
+      "target": "storyboard_video_rationale_paper_sketches"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "source_file": "knowledge/milanote/reference/videos/motion-graphics-how-to-create-a-storyboard.md",
+      "confidence_score": 1,
+      "source_location": null,
+      "weight": 0.9,
+      "_src": "storyboard_video_storyboard_tutorial",
+      "_tgt": "styleframes_video_styleframes_tutorial",
+      "source": "storyboard_video_storyboard_tutorial",
+      "target": "styleframes_video_styleframes_tutorial"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "knowledge/milanote/reference/videos/motion-graphics-how-to-create-a-storyboard.md",
+      "confidence_score": 1,
+      "source_location": null,
+      "weight": 1,
+      "_src": "storyboard_video_rationale_paper_sketches",
+      "_tgt": "storyboard_video_storyboard_concept",
+      "source": "storyboard_video_storyboard_concept",
+      "target": "storyboard_video_rationale_paper_sketches"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "source_file": "knowledge/milanote/reference/videos/motion-graphics-how-to-create-a-storyboard.md",
+      "confidence_score": 1,
+      "source_location": null,
+      "weight": 0.9,
+      "_src": "storyboard_video_storyboard_concept",
+      "_tgt": "storyboard_video_animatic",
+      "source": "storyboard_video_storyboard_concept",
+      "target": "storyboard_video_animatic"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "source_file": "knowledge/milanote/reference/videos/motion-graphics-how-to-create-a-storyboard.md",
+      "confidence_score": 1,
+      "source_location": null,
+      "weight": 0.9,
+      "_src": "storyboard_video_storyboard_concept",
+      "_tgt": "storyboard_video_script",
+      "source": "storyboard_video_storyboard_concept",
+      "target": "storyboard_video_script"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "source_file": "knowledge/milanote/reference/videos/motion-graphics-how-to-create-style-frames.md",
+      "confidence_score": 0.85,
+      "source_location": null,
+      "weight": 0.85,
+      "_src": "styleframes_video_style_frame_concept",
+      "_tgt": "storyboard_video_storyboard_concept",
+      "source": "storyboard_video_storyboard_concept",
+      "target": "styleframes_video_style_frame_concept"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "EXTRACTED",
+      "source_file": "knowledge/milanote/reference/videos/motion-graphics-how-to-create-style-frames.md",
+      "confidence_score": 1,
+      "source_location": null,
+      "weight": 0.9,
+      "_src": "styleframes_video_preproduction_series",
+      "_tgt": "storyboard_video_preproduction",
+      "source": "storyboard_video_preproduction",
+      "target": "styleframes_video_preproduction_series"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "knowledge/milanote/reference/videos/motion-graphics-how-to-create-style-frames.md",
+      "confidence_score": 1,
+      "source_location": null,
+      "weight": 1,
+      "_src": "styleframes_video_styleframes_tutorial",
+      "_tgt": "styleframes_video_style_frame_concept",
+      "source": "styleframes_video_styleframes_tutorial",
+      "target": "styleframes_video_style_frame_concept"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "knowledge/milanote/reference/videos/motion-graphics-how-to-create-style-frames.md",
+      "confidence_score": 1,
+      "source_location": null,
+      "weight": 1,
+      "_src": "styleframes_video_styleframes_tutorial",
+      "_tgt": "styleframes_video_mood_board",
+      "source": "styleframes_video_styleframes_tutorial",
+      "target": "styleframes_video_mood_board"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "knowledge/milanote/reference/videos/motion-graphics-how-to-create-style-frames.md",
+      "confidence_score": 1,
+      "source_location": null,
+      "weight": 1,
+      "_src": "styleframes_video_styleframes_tutorial",
+      "_tgt": "styleframes_video_client_presentation",
+      "source": "styleframes_video_styleframes_tutorial",
+      "target": "styleframes_video_client_presentation"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "knowledge/milanote/reference/videos/motion-graphics-how-to-create-style-frames.md",
+      "confidence_score": 1,
+      "source_location": null,
+      "weight": 1,
+      "_src": "styleframes_video_styleframes_tutorial",
+      "_tgt": "styleframes_video_adobe_illustrator",
+      "source": "styleframes_video_styleframes_tutorial",
+      "target": "styleframes_video_adobe_illustrator"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "knowledge/milanote/reference/videos/motion-graphics-how-to-create-style-frames.md",
+      "confidence_score": 1,
+      "source_location": null,
+      "weight": 1,
+      "_src": "styleframes_video_styleframes_tutorial",
+      "_tgt": "styleframes_video_milanote_comments",
+      "source": "styleframes_video_styleframes_tutorial",
+      "target": "styleframes_video_milanote_comments"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "knowledge/milanote/reference/videos/motion-graphics-how-to-create-style-frames.md",
+      "confidence_score": 1,
+      "source_location": null,
+      "weight": 1,
+      "_src": "styleframes_video_styleframes_tutorial",
+      "_tgt": "styleframes_video_preproduction_series",
+      "source": "styleframes_video_styleframes_tutorial",
+      "target": "styleframes_video_preproduction_series"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "knowledge/milanote/reference/videos/motion-graphics-how-to-create-style-frames.md",
+      "confidence_score": 1,
+      "source_location": null,
+      "weight": 1,
+      "_src": "styleframes_video_styleframes_tutorial",
+      "_tgt": "styleframes_video_rationale_before_animation",
+      "source": "styleframes_video_styleframes_tutorial",
+      "target": "styleframes_video_rationale_before_animation"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "knowledge/milanote/reference/videos/motion-graphics-how-to-create-style-frames.md",
+      "confidence_score": 1,
+      "source_location": null,
+      "weight": 1,
+      "_src": "styleframes_video_styleframes_tutorial",
+      "_tgt": "styleframes_video_rationale_multiple_variations",
+      "source": "styleframes_video_styleframes_tutorial",
+      "target": "styleframes_video_rationale_multiple_variations"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "knowledge/milanote/reference/videos/motion-graphics-how-to-create-style-frames.md",
+      "confidence_score": 1,
+      "source_location": null,
+      "weight": 1,
+      "_src": "styleframes_video_rationale_before_animation",
+      "_tgt": "styleframes_video_style_frame_concept",
+      "source": "styleframes_video_style_frame_concept",
+      "target": "styleframes_video_rationale_before_animation"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "knowledge/milanote/reference/videos/motion-graphics-how-to-create-style-frames.md",
+      "confidence_score": 1,
+      "source_location": null,
+      "weight": 1,
+      "_src": "styleframes_video_rationale_multiple_variations",
+      "_tgt": "styleframes_video_style_frame_concept",
+      "source": "styleframes_video_style_frame_concept",
+      "target": "styleframes_video_rationale_multiple_variations"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "source_file": "knowledge/milanote/reference/videos/motion-graphics-how-to-create-style-frames.md",
+      "confidence_score": 1,
+      "source_location": null,
+      "weight": 0.9,
+      "_src": "styleframes_video_style_frame_concept",
+      "_tgt": "styleframes_video_mood_board",
+      "source": "styleframes_video_style_frame_concept",
+      "target": "styleframes_video_mood_board"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "knowledge/milanote/reference/videos/my-creative-process-with-milanote-plan-organize-ui-ux-design-projects.md",
+      "confidence_score": 1,
+      "source_location": null,
+      "weight": 1,
+      "_src": "uiux_video_uiux_tutorial",
+      "_tgt": "styleframes_video_mood_board",
+      "source": "styleframes_video_mood_board",
+      "target": "uiux_video_uiux_tutorial"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "source_file": "knowledge/milanote/reference/videos/motion-graphics-how-to-create-style-frames.md",
+      "confidence_score": 0.9,
+      "source_location": null,
+      "weight": 0.9,
+      "_src": "styleframes_video_milanote_comments",
+      "_tgt": "recap_video_comment_primitive",
+      "source": "styleframes_video_milanote_comments",
+      "target": "recap_video_comment_primitive"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "knowledge/milanote/reference/videos/my-creative-process-with-milanote-plan-organize-ui-ux-design-projects.md",
+      "confidence_score": 1,
+      "source_location": null,
+      "weight": 1,
+      "_src": "uiux_video_uiux_tutorial",
+      "_tgt": "uiux_video_infinite_canvas",
+      "source": "uiux_video_uiux_tutorial",
+      "target": "uiux_video_infinite_canvas"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "knowledge/milanote/reference/videos/my-creative-process-with-milanote-plan-organize-ui-ux-design-projects.md",
+      "confidence_score": 1,
+      "source_location": null,
+      "weight": 1,
+      "_src": "uiux_video_uiux_tutorial",
+      "_tgt": "uiux_video_board_primitive",
+      "source": "uiux_video_uiux_tutorial",
+      "target": "uiux_video_board_primitive"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "knowledge/milanote/reference/videos/my-creative-process-with-milanote-plan-organize-ui-ux-design-projects.md",
+      "confidence_score": 1,
+      "source_location": null,
+      "weight": 1,
+      "_src": "uiux_video_uiux_tutorial",
+      "_tgt": "uiux_video_note_primitive",
+      "source": "uiux_video_uiux_tutorial",
+      "target": "uiux_video_note_primitive"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "knowledge/milanote/reference/videos/my-creative-process-with-milanote-plan-organize-ui-ux-design-projects.md",
+      "confidence_score": 1,
+      "source_location": null,
+      "weight": 1,
+      "_src": "uiux_video_uiux_tutorial",
+      "_tgt": "uiux_video_todo_list",
+      "source": "uiux_video_uiux_tutorial",
+      "target": "uiux_video_todo_list"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "knowledge/milanote/reference/videos/my-creative-process-with-milanote-plan-organize-ui-ux-design-projects.md",
+      "confidence_score": 1,
+      "source_location": null,
+      "weight": 1,
+      "_src": "uiux_video_uiux_tutorial",
+      "_tgt": "uiux_video_column_primitive",
+      "source": "uiux_video_uiux_tutorial",
+      "target": "uiux_video_column_primitive"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "knowledge/milanote/reference/videos/my-creative-process-with-milanote-plan-organize-ui-ux-design-projects.md",
+      "confidence_score": 1,
+      "source_location": null,
+      "weight": 1,
+      "_src": "uiux_video_uiux_tutorial",
+      "_tgt": "uiux_video_arrow_connector",
+      "source": "uiux_video_uiux_tutorial",
+      "target": "uiux_video_arrow_connector"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "knowledge/milanote/reference/videos/my-creative-process-with-milanote-plan-organize-ui-ux-design-projects.md",
+      "confidence_score": 1,
+      "source_location": null,
+      "weight": 1,
+      "_src": "uiux_video_uiux_tutorial",
+      "_tgt": "uiux_video_user_flow",
+      "source": "uiux_video_uiux_tutorial",
+      "target": "uiux_video_user_flow"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "knowledge/milanote/reference/videos/my-creative-process-with-milanote-plan-organize-ui-ux-design-projects.md",
+      "confidence_score": 1,
+      "source_location": null,
+      "weight": 1,
+      "_src": "uiux_video_uiux_tutorial",
+      "_tgt": "uiux_video_chrome_extension",
+      "source": "uiux_video_uiux_tutorial",
+      "target": "uiux_video_chrome_extension"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "knowledge/milanote/reference/videos/my-creative-process-with-milanote-plan-organize-ui-ux-design-projects.md",
+      "confidence_score": 1,
+      "source_location": null,
+      "weight": 1,
+      "_src": "uiux_video_uiux_tutorial",
+      "_tgt": "uiux_video_team_invite",
+      "source": "uiux_video_uiux_tutorial",
+      "target": "uiux_video_team_invite"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "knowledge/milanote/reference/videos/my-creative-process-with-milanote-plan-organize-ui-ux-design-projects.md",
+      "confidence_score": 1,
+      "source_location": null,
+      "weight": 1,
+      "_src": "uiux_video_uiux_tutorial",
+      "_tgt": "uiux_video_power_ups",
+      "source": "uiux_video_uiux_tutorial",
+      "target": "uiux_video_power_ups"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "knowledge/milanote/reference/videos/my-creative-process-with-milanote-plan-organize-ui-ux-design-projects.md",
+      "confidence_score": 1,
+      "source_location": null,
+      "weight": 1,
+      "_src": "uiux_video_uiux_tutorial",
+      "_tgt": "uiux_video_breadcrumb_navigation",
+      "source": "uiux_video_uiux_tutorial",
+      "target": "uiux_video_breadcrumb_navigation"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "knowledge/milanote/reference/videos/my-creative-process-with-milanote-plan-organize-ui-ux-design-projects.md",
+      "confidence_score": 1,
+      "source_location": null,
+      "weight": 1,
+      "_src": "uiux_video_uiux_tutorial",
+      "_tgt": "uiux_video_adobe_xd_wireframes",
+      "source": "uiux_video_uiux_tutorial",
+      "target": "uiux_video_adobe_xd_wireframes"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "knowledge/milanote/reference/videos/my-creative-process-with-milanote-plan-organize-ui-ux-design-projects.md",
+      "confidence_score": 1,
+      "source_location": null,
+      "weight": 1,
+      "_src": "uiux_video_uiux_tutorial",
+      "_tgt": "uiux_video_templates",
+      "source": "uiux_video_uiux_tutorial",
+      "target": "uiux_video_templates"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "knowledge/milanote/reference/videos/recap-milanote-creative-workspace.md",
+      "confidence_score": 1,
+      "source_location": null,
+      "weight": 1,
+      "_src": "recap_video_recap_tutorial",
+      "_tgt": "uiux_video_infinite_canvas",
+      "source": "uiux_video_infinite_canvas",
+      "target": "recap_video_recap_tutorial"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "source_file": "knowledge/milanote/reference/videos/my-creative-process-with-milanote-plan-organize-ui-ux-design-projects.md",
+      "confidence_score": 0.85,
+      "source_location": null,
+      "weight": 0.85,
+      "_src": "uiux_video_user_flow",
+      "_tgt": "uiux_video_board_primitive",
+      "source": "uiux_video_board_primitive",
+      "target": "uiux_video_user_flow"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "knowledge/milanote/reference/videos/recap-milanote-creative-workspace.md",
+      "confidence_score": 1,
+      "source_location": null,
+      "weight": 1,
+      "_src": "recap_video_recap_tutorial",
+      "_tgt": "uiux_video_board_primitive",
+      "source": "uiux_video_board_primitive",
+      "target": "recap_video_recap_tutorial"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "knowledge/milanote/reference/videos/recap-milanote-creative-workspace.md",
+      "confidence_score": 1,
+      "source_location": null,
+      "weight": 1,
+      "_src": "recap_video_recap_tutorial",
+      "_tgt": "uiux_video_note_primitive",
+      "source": "uiux_video_note_primitive",
+      "target": "recap_video_recap_tutorial"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "knowledge/milanote/reference/videos/recap-milanote-creative-workspace.md",
+      "confidence_score": 1,
+      "source_location": null,
+      "weight": 1,
+      "_src": "recap_video_recap_tutorial",
+      "_tgt": "uiux_video_todo_list",
+      "source": "uiux_video_todo_list",
+      "target": "recap_video_recap_tutorial"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "knowledge/milanote/reference/videos/recap-milanote-creative-workspace.md",
+      "confidence_score": 1,
+      "source_location": null,
+      "weight": 1,
+      "_src": "recap_video_recap_tutorial",
+      "_tgt": "uiux_video_column_primitive",
+      "source": "uiux_video_column_primitive",
+      "target": "recap_video_recap_tutorial"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "source_file": "knowledge/milanote/reference/videos/my-creative-process-with-milanote-plan-organize-ui-ux-design-projects.md",
+      "confidence_score": 1,
+      "source_location": null,
+      "weight": 0.9,
+      "_src": "uiux_video_user_flow",
+      "_tgt": "uiux_video_arrow_connector",
+      "source": "uiux_video_arrow_connector",
+      "target": "uiux_video_user_flow"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "source_file": "knowledge/milanote/reference/videos/recap-milanote-creative-workspace.md",
+      "confidence_score": 0.85,
+      "source_location": null,
+      "weight": 0.85,
+      "_src": "recap_video_line_connector",
+      "_tgt": "uiux_video_arrow_connector",
+      "source": "uiux_video_arrow_connector",
+      "target": "recap_video_line_connector"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "knowledge/milanote/reference/videos/recap-milanote-creative-workspace.md",
+      "confidence_score": 1,
+      "source_location": null,
+      "weight": 1,
+      "_src": "recap_video_recap_tutorial",
+      "_tgt": "uiux_video_team_invite",
+      "source": "uiux_video_team_invite",
+      "target": "recap_video_recap_tutorial"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "source_file": "knowledge/milanote/reference/videos/recap-milanote-creative-workspace.md",
+      "confidence_score": 0.8,
+      "source_location": null,
+      "weight": 0.8,
+      "_src": "recap_video_comment_primitive",
+      "_tgt": "uiux_video_team_invite",
+      "source": "uiux_video_team_invite",
+      "target": "recap_video_comment_primitive"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "knowledge/milanote/reference/videos/recap-milanote-creative-workspace.md",
+      "confidence_score": 1,
+      "source_location": null,
+      "weight": 1,
+      "_src": "recap_video_recap_tutorial",
+      "_tgt": "uiux_video_power_ups",
+      "source": "uiux_video_power_ups",
+      "target": "recap_video_recap_tutorial"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "knowledge/milanote/reference/videos/recap-milanote-creative-workspace.md",
+      "confidence_score": 1,
+      "source_location": null,
+      "weight": 1,
+      "_src": "recap_video_recap_tutorial",
+      "_tgt": "uiux_video_breadcrumb_navigation",
+      "source": "uiux_video_breadcrumb_navigation",
+      "target": "recap_video_recap_tutorial"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "knowledge/milanote/reference/videos/recap-milanote-creative-workspace.md",
+      "confidence_score": 1,
+      "source_location": null,
+      "weight": 1,
+      "_src": "recap_video_recap_tutorial",
+      "_tgt": "uiux_video_templates",
+      "source": "uiux_video_templates",
+      "target": "recap_video_recap_tutorial"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "knowledge/milanote/reference/videos/recap-milanote-creative-workspace.md",
+      "confidence_score": 1,
+      "source_location": null,
+      "weight": 1,
+      "_src": "recap_video_recap_tutorial",
+      "_tgt": "recap_video_free_plan",
+      "source": "recap_video_recap_tutorial",
+      "target": "recap_video_free_plan"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "knowledge/milanote/reference/videos/recap-milanote-creative-workspace.md",
+      "confidence_score": 1,
+      "source_location": null,
+      "weight": 1,
+      "_src": "recap_video_recap_tutorial",
+      "_tgt": "recap_video_pro_plan",
+      "source": "recap_video_recap_tutorial",
+      "target": "recap_video_pro_plan"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "knowledge/milanote/reference/videos/recap-milanote-creative-workspace.md",
+      "confidence_score": 1,
+      "source_location": null,
+      "weight": 1,
+      "_src": "recap_video_recap_tutorial",
+      "_tgt": "recap_video_export_png_pdf",
+      "source": "recap_video_recap_tutorial",
+      "target": "recap_video_export_png_pdf"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "knowledge/milanote/reference/videos/recap-milanote-creative-workspace.md",
+      "confidence_score": 1,
+      "source_location": null,
+      "weight": 1,
+      "_src": "recap_video_recap_tutorial",
+      "_tgt": "recap_video_image_primitive",
+      "source": "recap_video_recap_tutorial",
+      "target": "recap_video_image_primitive"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "knowledge/milanote/reference/videos/recap-milanote-creative-workspace.md",
+      "confidence_score": 1,
+      "source_location": null,
+      "weight": 1,
+      "_src": "recap_video_recap_tutorial",
+      "_tgt": "recap_video_link_card",
+      "source": "recap_video_recap_tutorial",
+      "target": "recap_video_link_card"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "knowledge/milanote/reference/videos/recap-milanote-creative-workspace.md",
+      "confidence_score": 1,
+      "source_location": null,
+      "weight": 1,
+      "_src": "recap_video_recap_tutorial",
+      "_tgt": "recap_video_line_connector",
+      "source": "recap_video_recap_tutorial",
+      "target": "recap_video_line_connector"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "knowledge/milanote/reference/videos/recap-milanote-creative-workspace.md",
+      "confidence_score": 1,
+      "source_location": null,
+      "weight": 1,
+      "_src": "recap_video_recap_tutorial",
+      "_tgt": "recap_video_notifications",
+      "source": "recap_video_recap_tutorial",
+      "target": "recap_video_notifications"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "knowledge/milanote/reference/videos/recap-milanote-creative-workspace.md",
+      "confidence_score": 1,
+      "source_location": null,
+      "weight": 1,
+      "_src": "recap_video_recap_tutorial",
+      "_tgt": "recap_video_lock_position",
+      "source": "recap_video_recap_tutorial",
+      "target": "recap_video_lock_position"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "knowledge/milanote/reference/videos/recap-milanote-creative-workspace.md",
+      "confidence_score": 1,
+      "source_location": null,
+      "weight": 1,
+      "_src": "recap_video_recap_tutorial",
+      "_tgt": "recap_video_comment_primitive",
+      "source": "recap_video_recap_tutorial",
+      "target": "recap_video_comment_primitive"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "knowledge/milanote/reference/videos/recap-milanote-creative-workspace.md",
+      "confidence_score": 1,
+      "source_location": null,
+      "weight": 1,
+      "_src": "recap_video_recap_tutorial",
+      "_tgt": "recap_video_card_limit",
+      "source": "recap_video_recap_tutorial",
+      "target": "recap_video_card_limit"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "knowledge/milanote/reference/videos/recap-milanote-creative-workspace.md",
+      "confidence_score": 1,
+      "source_location": null,
+      "weight": 1,
+      "_src": "recap_video_recap_tutorial",
+      "_tgt": "recap_video_ios_app_coming",
+      "source": "recap_video_recap_tutorial",
+      "target": "recap_video_ios_app_coming"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "knowledge/milanote/reference/videos/recap-milanote-creative-workspace.md",
+      "confidence_score": 1,
+      "source_location": null,
+      "weight": 1,
+      "_src": "recap_video_recap_tutorial",
+      "_tgt": "recap_video_mac_app_coming",
+      "source": "recap_video_recap_tutorial",
+      "target": "recap_video_mac_app_coming"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "source_file": "knowledge/milanote/reference/videos/recap-milanote-creative-workspace.md",
+      "confidence_score": 1,
+      "source_location": null,
+      "weight": 0.9,
+      "_src": "recap_video_free_plan",
+      "_tgt": "recap_video_card_limit",
+      "source": "recap_video_free_plan",
+      "target": "recap_video_card_limit"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "source_file": "knowledge/milanote/reference/videos/recap-milanote-creative-workspace.md",
+      "confidence_score": 1,
+      "source_location": null,
+      "weight": 0.8,
+      "_src": "recap_video_pro_plan",
+      "_tgt": "recap_video_free_plan",
+      "source": "recap_video_free_plan",
+      "target": "recap_video_pro_plan"
     }
   ],
   "hyperedges": [
