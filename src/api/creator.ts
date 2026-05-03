@@ -122,8 +122,10 @@ export class ApiCreator implements Creator {
       title,
       ...(description ? { description } : {}),
     });
-    // Wait for server to register the new board before we create children inside it
-    await new Promise((r) => setTimeout(r, 800));
+    // Wait for server to register the new board as a joinable channel.
+    // 800ms was insufficient — freshly created root boards need ~3s before
+    // child ELEMENT_CREATE actions are accepted on their channel.
+    await new Promise((r) => setTimeout(r, 3000));
     return { id, url: `https://app.milanote.com/${id}/` };
   }
 
@@ -250,7 +252,7 @@ export class ApiCreator implements Creator {
       ...(description ? { description } : {}),
     }, pos);
     // Wait for server to register new board before creating children inside it
-    await new Promise((r) => setTimeout(r, 800));
+    await new Promise((r) => setTimeout(r, 2000));
     return { id, url: `https://app.milanote.com/${id}/` };
   }
 }
