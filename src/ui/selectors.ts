@@ -3,19 +3,21 @@
  * @description Milanote DOM selectors — seed set lifted from milanote-extractor; expanded via probe sessions
  * @version 0.2.0
  * @created 2026-04-29T00:00:00Z
- * @lastUpdated 2026-05-02T00:00:00Z
+ * @lastUpdated 2026-05-03T00:00:00Z
  *
  * Confidence levels used in comments:
- *   CONFIRMED  — selector observed working in drive-probe-actions.mjs probe session (2026-05-02)
+ *   CONFIRMED  — selector observed working in drive-probe-actions.mjs probe session or CDP probe
  *   SCREENSHOT — selector inferred from DOM screenshots captured during probe
  *   INFERRED   — derived from Milanote's naming convention / class patterns seen in probe
  *   PLACEHOLDER — best-guess from toolbar labels / aria conventions; needs live DOM inspection
  *
  * Primary evidence sources:
- *   - scripts/drive-probe-actions.mjs — drag-from-toolbar gestures all succeeded using these classes
+ *   - scripts/drive-probe-actions.mjs — drag-from-toolbar gestures all succeeded using these classes (2026-05-02)
  *   - knowledge/audit/2026-05-02-automated-probe.md — probe session report
- *   - .ms-debug/board-inspect.png, board-inspect2.png — screenshots of live DOM
- *   - knowledge/milanote/reference/videos/ — 11 tutorial transcripts describing UI gestures
+ *   - CDP Runtime.evaluate probe on live home workspace (2026-05-03):
+ *       confirmed: .canvas-section, .board-content, .element-tool-{card,link,task-list,board,column}
+ *       confirmed: .MoreTool (class: "ToolbarPopupTool MoreTool"), input.FileInput[type=file] (image/*)
+ *       confirmed title div: div.ElementSimpleContentEditable.multiline.editable-title (board title in DOM)
  */
 
 /** Selectors that prove the board canvas has rendered. Lifted from milanote-extractor:181-186. */
@@ -91,16 +93,26 @@ export const TOOLBAR = {
 
   /**
    * "..." (More) overflow button that reveals additional tools including swatch/color.
-   * SCREENSHOT — visible in board-inspect.png as a "..." button below Comment/Table.
-   * Referenced in audit as `ToolbarPopupTool MoreTool`.
-   * INFERRED — click to expand, then pick swatch from the popup.
+   * CONFIRMED 2026-05-03 — CDP probe confirmed class "ToolbarPopupTool MoreTool".
+   * Click to expand, then pick swatch or image from the popup.
    */
-  moreTrigger: '.MoreTool, .element-tool-more, [class*="MoreTool"]',
+  moreTrigger: '.MoreTool',
 } as const;
 
 export const CANVAS = {
-  /** The main drop-target for drag-from-toolbar gestures. CONFIRMED in probe. */
+  /** The main drop-target for drag-from-toolbar gestures. CONFIRMED in probe (2026-05-02). */
   section: '.canvas-section',
+  /** Outer board-content wrapper. CONFIRMED 2026-05-03 via CDP probe on home workspace. */
+  boardContent: '.board-content',
+} as const;
+
+export const UPLOADS = {
+  /**
+   * Hidden file input present on all board pages. Accepts image/* files.
+   * CONFIRMED 2026-05-03 — CDP probe found input.FileInput[type="file"][accept="image/*"].
+   * Use page.setInputFiles(UPLOADS.fileInput, path) after triggering the image tool.
+   */
+  fileInput: 'input.FileInput',
 } as const;
 
 export const CREATE_FLOW = {
@@ -116,12 +128,13 @@ export const CREATE_FLOW = {
 
   /**
    * Input that appears after dropping a board tile — for setting the board title.
-   * INFERRED from class naming pattern observed in probe (ColumnTitle, boardTitle).
-   * The probe script attempted these selectors but did not confirm which matched.
-   * Primary: contenteditable inside the new board thumbnail element.
-   * PLACEHOLDER — confirm via DevTools after a board-drop gesture.
+   * CONFIRMED 2026-05-03: board title renders as a contenteditable div with classes
+   * "ElementSimpleContentEditable multiline editable-title" (seen on live board via CDP).
+   * This selector matches the editable div; `tryFill` handles the contenteditable path.
+   * Fallback candidates left in place in case the post-drop input has a different class.
    */
   newBoardTitleInput: [
+    '.ElementSimpleContentEditable.editable-title[contenteditable]',
     '[class*="BoardTitle"] [contenteditable]',
     '[class*="boardTitle"] input',
     'input[placeholder*="board" i]',
@@ -139,11 +152,13 @@ export const CREATE_FLOW = {
 
   /**
    * Inline column-title input shown after a column is dropped.
-   * INFERRED from probe script's attempted selectors (ColumnTitle contenteditable).
-   * The probe did not confirm which matched; all candidates listed below.
-   * PLACEHOLDER — confirm via DevTools after a column-drop gesture.
+   * INFERRED: same ElementSimpleContentEditable pattern as board titles, targeted to
+   * the column context. The `.editable-title` class was confirmed on a board title div;
+   * column titles likely use the same or a sibling class.
+   * PLACEHOLDER for the exact selector post-drop — confirm via DevTools after column-drop.
    */
   columnTitleInput: [
+    '.ElementSimpleContentEditable.editable-title[contenteditable]',
     '[class*="ColumnTitle"] [contenteditable]',
     '[class*="columnTitle"] input',
     'input[placeholder*="column" i]',

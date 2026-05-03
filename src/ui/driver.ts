@@ -18,7 +18,7 @@ import type { Page } from 'playwright';
 import type { Card } from '../template/schema.js';
 import type { BoardRef, CardRef, ColumnRef, Creator } from '../creator/types.js';
 import { NotImplementedError } from '../creator/types.js';
-import { TOOLBAR, CANVAS, CREATE_FLOW } from './selectors.js';
+import { TOOLBAR, CANVAS, CREATE_FLOW, UPLOADS } from './selectors.js';
 
 export class UiCreator implements Creator {
   readonly strategy = 'ui' as const;
@@ -117,18 +117,24 @@ export class UiCreator implements Creator {
         break;
 
       case 'image':
-        await this.dragTool(TOOLBAR.image);
-        // Image creation opens a file-picker which Playwright cannot drive without
-        // a real file path injected via page.setInputFiles — not yet implemented.
-        console.warn('UiCreator.createCard(image): file-picker interaction not yet implemented; image dropped but src not set');
+        // Local file path: inject via the hidden FileInput (confirmed present, accepts image/*).
+        // URL-based images: the ApiCreator handles those via Socket.IO; warn and skip here.
+        if (card.src && !card.src.startsWith('http')) {
+          await this.page.setInputFiles(UPLOADS.fileInput, card.src);
+          await this.page.waitForTimeout(1_500); // wait for upload + element creation
+        } else {
+          console.warn('UiCreator.createCard(image): URL-based src not supported in UI fallback; use ApiCreator');
+        }
         break;
 
       case 'swatch':
-        // Swatch creation requires expanding the "more" toolbar popup first
-        await this.tryFill(CREATE_FLOW.cardMenuTrigger, '');
+        // Swatch is behind the "..." overflow (TOOLBAR.moreTrigger = '.MoreTool', CONFIRMED).
+        // The exact popup selector for the swatch tool has not been probed yet.
+        await this.page.click(TOOLBAR.moreTrigger).catch(() => {});
+        await this.page.waitForTimeout(300);
         throw new NotImplementedError(
           'UiCreator.createCard(swatch)',
-          'Swatch toolbar trigger is behind the "..." overflow menu (TOOLBAR.moreTrigger). Confirm selector via DevTools.',
+          'MoreTool opened but swatch popup selector not confirmed. Inspect .MoreTool popup via DevTools.',
         );
 
       case 'file':
