@@ -7,5 +7,7 @@ dist/
 *.sqlite-wal
 .ms-debug/
 graphify-out/
+.graphify_*.json
+.graphify_python
 coverage/
 .claude/settings.local.json
