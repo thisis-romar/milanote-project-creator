@@ -111,6 +111,40 @@ Element IDs follow the pattern observed in the DOM: alphanumeric strings like `1
 
 The ID encodes `<sessionId><clientTick><suffix>` — e.g. `1gZSco` is the `clientId` field from the user object.
 
+## Template board content — access limitation (probed 2026-05-03)
+
+Milanote's 165+ official template boards (see `reference/templates/template-board-ids.json`) are server-side protected. Extensive probing confirmed all paths fail:
+
+| Approach | Result |
+|---|---|
+| `GET /api/elements?ids=<templateId>&includeChildren=true` | Returns `{BOARD:1, SKELETON:4}` only — placeholders, no content |
+| `GET /api/boards?ids=<templateId>` | Same: SKELETON only |
+| Direct URL navigation `app.milanote.com/<templateId>` | Redirects to a Milanote feature page, not the board |
+| Socket.IO `USER_NAVIGATE + update-channels(replay:true)` | 0 `ELEMENT_CREATE` frames received — server does not replay to external clients |
+| CDP `Network.webSocketFrameReceived` | Does not fire after `Page.navigate` (session disconnect during reload) |
+| `Page.addScriptToEvaluateOnNewDocument` WebSocket hook | Hook runs, but `window.__wsMessages` stays empty — SPA may use service worker or different context |
+| Browser "Use this template" via CDP automation | `POST /api/elements/duplicate` fires but returns error: "Couldn't duplicate this content" — template source boards are Milanote-owned and protected |
+
+**Conclusion:** Template content is only materialised server-side when Milanote's own backend executes the duplication with elevated permissions. Regular API access (including authenticated Socket.IO) cannot read or replicate template element data.
+
+The SKELETON element type is Milanote's lazy-loading sentinel: 4 SKELETON children per template board, visible via REST but containing no content fields. The actual cards, columns, and text exist only in Milanote's internal data store.
+
+The `POST /api/elements/duplicate` endpoint *does* exist and is used by the template picker flow. Its shape:
+```json
+POST /api/elements/duplicate
+{
+  "duplications": [{
+    "originalElementId": "<milanote-template-source-board-id>",
+    "newElementId": "<user-destination-board-id>",
+    "newElementLocation": {
+      "parentId": "<workspace-board-id>",
+      "position": { "x": 50, "y": 50, "score": 65536 }
+    }
+  }]
+}
+```
+The `originalElementId` is a Milanote-owned board (not the same ID as in `template-board-ids.json` — that file captures the preview board ID, which differs from the source board used for duplication).
+
 ## Still unknown (requires more probing)
 
 - `BOARD` element type (nested board create) — not captured in this session (board drag created an element but Ctrl+Z ran before the BOARD create was observed)
@@ -118,7 +152,7 @@ The ID encodes `<sessionId><clientTick><suffix>` — e.g. `1gZSco` is the `clien
 - `IMAGE` element type and upload flow
 - `SWATCH` element type
 - `ELEMENT_UPDATE` — text content update after creation
-- Server ACK shape (received frames)
+- Server replay frame shape (inbound frames on board open — cannot be captured externally)
 
 ## Implementation note for ApiCreator
 
