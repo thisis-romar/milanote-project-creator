@@ -100,14 +100,17 @@ await new Promise(r => {
 
 // Final check
 const finalUrl = (await cdp.send('Runtime.evaluate', { expression: 'location.href', returnByValue: true })).result?.result?.value ?? '';
-const pickerVisible = (await cdp.send('Runtime.evaluate', {
+const pickerRaw = (await cdp.send('Runtime.evaluate', {
   expression: `JSON.stringify({picker:!!document.querySelector('[class*="TemplatePicker"]'),url:location.href})`,
   returnByValue: true,
 })).result?.result?.value;
-console.log(`Final state: ${pickerVisible}`);
+const pickerState = JSON.parse(pickerRaw ?? '{}');
+console.log(`Final state: ${pickerRaw}`);
 
-if (!finalUrl.includes('new-board')) {
-  console.error('Template picker not accessible. Cannot proceed.');
+// Accept if picker is visible regardless of whether URL still shows /new-board
+// (Milanote replaces /new-board with the board slug but keeps the picker mounted)
+if (!pickerState.picker && !finalUrl.includes('new-board')) {
+  console.error('Template picker not accessible (picker not rendered and URL changed). Cannot proceed.');
   cdp.close();
   process.exit(1);
 }
@@ -122,7 +125,9 @@ await cdp.send('Runtime.evaluate', {
 });
 await delay(500);
 
-// ── Scoped template click helper ──────────────────────────────────────────
+// ── Scoped template hover helper ──────────────────────────────────────────
+// Hover triggers the template preview network request (GET /api/boards?ids=<id>)
+// without navigating away from the picker. Click would navigate; hover is safer.
 const clickTemplateInPane = async (displayName) => {
   const result = await cdp.send('Runtime.evaluate', {
     expression: `(function(name){
@@ -134,18 +139,27 @@ const clickTemplateInPane = async (displayName) => {
       const btns = [...container.querySelectorAll('[class*="TemplateButton"]')];
       const btn = btns.find(b => b.textContent?.trim().startsWith(name));
       if(!btn) return null;
+      // Hover to trigger preview load without navigating away from picker
+      btn.dispatchEvent(new MouseEvent('mouseenter', {bubbles:true}));
+      btn.dispatchEvent(new MouseEvent('mouseover', {bubbles:true}));
+      btn.dispatchEvent(new MouseEvent('mousemove', {bubbles:true}));
+      // Also click in case hover alone doesn't trigger the request
       btn.click();
-      return 'clicked: ' + btn.textContent?.trim().slice(0,40);
+      return 'hovered+clicked: ' + btn.textContent?.trim().slice(0,40);
     })(${JSON.stringify(displayName)})`,
     returnByValue: true,
   });
   return result.result?.result?.value ?? null;
 };
 
+// Reset must happen BEFORE the click fires (not inside this helper) because the click
+// triggers the GET /api/boards?ids=<id> request synchronously — resetting after the
+// click would clear the already-captured ID.
 const getNewBoardId = async (waitMs = 1200) => {
-  recentBoardIds = [];
   await delay(waitMs);
-  return recentBoardIds[recentBoardIds.length - 1] ?? null;
+  const id = recentBoardIds[recentBoardIds.length - 1] ?? null;
+  recentBoardIds = [];
+  return id;
 };
 
 const clickBack = async () => {
@@ -184,8 +198,9 @@ for (const collection of collections) {
 
   for (const tpl of collection.templates) {
     if (result[tpl.id]) { skipped++; continue; }
+    recentBoardIds = [];  // reset BEFORE click so any immediate request is captured
     const clicked = await clickTemplateInPane(tpl.displayName);
-    const boardId = await getNewBoardId(1200);
+    const boardId = await getNewBoardId(600);
     if (boardId) {
       result[tpl.id] = boardId;
       captured++;
