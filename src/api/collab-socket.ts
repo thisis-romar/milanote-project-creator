@@ -70,6 +70,17 @@ export class CollabSocket {
 
     if (!this.userId) throw new Error('CollabSocket: could not extract userId from session');
 
+    await this.openWebSocket();
+  }
+
+  /** Connect using pre-extracted credentials — bypasses Playwright page dependency. */
+  async connectRaw(cookieHeader: string, userId: string): Promise<void> {
+    this.cookieHeader = cookieHeader;
+    this.userId = userId;
+    await this.openWebSocket();
+  }
+
+  private async openWebSocket(): Promise<void> {
     const url = `wss://${COLLAB_HOST}${SOCKET_PATH}?userId=${this.userId}&EIO=4&transport=websocket`;
 
     await new Promise<void>((resolve, reject) => {

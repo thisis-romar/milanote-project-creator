@@ -17,8 +17,9 @@ import { ApiCreator } from '../api/creator.js';
 import { CollabSocket, generateElementId } from '../api/collab-socket.js';
 import { UiCreator } from '../ui/driver.js';
 import { MilanoteClient, getMilanoteCookies } from '../api/client.js';
-import { attachToEdge } from '../cdp/attach.js';
+import { attachToEdge, getCookiesViaCDP } from '../cdp/attach.js';
 import { getOrOpenMilanotePage, MILANOTE_HOST } from '../cdp/page.js';
+import { buildCookieHeader } from '../api/client.js';
 import { NotImplementedError } from '../creator/types.js';
 import { assertNoDuplicate, saveWorkspaceSnapshot, verifyBoardCreation } from '../api/inspector.js';
 import { parseVarFlags } from './utils.js';
@@ -85,24 +86,35 @@ export function registerCreateCommand(program: Command): void {
       }
 
       // Live mode: attach, build creators, run orchestrator
+      // Primary path: raw CDP cookie extraction (fast, works regardless of tab count).
+      // Playwright is attempted afterwards for UiCreator support — failure is non-fatal
+      // since ApiCreator handles all supported card types without Playwright.
       console.log(chalk.cyan('\nAttaching to Edge via CDP...'));
-      const browser = await attachToEdge(opts.url);
-      const page = await getOrOpenMilanotePage(browser);
-      if (!page.url().includes(MILANOTE_HOST)) {
-        await page.goto(opts.url, { waitUntil: 'load', timeout: 60_000 });
+
+      const { cookies: cdpCookies, userId: cdpUserId } = await getCookiesViaCDP();
+
+      let browser = null;
+      let page = null;
+      try {
+        browser = await attachToEdge(opts.url);
+        page = await getOrOpenMilanotePage(browser);
+        if (!page.url().includes(MILANOTE_HOST)) {
+          await page.goto(opts.url, { waitUntil: 'load', timeout: 60_000 });
+        }
+      } catch {
+        // Playwright unavailable (too many tabs / context closed) — ApiCreator path only
+        console.log(chalk.dim('  Playwright unavailable — using ApiCreator (no UI fallback)'));
       }
 
-      const cookies = await getMilanoteCookies(page.context());
+      const cookies = page ? await getMilanoteCookies(page.context()) : cdpCookies;
       const client = new MilanoteClient(cookies);
 
-      // Extract the workspace/home board ID from the current page URL or --workspace flag.
-      // URL pattern: https://app.milanote.com/<boardId>/home  or  /<boardId>/<name>
+      // Extract the workspace/home board ID from --workspace flag or current page URL.
       const workspaceBoardId =
         opts.workspace ??
-        (() => {
-          const m = page.url().match(/app\.milanote\.com\/([A-Za-z0-9]+)/);
-          return m?.[1];
-        })();
+        (page
+          ? (() => { const m = page.url().match(/app\.milanote\.com\/([A-Za-z0-9]+)/); return m?.[1]; })()
+          : undefined);
 
       if (workspaceBoardId) {
         console.log(chalk.dim(`  Workspace board: ${workspaceBoardId}`));
@@ -120,7 +132,7 @@ export function registerCreateCommand(program: Command): void {
         if (!lockAcquired) {
           console.error(chalk.red(`\n✗ Another create is already running against workspace ${workspaceBoardId}.`));
           console.error(chalk.dim(`  If this is stale (> 5 min old), delete: ${lockPath}`));
-          await browser.close();
+          await browser?.close();
           process.exitCode = 1;
           return;
         }
@@ -134,7 +146,7 @@ export function registerCreateCommand(program: Command): void {
       // Ensure the lock is released on Ctrl-C as well
       process.once('SIGINT', async () => {
         await socket.disconnect().catch(() => {});
-        await browser.close().catch(() => {});
+        await browser?.close().catch(() => {});
         await releaseLock();
         process.exit(130);
       });
@@ -149,7 +161,12 @@ export function registerCreateCommand(program: Command): void {
           }
         }
 
-        await socket.connect(page);
+        // Connect socket — use raw credentials if Playwright wasn't available
+        if (page) {
+          await socket.connect(page);
+        } else {
+          await socket.connectRaw(buildCookieHeader(cookies), cdpUserId);
+        }
 
         // If --folder: create a wrapper board and route all content inside it
         let effectiveWorkspaceBoardId = workspaceBoardId;
@@ -164,7 +181,8 @@ export function registerCreateCommand(program: Command): void {
         }
 
         const apiCreator = new ApiCreator(client, effectiveWorkspaceBoardId, socket);
-        const uiCreator = new UiCreator(page);
+        // UiCreator requires a Playwright page; omit fallback when raw CDP path is used
+        const uiCreator = page ? new UiCreator(page) : undefined;
 
         const root = await createFromTemplate(parsed, {
           primary: apiCreator,
@@ -191,7 +209,7 @@ export function registerCreateCommand(program: Command): void {
         }
       } finally {
         await socket.disconnect();
-        await browser.close();
+        await browser?.close();
         await releaseLock();
       }
     });
