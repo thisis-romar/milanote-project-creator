@@ -29,7 +29,7 @@ interface ElementResponse {
 }
 
 /** Fetch the element to find its parentId and type. */
-async function fetchElementMeta(
+export async function fetchElementMeta(
   client: MilanoteClient,
   elementId: string,
 ): Promise<{ parentId: string; elementType: string; title: string } | null> {

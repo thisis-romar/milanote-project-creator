@@ -128,14 +128,16 @@ export class UiCreator implements Creator {
         break;
 
       case 'swatch':
-        // Swatch is behind the "..." overflow (TOOLBAR.moreTrigger = '.MoreTool', CONFIRMED).
-        // The exact popup selector for the swatch tool has not been probed yet.
+        // Swatch tool is behind .MoreTool overflow.
+        // CONFIRMED 2026-05-04: class ".element-tool-color-swatch" (label "Color").
+        // Clicking MoreTool first expands it so the swatch tool becomes draggable.
         await this.page.click(TOOLBAR.moreTrigger).catch(() => {});
         await this.page.waitForTimeout(300);
-        throw new NotImplementedError(
-          'UiCreator.createCard(swatch)',
-          'MoreTool opened but swatch popup selector not confirmed. Inspect .MoreTool popup via DevTools.',
-        );
+        await this.dragTool(TOOLBAR.swatch);
+        // Color input: after dropping, a hex input or color picker may appear.
+        // The ApiCreator is preferred for swatches (sets color directly). If the
+        // UI flow requires more interaction here, extend this case.
+        break;
 
       case 'file':
         throw new NotImplementedError(

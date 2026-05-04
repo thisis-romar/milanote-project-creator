@@ -32,6 +32,44 @@ Socket.IO v4 prefix codes:
 
 All mutation payloads are `42N["action", { ... }]` events.
 
+## ELEMENT_CREATE — Board (BOARD)
+
+Derived from `src/api/creator.ts` (createRootBoard + createSubboard) and `src/api/collab-socket.ts`. The shape is symmetric with all other ELEMENT_CREATE types; the unique constraint is the **3-second post-create wait** before sending children.
+
+```json
+42N["action", {
+  "type": "ELEMENT_CREATE",
+  "elementType": "BOARD",
+  "id": "<client-generated-14-char-id>",
+  "location": {
+    "parentId": "<parent-board-id>",
+    "section": "CANVAS",
+    "position": { "x": 50, "y": 50, "score": 65536 }
+  },
+  "content": {
+    "title": "<string>",
+    "description": "<string>"
+  },
+  "meta": {
+    "creator": "<userId>",
+    "modifiedBy": "<userId>",
+    "createdTime": 1777752108018,
+    "modifiedTime": 1777752108018,
+    "platform": "Desktop web",
+    "locationSectionModifiedTime": 1777752108018,
+    "versionId": "<sessionId>-N"
+  },
+  "timestamp": 1777752108018,
+  "sync": true,
+  "user": { "_id": "<userId>", "clientId": "<clientId>", "clientTick": N },
+  "deviceId": "<deviceId>",
+  "sessionId": "<sessionId>",
+  "channels": ["<parentBoardId>-LIVE"]
+}]
+```
+
+**Critical timing:** after sending ELEMENT_CREATE for a BOARD, the client must wait **~3 seconds** for the server to register the new board as a live channel before sending any `ELEMENT_CREATE` messages with `location.parentId` set to the new board ID. Sending children too early silently drops them. Root boards require 3s; nested subboards require 2s.
+
 ## ELEMENT_CREATE — Note card (CARD)
 
 ```json
@@ -147,7 +185,6 @@ The `originalElementId` is a Milanote-owned board (not the same ID as in `templa
 
 ## Still unknown (requires more probing)
 
-- `BOARD` element type (nested board create) — not captured in this session (board drag created an element but Ctrl+Z ran before the BOARD create was observed)
 - `COLUMN` element type shape
 - `IMAGE` element type and upload flow
 - `SWATCH` element type

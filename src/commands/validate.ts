@@ -10,20 +10,10 @@ import type { Command } from 'commander';
 import chalk from 'chalk';
 import { parseTemplate, TemplateParseError } from '../template/parser.js';
 import type { Card, Template } from '../template/schema.js';
+import { parseVarFlags } from './utils.js';
 
 interface ValidateOptions {
   var?: string[];
-}
-
-function parseVarFlags(values: string[] | undefined): Record<string, string> {
-  if (!values) return {};
-  const out: Record<string, string> = {};
-  for (const v of values) {
-    const eq = v.indexOf('=');
-    if (eq < 0) throw new Error(`Invalid --var (expected key=value): ${v}`);
-    out[v.slice(0, eq)] = v.slice(eq + 1);
-  }
-  return out;
 }
 
 export function registerValidateCommand(program: Command): void {
@@ -61,7 +51,7 @@ interface NodeStats {
   byType: Record<string, number>;
 }
 
-function countNodes(template: Template): NodeStats {
+export function countNodes(template: Template): NodeStats {
   const stats: NodeStats = { columns: 0, cards: 0, boards: 1, byType: {} };
   const visitCards = (cards: Card[] | undefined): void => {
     if (!cards) return;

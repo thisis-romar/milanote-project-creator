@@ -77,24 +77,44 @@ export const TOOLBAR = {
   column: '.element-tool-column',
 
   /**
-   * "Add image" toolbar button — opens a file picker or stock-image library.
-   * SCREENSHOT — visible in board-inspect.png as a button labelled "Add image".
-   * Class pattern follows the same ElementTool convention; "image" suffix inferred.
-   * INFERRED (confirm via DevTools inspection).
+   * Color swatch tool — drag to canvas creates a COLOR_SWATCH element.
+   * CONFIRMED 2026-05-04 — CDP probe after MoreTool expand: class "element-tool-color-swatch", label "Color".
+   * Hidden behind .MoreTool on smaller viewports; drag gesture same as other tools.
+   */
+  swatch: '.element-tool-color-swatch',
+
+  /**
+   * Sketch/draw tool — drag to canvas opens a drawing canvas.
+   * CONFIRMED 2026-05-04 — class "element-tool-sketch", label "Sketch".
+   * Hidden behind .MoreTool.
+   */
+  sketch: '.element-tool-sketch',
+
+  /**
+   * Document tool — drag to canvas creates a document/rich-text element.
+   * CONFIRMED 2026-05-04 — class "element-tool-document", label "Document".
+   * Hidden behind .MoreTool.
+   */
+  document: '.element-tool-document',
+
+  /**
+   * "Add image" toolbar button — opens file picker (accepts image/*).
+   * The hidden input is UPLOADS.fileInput. No draggable element-tool class for this;
+   * image upload happens via the file picker, not drag-from-toolbar.
+   * Use UPLOADS.fileInput + page.setInputFiles() for image creation in UiCreator.
    */
   image: '.element-tool-image',
 
   /**
-   * "Upload" toolbar button — opens a file-picker for arbitrary file upload.
-   * SCREENSHOT — visible in board-inspect.png labelled "Upload".
-   * INFERRED class suffix; may be "element-tool-upload" or "element-tool-file".
+   * "Upload" file tool — drag to canvas creates a FILE element.
+   * INFERRED class suffix based on naming convention; not yet confirmed via CDP.
    */
   file: '.element-tool-upload',
 
   /**
-   * "..." (More) overflow button that reveals additional tools including swatch/color.
-   * CONFIRMED 2026-05-03 — CDP probe confirmed class "ToolbarPopupTool MoreTool".
-   * Click to expand, then pick swatch or image from the popup.
+   * "..." (More) overflow button that reveals additional tools.
+   * CONFIRMED 2026-05-03 — class "ToolbarPopupTool MoreTool".
+   * CONFIRMED 2026-05-04 — clicking reveals: swatch, sketch, document, audio.
    */
   moreTrigger: '.MoreTool',
 } as const;

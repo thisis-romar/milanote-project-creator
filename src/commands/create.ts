@@ -21,6 +21,7 @@ import { attachToEdge } from '../cdp/attach.js';
 import { getOrOpenMilanotePage, MILANOTE_HOST } from '../cdp/page.js';
 import { NotImplementedError } from '../creator/types.js';
 import { assertNoDuplicate, saveWorkspaceSnapshot, verifyBoardCreation } from '../api/inspector.js';
+import { parseVarFlags } from './utils.js';
 
 interface CreateOptions {
   var?: string[];
@@ -31,22 +32,11 @@ interface CreateOptions {
   url: string;
 }
 
-function parseVarFlags(values: string[] | undefined): Record<string, string> {
-  if (!values) return {};
-  const out: Record<string, string> = {};
-  for (const v of values) {
-    const eq = v.indexOf('=');
-    if (eq < 0) throw new Error(`Invalid --var (expected key=value): ${v}`);
-    out[v.slice(0, eq)] = v.slice(eq + 1);
-  }
-  return out;
-}
-
 /**
  * Acquire a per-workspace run lock file. Returns true if acquired.
  * Treats locks older than 5 minutes as stale and reclaims them.
  */
-async function tryAcquireLock(lockPath: string): Promise<boolean> {
+export async function tryAcquireLock(lockPath: string): Promise<boolean> {
   await mkdir('.ms-debug', { recursive: true });
   try {
     const s = await stat(lockPath);
